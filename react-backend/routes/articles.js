@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const assert = require('assert');
 
 
-const passwords = require('../credentials').passwords;
+//const passwords = require('../credentials').passwords;
 
 const articlesDB = require('../filesystem/articlesDB').articlesDB;
 
