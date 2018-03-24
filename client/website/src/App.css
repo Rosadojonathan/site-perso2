@@ -1,0 +1,139 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Mina', sans-serif;
+}
+
+.header-color{
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.landing-grid {
+/*  background: #ECE9E6;
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); */
+
+
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  text-align:center;
+}
+
+.avatar-img {
+  padding-top:5em;
+}
+.img-circle {
+  width:350px;
+  height:auto;
+  border-radius: 50%;
+}
+
+.banner-text {
+  background-color:black;
+  opacity: .8;
+  width:75%;
+  margin:auto;
+  border-radius:10px;
+}
+
+.banner-text h1 {
+  text-align: center;
+  font-size: 44px;
+  font-weight:bold;
+  color: white;
+}
+
+.banner-text hr {
+  border-top:5px dotted white;
+  width:50px;
+  margin:auto;
+}
+
+.banner-text p {
+  text-align: center;
+  color:white;
+  font-size:20px;
+  padding:1em;
+}
+
+.social-links {
+  position:absolute;
+  top:420px;
+  left:280px;
+}
+
+/* .social-links{
+  position:relative;
+  left:-300px;
+  height:200px;
+} */
+.social-links i {
+  color:white;
+  font-size:5em;
+  padding:8px;
+}
+
+
+.submit-btn{
+  background-color:#0326A5 !important;
+}
+
+
+
+/* Resume page Css */
+.resume-right-col {
+  background: black;
+  opacity:.8;
+  color:white;
+  padding:2em;
+}
+
+.category-tabs{
+  text-align: center;
+  width:95%;
+
+}
+
+.category-tabs p {
+margin-top: 10px;
+}
+
+.article-list:hover{
+  background-color: #e16600;
+}
+
+.link-hover:hover{
+  transform: rotate(-10deg) skew(-10deg, 0);
+}
+
+@media (max-width: 800px){
+  .category-tabs {
+    margin-top:45px;
+    vertical-align: middle;
+  }
+  .category-tabs p {
+    line-height:1.6em;
+    font-size: 0.7em;
+    font-weight: bold;
+
+
+  }
+}
+
+@media (min-width: 800px){
+.projects-grid {
+  display:flex;
+ }
+ .landing-cards{
+   padding:10px;
+   margin:auto;
+   width:100px;
+ }
+ .article-blog {
+   width:300px;
+ }
+
+}
