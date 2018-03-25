@@ -54,7 +54,7 @@ class Contact extends Component {
       <meta property="og:title" content="Me contacter - Tech-Marketer " />
       <meta name="og:description" content="Pour une demande de renseignements ou toute autre proposition n'hésitez pas à me contacter ici."/>
       <meta name="og:url" content={window.location.href}/>
-      <meta name="og:image" content="http://localhost:3001/images/homepage.jpg" />
+      <meta name="og:image" content="http://188.166.107.209/images/homepage.jpg" />
     </Helmet>
 
     <Grid className="landing-grid" style={{top:'170px'}}>

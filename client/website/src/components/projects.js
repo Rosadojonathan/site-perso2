@@ -151,7 +151,7 @@ class Projects extends Component {
           <meta property="og:title" content="Projets Tech-Market - Tech-Marketer" />
           <meta name="og:description" content="Jonathan Rosado - Marketer spécialisé dans l'aspect technique du Marketing. J'allie la programmation et les statistiques au Marketing."/>
           <meta name="og:url" content={window.location.href}/>
-          <meta name="og:image" content="http://localhost:3001/images/homepage.jpg" />
+          <meta name="og:image" content="http://188.166.107.209/images/homepage.jpg" />
         </Helmet>
 
         <Tabs style={{padding:'0px 10px',width:"100%"}}activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
