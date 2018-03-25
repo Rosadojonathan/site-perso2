@@ -1,5 +1,6 @@
 # Compiled source #
 ###################
+*.pem
 *.com
 *.class
 *.dll

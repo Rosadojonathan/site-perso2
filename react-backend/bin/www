@@ -7,6 +7,14 @@
 var app = require('../app');
 var debug = require('debug')('react-backend:server');
 var http = require('http');
+var https = require('https');
+var fs = require('fs');
+
+var options = {
+	cert: fs.readFileSync('./sslcert/fullchain.pem'),
+	key: fs.readFileSync('./sslcert/privkey.pem')
+};
+
 
 /**
  * Get port from environment and store in Express.
