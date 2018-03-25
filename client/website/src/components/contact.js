@@ -115,7 +115,7 @@ class Contact extends Component {
 
     <Cell col={12} style={{display: this.state.showChatbot ? 'none' : 'block',textAlign:'center',alignItems:'center',justifyContent:'center'}}>
           <div style={{alignItems:'center'}}>
-          <h3> ... ou bien passer par le chatbot ?</h3>
+          <h3> ... ou passer par le chatbot ?</h3>
           <br/>
           <Button id='contact-form' raised colored ripple style={{backgroundColor:'#9D0313'}} onClick={() => this.showChatbot()} > Voyons ça !</Button>
 
