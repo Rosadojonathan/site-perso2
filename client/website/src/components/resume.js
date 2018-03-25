@@ -64,7 +64,7 @@ class Resume extends Component {
           <Cell col={4}>
 
             <div style={{textAlign:'center'}}>
-              <img className="avatar-img" src={imageJonathan} alt="avatar" style={{ borderRadius:'50%',height:'350px',width:'350px'}}/>
+              <img className="avatar-img" src={imageJonathan} alt="avatar" style={{ borderRadius:'50%',height:'300px',width:'300px'}}/>
             </div>
             <h2 style={{paddingTop:'2em'}}>Jonathan Rosado</h2>
             <h4 style={{color:'grey'}}>Tech-Marketer</h4>
