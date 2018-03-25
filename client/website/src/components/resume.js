@@ -51,12 +51,12 @@ class Resume extends Component {
           <meta charSet="utf-8" />
           <title>CV de Jonathan Rosado - Tech Marketer </title>
 
-          <meta name="description" content="Jonathan Rosado - Marketer spécialisé dans l'aspect technique du Marketing. J'allie la programmation et les statistiques au Marketing."/>
+          <meta name="description" content="Jonathan Rosado - Marketer spécialisé dans l'aspect technologique du Marketing. J'allie la programmation et les statistiques au Marketing pour résoudre des probèmes de manière innovante."/>
 
           <meta property="og:locale" content="fr_FR" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="CV de Jonathan Rosado - Tech Marketer" />
-          <meta property="og:description" content="Jonathan Rosado - Marketer spécialisé dans l'aspect technique du Marketing. J'allie la programmation et les statistiques au Marketing."/>
+          <meta property="og:description" content="Jonathan Rosado - Marketer spécialisé dans l'aspect technologique du Marketing. J'allie la programmation et les statistiques au Marketing pour résoudre des probèmes de manière innovante."/>
           <meta property="og:url" content={window.location.href}/>
           <meta property="og:image" content="https://jonathanrosado.fr/images/homepage.jpg" />
         </Helmet>
