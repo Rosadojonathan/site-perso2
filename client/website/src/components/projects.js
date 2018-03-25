@@ -29,7 +29,7 @@ class Projects extends Component {
           <CardTitle style={{color:'black', fontWeight:'bold'}}>Création d'un site internet sous React</CardTitle>
           <CardText>Je me suis lancé dans le développement de ce site internet codé entièrement en JavaScript grâce aux technologies React et Node.js. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking.</CardText>
            <CardActions border>
-             <Button colored style={{textAlign:'center'}}>SOON ON GITHUB</Button>
+             <Button colored style={{textAlign:'center'}}><a style={{ textDecoration:'none',color:'#000080'}} href="https://github.com/Rosadojonathan/site-perso2">GitHub</a></Button>
 
            </CardActions>
            <CardMenu style={{color:'#fff'}}>
