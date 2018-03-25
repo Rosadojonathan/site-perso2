@@ -149,9 +149,9 @@ class Projects extends Component {
           <meta property="og:locale" content="fr_FR" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Projets Tech-Market - Tech-Marketer" />
-          <meta name="og:description" content="Jonathan Rosado - Marketer spécialisé dans l'aspect technique du Marketing. J'allie la programmation et les statistiques au Marketing."/>
-          <meta name="og:url" content={window.location.href}/>
-          <meta name="og:image" content="http://188.166.107.209/images/homepage.jpg" />
+          <meta property="og:description" content="Jonathan Rosado - Marketer spécialisé dans l'aspect technique du Marketing. J'allie la programmation et les statistiques au Marketing."/>
+          <meta property="og:url" content={window.location.href}/>
+          <meta property="og:image" content="http://188.166.107.209/images/homepage.jpg" />
         </Helmet>
 
         <Tabs style={{padding:'0px 10px',width:"100%"}}activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
