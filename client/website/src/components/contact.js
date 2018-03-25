@@ -3,11 +3,14 @@ import {Helmet} from 'react-helmet';
 import { Grid,Cell,Textfield,Button} from 'react-mdl';
 import axios from 'axios';
 
+import Chatbot from './chatbot';
+
 class Contact extends Component {
  state = {
    email: '',
    message:'',
    name:'',
+   'showChatbot':false,
  };
 
  onSubmit = () => {
@@ -37,6 +40,10 @@ class Contact extends Component {
 
  }
 
+ showChatbot = () => {
+   this.setState({showChatbot:true})
+ }
+
   render() {
 
     let bgColor = this.state.bgColor ? this.state.bgColor : '';
@@ -58,9 +65,9 @@ class Contact extends Component {
     </Helmet>
 
     <Grid className="landing-grid" style={{top:'170px'}}>
-      <Cell col={12}>
+      <Cell col={12} style={{display: this.state.showChatbot ? 'none' : 'block'}}>
 
-        <h3 style={{}}>Me contacter</h3>
+        <h3 style={{}}>Me contacter de manière classique...</h3>
         <Textfield
                 onChange={() => {}}
                 name="name"
@@ -101,6 +108,29 @@ class Contact extends Component {
 
             <br/>
         <Button id='contact-form' raised colored ripple style={{backgroundColor:bgColor}} onClick={() => this.onSubmit()} > {message}</Button>
+
+          <br/>
+          <br/>
+    </Cell>
+
+    <Cell col={12} style={{display: this.state.showChatbot ? 'none' : 'block',textAlign:'center',alignItems:'center',justifyContent:'center'}}>
+          <div style={{alignItems:'center'}}>
+          <h3> ... ou bien passer par le chatbot ?</h3>
+          <br/>
+          <Button id='contact-form' raised colored ripple style={{backgroundColor:'red'}} onClick={() => this.showChatbot()} > Voyons ça !</Button>
+
+
+          </div>
+
+      </Cell>
+      <Cell col={12} style={{display: this.state.showChatbot ? 'block' : 'none'}}>
+
+
+
+
+        <Chatbot style={{width:'100%',height:'600px' }} />
+
+
 
       </Cell>
     </Grid>
