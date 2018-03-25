@@ -26,7 +26,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('static'));
 app.use(express.static( `${__dirname}/../client/website/build`));
+
 
 app.use('/posts', posts);
 app.use('/articles',articles);
