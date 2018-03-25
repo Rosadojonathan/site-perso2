@@ -74,7 +74,7 @@ class Resume extends Component {
             <h5>Addresse</h5>
             <p>Toulouse, Occitanie</p>
             <h5>Téléphone</h5>
-            <p>06-46-74-63-75</p>
+            <p>+336.46.74.63.75</p>
             <h5>Email</h5>
             <p>jonathan.emil.rosado@gmail.com</p>
             <h5>LinkedIn</h5>
