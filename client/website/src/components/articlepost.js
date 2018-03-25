@@ -54,7 +54,7 @@ componentDidMount(){
             <meta property="og:title" content={this.state.article[0].title} />
             <meta property="og:description" content={this.state.article[0].description}/>
             <meta property="og:url" content={window.location.href}/>
-            <meta property="og:image" content="http://188.166.107.209/images/homepage.jpg" />
+            <meta property="og:image" content="https://jonathanrosado.fr/images/homepage.jpg" />
 
             <meta property="article:published_time" content="2018-03-21T12:00:49+01:00" />
           </Helmet>

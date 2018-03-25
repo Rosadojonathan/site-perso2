@@ -36,7 +36,7 @@ class Blog extends Component {
         <meta property="og:title" content="Blog - Tech-Marketer" />
         <meta name="og:description" content="Comment allier Marketing et Tech pour améliorer son efficacité."/>
         <meta name="og:url" content={window.location.href}/>
-        <meta name="og:image" content="http://localhost:3001/images/homepage.jpg" />
+        <meta name="og:image" content="https://jonathanrosado.fr/images/homepage.jpg" />
       </Helmet>
 
       {this.state.posts.map(post=>
