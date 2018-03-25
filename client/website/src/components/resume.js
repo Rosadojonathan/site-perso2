@@ -76,7 +76,7 @@ class Resume extends Component {
             <h5>Téléphone</h5>
             <p>06-46-74-63-75</p>
             <h5>Email</h5>
-            <p>jonathan@jonathanrosado.fr</p>
+            <p>jonathan.emil.rosado@gmail.com</p>
             <h5>LinkedIn</h5>
 
             <a style={{cursor:'pointer'}} href="https://www.linkedin.com/in/jonathan-rosado-967067130/">
