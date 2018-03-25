@@ -34,12 +34,9 @@ app.use('/contactform',contactform);
 app.get('/blog/:whatever', (req,res) => {
   res.sendFile(path.join(__dirname, '../client/website/build/index.html'));
 });
+
 app.use('/', (req,res) => {
-<<<<<<< HEAD
-res.sendFile(path.join(__dirname, '../client/website/build/index.html'));
-=======
   res.sendFile(path.join(__dirname,'../client/website/build/index.html'));
->>>>>>> 123ba59ff7a0d72a57c06487854959f7b3ad548b
 });
 
 
@@ -54,15 +51,7 @@ app.use(function(req, res, next) {
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
-<<<<<<< HEAD
-//  res.locals.message = err.message;
- // res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  //res.status(err.status || 500);
-  //res.render('error');
-   res.sendFile(path.join(__dirname,'..client/website/build/index.html'));
-=======
   // res.locals.message = err.message;
   // res.locals.error = req.app.get('env') === 'development' ? err : {};
   //
@@ -70,7 +59,7 @@ app.use(function(err, req, res, next) {
   // res.status(err.status || 500);
   // res.render('error');
   res.sendFile(path.join(__dirname,'..client/website/build/index.html'));
->>>>>>> 123ba59ff7a0d72a57c06487854959f7b3ad548b
+
 });
 
 module.exports = app;
