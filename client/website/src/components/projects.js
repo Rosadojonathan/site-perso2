@@ -44,7 +44,7 @@ class Projects extends Component {
           <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
             <CardTitle style={{color:'#fff',height:'176px',background:`url(${machineLearningIcon}) center / cover`}}></CardTitle>
             <CardTitle style={{color:'black', fontWeight:'bold'}}>Projet Machine Learning: Prédiction de pertinence d'un produit sur les canaux publicitaires</CardTitle>
-            <CardText>Ce projet m'a permit de mettre en application mes connaissances en Statistiques et Machine Learning appliqué au Marketing grâce à Python. </CardText>
+            <CardText>Ce projet m'a permis de mettre en application mes connaissances en Statistiques et Machine Learning appliqué au Marketing grâce à Python. </CardText>
              <CardActions border>
                <Button colored style={{textAlign:'center'}}>SOON ON GITHUB</Button>
 

@@ -4,7 +4,7 @@ module.exports.article =  {
 
 
 
-  <p> Créer des publicités sur Facebook peut rapidement devenir un processus ennuyeux et répétitif. Si vous déjà remarqué qu'il existe peu de variation de contenu entre vos annonces à part quelques éléments
+  <p> Créer des publicités sur Facebook peut rapidement devenir un processus ennuyeux et répétitif. Si vous avez déjà remarqué qu'il existe peu de variation de contenu entre vos annonces à part quelques éléments,
   c'est que l'automatisation peut potentiellement vous être utile.
 
   Dans cet article nous allons voir comment créer un script qui semi-automatise la création de Facebook Ads grâce à Python et l'API de Facebook.</p>
@@ -13,12 +13,12 @@ module.exports.article =  {
   <h2>I) Enregistrer une app Facebook sur developers.facebook.com</h2>
 
   <p>
-    Rendez-vous sur https://developers.facebook.com/ puis dans l'espace Mes Apps où vous ajoutourez une application.
+    Rendez-vous sur https://developers.facebook.com/ puis dans l'espace Mes Apps où vous ajouterez une application.
   </p>
   <p>Il va ensuite vous falloir aller dans les paramètres pour effectuer quelques réglages.</p>
   <ul>
     <li>Dans Paramètres > Avancé : renseignez l'ID de vos comptes publicitaires autorisés </li>
-    <li>Dans Paramètres > Général : renseignez une URL pour votre Politique de confidentialité et de conditions de service. Ca peut être l'URL de votre site internet.</li>
+    <li>Dans Paramètres > Général : renseignez une URL pour votre Politique de confidentialité et de conditions de service. Ça peut être l'URL de votre site internet.</li>
     <li>Dans Produits ajoutez l'API Marketing.</li>
     <li>Dans API Marketing > Paramètres : Ajoutez vos comptes publicitaires.</li>
     <li>Rendez ensuite votre application publique.</li>
@@ -75,9 +75,9 @@ module.exports.article =  {
 
 
   <br>
-  <p>Afin de pouvoir automatiser la création j'ai choisi de standardiser certains paramètres comme le budget journalier par défault, le texte de l'annonce à part quelques éléments ou l'objectif de campagne. J'aurais pu éventuellement rajouer la possibilité de renseigner le budget journalier en tant que variable lors du lancement du script mais je ne souhaitais pas rajouter plus d'étapes, le but étant de gagner du temps.</p>
+  <p>Afin de pouvoir automatiser la création j'ai choisi de standardiser certains paramètres comme le budget journalier par défault, le texte de l'annonce à part quelques éléments ou l'objectif de campagne. J'aurais pu éventuellement rajouter la possibilité de renseigner le budget journalier en tant que variable lors du lancement du script mais je ne souhaitais pas rajouter plus d'étapes, le but étant de gagner du temps.</p>
   <br>
-  <p>Pour le ciblage des intérêts j'ai pris le choix de récupérer le premier évènement renvoyé par TargetingSearch.search, auquel je passe les paramètres du nom de la variable que je souhaite cibler (une marque, une personnalité, un artiste, etc.). Parfois le résultat peut être différent des attentes, comme lorsqu'on passe le paramètres "Pink", le 1er centre d'intérêt est la couleur et non la chanteuse. Cela implique de surveiller les résultat obtenus par le script. </p>
+  <p>Pour le ciblage des intérêts j'ai pris le choix de récupérer le premier évènement renvoyé par TargetingSearch.search, auquel je passe les paramètres du nom de la variable que je souhaite cibler (une marque, une personnalité, un artiste, etc.). Parfois le résultat peut être différent des attentes, comme lorsqu'on passe le paramètres "Pink", le 1er centre d'intérêt est la couleur et non la chanteuse. Cela implique de surveiller les résultats obtenus par le script. </p>
 
   <p>Vous remarquerez que je suis obligé de distinguer de manière assez sale si je souhaite cibler une ville ou un pays. C'est dû au fonctionnement de l'API qui nous ne permet pas de passer une requête indifférenciée entre les deux, malheureusement. </p>
   <p>La qualité du code n'est de toute façon pas au rendez-vous de manière générale, j'ai fait ce script en un week-end mais elle pourrait facilement être améliorée. Je m'y attaquerai peut être lors d'une V2 ! </p>

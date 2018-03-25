@@ -105,7 +105,7 @@ class Resume extends Component {
           </Cell>
           <Cell className="resume-right-col" col={8}>
 
-            <h3>Experience</h3>
+            <h3>Expérience</h3>
 
             <Experience
               startYear="Février 2017"
@@ -122,7 +122,7 @@ class Resume extends Component {
             startYear={2017}
             endYear={2018}
             schoolName="Université Capitole - IAE Toulouse"
-            schoolDescription="Cette formation m'a permit de consolider mes connaissances en Marketing Digital acquises lors de mon expérience professionnelle en alternance, notamment en SEO et en stratégie Marketing. Mon mémoire traite de l'automatisation du SEA et Social Media Advertising: quelle réalisation, enjeux et bénéfices pour le Marketeur?"
+            schoolDescription="Cette formation m'a permis de consolider mes connaissances en Marketing Digital acquises lors de mon expérience professionnelle en alternance, notamment en SEO et en stratégie Marketing. Mon mémoire traite de l'automatisation du SEA et Social Media Advertising: quelle réalisation, enjeux et bénéfices pour le Marketeur?"
             schoolDegree="Master 2 - Marketing Digital"
             />
 
