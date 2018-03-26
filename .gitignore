@@ -7,6 +7,8 @@
 *.exe
 *.o
 *.so
+credentials.js
+
 
 # Packages #
 ############
