@@ -37,12 +37,12 @@ body {
   border-radius:10px;
 }
 
-#navigation > a {
+/* #navigation > a {
   color: #eeeaea;
-}
+} */
 
 #navigation > a:hover {
-  font-size:15px;
+  font-size:14px;
   color:#FFF;
   text-shadow: -1px 1px 20px #aaa, 1px -1px 20px #fff;
 
