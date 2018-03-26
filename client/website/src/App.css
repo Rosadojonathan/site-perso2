@@ -38,7 +38,10 @@ body {
 }
 
 #navigation > a:hover {
-  transform: skew(-15deg,0deg)
+  font-size:16px;
+  transform: skew(-10deg,0deg);
+  transition: font-size 0.3s ease;
+
 }
 
 .banner-text h1 {
