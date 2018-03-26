@@ -3,12 +3,14 @@ var router = express.Router();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
+const passwords = require('./credentials').passwordMailer;
+
 const smtpTransport = nodemailer.createTransport({
   service:"Gmail",
   auth:{
 
-    user:"jonathan.emil.rosado@gmail.com",
-    pass:"marakaipower",
+    user:passwords.account,
+    pass:passwords.password,
 
   }
 })
