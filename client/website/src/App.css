@@ -46,7 +46,7 @@ body {
   color:#FFF;
   text-shadow: -1px 1px 20px #aaa, 1px -1px 20px #fff;
 
-  transition: font-size 0.3s ease, color 0.3s ease,text-shadow 0.3s linear 0s;
+  transition: font-size 0.5s ease, color 0.5s ease,text-shadow 0.8s linear 0s;
 
 }
 
