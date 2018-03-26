@@ -11,7 +11,7 @@ import './App.css';
 
 
 class App extends Component {
-  
+
 
   render() {
     return (
@@ -19,7 +19,7 @@ class App extends Component {
       <MuiThemeProvider>
       <Layout>
           <Header className="header-color" title={<Link style={{textDecoration: 'none',color:'white'}} to="/">Rosado Jonathan - Tech Marketer</Link>} scroll>
-              <Navigation>
+              <Navigation id="navigation">
 {/* key='1' onMouseEnter={this.onHover.bind(this)} onMouseLeave={this.onHover.bind(this,this.key)} style={{transform: this.state.hovered && this.state.key == this.props.key ? 'skew(-15deg, 0deg)' : 'skew(0)'}} */}
                   <Link to="/cv">CV</Link>
                   <Link to="/blog">Blog</Link>
