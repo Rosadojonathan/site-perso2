@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
 import {Helmet} from 'react-helmet';
-import { Grid, Cell,Textfield } from 'react-mdl';
+import { Grid, Cell,Textfield, Card} from 'react-mdl';
+import CommentList from './CommentList';
+import CommentBox from './CommentBox';
+import * as firebase from 'firebase';
+
+import firebasecredentials from '../firebasecredentials';
 
 import '../css/articlecss.css';
+
+
 
 class ArticlePost extends Component {
   constructor(props){
     super(props)
-
+    firebase.initializeApp(firebasecredentials)
     this.state = {
       article: {},
-      loaded:false
+      loaded:false,
+
+
+
     }
 
   }
@@ -31,6 +41,17 @@ componentDidMount(){
     console.log(error);
   });
 
+  // const ref = firebase.database().ref(`articles/${window.location.pathname.split('/')[2]}`);
+  //
+  // ref.on('value',snapshot => {
+  //
+  //   console.log(snapshot)
+  //   this.setState({
+  //     comments: snapshot.val(),
+  //     commentsLoading:false
+  //   })
+  // })
+
 }
 
 
@@ -38,6 +59,13 @@ componentDidMount(){
 
   render() {
     console.log(this.state.article);
+
+    // const commentaire = this.state.comments.map((comment,i) =>
+    //   <div>
+    //     <h2>{comment.name}</h2>
+    //     <p>{comment.comment}</p>
+    //   </div>
+    //  )
     if (this.state.loaded){
       return (
 
@@ -64,6 +92,14 @@ componentDidMount(){
               <h1 style={{fontSize:'1.8em',fontWeight:'bold'}}>{this.state.article[0].title}</h1>
 
               <p dangerouslySetInnerHTML={{__html: this.state.article[0].content}} />
+            </Cell>
+
+            <Cell>
+              <div style={{textAlign:'center'}}>
+                <CommentBox db={firebase} />
+
+                <CommentList db={firebase}/>
+              </div>
             </Cell>
 
           </Grid>
