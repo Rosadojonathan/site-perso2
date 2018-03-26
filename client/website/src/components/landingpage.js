@@ -34,13 +34,13 @@ class Landing extends Component {
       <div style={{width:'100%',margin:'auto'}}>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Home - Tech-Marketer</title>
+          <title>Jonathan Rosado - Tech-Marketer</title>
 
           <meta name="description" content="Jonathan Rosado - Marketer spécialisé dans l'aspect technologique du Marketing. J'allie la programmation et les statistiques au Marketing pour résoudre des problèmes avec des solutions innovantes."/>
 
           <meta property="og:locale" content="fr_FR" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Home - Tech-Marketer" />
+          <meta property="og:title" content="Jonathan Rosado - Tech-Marketer" />
           <meta property="og:description" content="Jonathan Rosado - Marketer spécialisé dans l'aspect technologique du Marketing. J'allie la programmation et les statistiques au Marketing pour résoudre des problèmes avec des solutions innovantes."/>
           <meta property="og:url" content={window.location.href}/>
           <meta property="og:image" content="https://jonathanrosado.fr/images/homepage.jpg" />
