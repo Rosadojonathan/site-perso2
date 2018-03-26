@@ -95,10 +95,11 @@ componentDidMount(){
             </Cell>
 
             <Cell>
-              <div style={{textAlign:'center'}}>
-                <CommentBox db={firebase} />
+              <div id="commentaires" style={{textAlign:'center'}}>
 
+                <CommentBox db={firebase} />
                 <CommentList db={firebase}/>
+
               </div>
             </Cell>
 
