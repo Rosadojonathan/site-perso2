@@ -289,17 +289,14 @@ module.exports.article =  {
   <style>
 
   h2   {
-    font-size: 2.3em;
+    font-size: 1.4em;
     font-weight:900,
   }
   img {
     width:90%;
     height:auto;
   }
-
-  p {
-    font-size:1.8em;
-  }
+  
 
   </style>
 
