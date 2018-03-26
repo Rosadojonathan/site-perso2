@@ -21,10 +21,10 @@ class App extends Component {
           <Header className="header-color" title={<Link style={{textDecoration: 'none',color:'white'}} to="/">Rosado Jonathan - Tech Marketer</Link>} scroll>
               <Navigation id="navigation">
 {/* key='1' onMouseEnter={this.onHover.bind(this)} onMouseLeave={this.onHover.bind(this,this.key)} style={{transform: this.state.hovered && this.state.key == this.props.key ? 'skew(-15deg, 0deg)' : 'skew(0)'}} */}
-                  <Link style={{color: window.location.pathname.includes('cv') ? '#FFF' :  '#eeeaea'}} to="/cv">CV</Link>
-                  <Link style={{color: window.location.pathname.includes('blog') ? '#FFF' :  '#eeeaea'}} to="/blog">Blog</Link>
-                  <Link style={{color: window.location.pathname.includes('projets') ? '#FFF' :  '#eeeaea'}} to="/projets">Projets</Link>
-                  <Link style={{color: window.location.pathname.includes('contact') ? '#FFF' :  '#eeeaea'}} to="/contact">Contact</Link>
+                  <Link style={{color: window.location.pathname.includes('cv') ? '#FFF' :  '#eeeaea', fontWeight: window.location.pathname.includes('cv') ? 'bold' : '500'}} to="/cv">CV</Link>
+                  <Link style={{color: window.location.pathname.includes('blog') ? '#FFF' :  '#eeeaea', fontWeight: window.location.pathname.includes('blog') ? 'bold' : '500'}} to="/blog">Blog</Link>
+                  <Link style={{color: window.location.pathname.includes('projets') ? '#FFF' :  '#eeeaea', fontWeight: window.location.pathname.includes('projets') ? 'bold' : '500'}} to="/projets">Projets</Link>
+                  <Link style={{color: window.location.pathname.includes('contact') ? '#FFF' :  '#eeeaea', fontWeight: window.location.pathname.includes('contact') ? 'bold' : '500'}} to="/contact">Contact</Link>
               </Navigation>
           </Header>
           <Drawer title={<Link style={{textDecoration:'none',color:'black'}} to='/'>Tech-Marketer </Link>}>
