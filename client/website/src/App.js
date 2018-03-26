@@ -23,8 +23,8 @@ class App extends Component {
 {/* key='1' onMouseEnter={this.onHover.bind(this)} onMouseLeave={this.onHover.bind(this,this.key)} style={{transform: this.state.hovered && this.state.key == this.props.key ? 'skew(-15deg, 0deg)' : 'skew(0)'}} */}
                   <Link style={{color: window.location.pathname.includes('cv') ? 'white' :  '#eeeaea'}} to="/cv">CV</Link>
                   <Link style={{color: window.location.pathname.includes('blog') ? 'white' :  '#eeeaea'}} to="/blog">Blog</Link>
-                  <Link to="/projets">Projets</Link>
-                  <Link to="/contact">Contact</Link>
+                  <Link style={{color: window.location.pathname.includes('projets') ? 'white' :  '#eeeaea'}} to="/projets">Projets</Link>
+                  <Link style={{color: window.location.pathname.includes('contact') ? 'white' :  '#eeeaea'}} to="/contact">Contact</Link>
               </Navigation>
           </Header>
           <Drawer title={<Link style={{textDecoration:'none',color:'black'}} to='/'>Tech-Marketer </Link>}>
