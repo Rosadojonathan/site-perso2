@@ -3,6 +3,7 @@ import {Helmet} from 'react-helmet';
 import { Grid, Cell,Textfield, Card} from 'react-mdl';
 import CommentList from './CommentList';
 import CommentBox from './CommentBox';
+import LikeCounter from './LikeCounter';
 import * as firebase from 'firebase';
 
 import firebasecredentials from '../firebasecredentials';
@@ -96,6 +97,9 @@ componentDidMount(){
 
             <Cell col={9}>
               <div id="commentaires" style={{textAlign:'center'}}>
+                <br/>
+                <LikeCounter db={firebase}/>
+                <br/>
 
                 <CommentBox db={firebase} />
                 <CommentList db={firebase}/>
