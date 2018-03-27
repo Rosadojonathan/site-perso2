@@ -42,16 +42,7 @@ componentDidMount(){
     console.log(error);
   });
 
-  // const ref = firebase.database().ref(`articles/${window.location.pathname.split('/')[2]}`);
-  //
-  // ref.on('value',snapshot => {
-  //
-  //   console.log(snapshot)
-  //   this.setState({
-  //     comments: snapshot.val(),
-  //     commentsLoading:false
-  //   })
-  // })
+
 
 }
 
@@ -61,12 +52,7 @@ componentDidMount(){
   render() {
     console.log(this.state.article);
 
-    // const commentaire = this.state.comments.map((comment,i) =>
-    //   <div>
-    //     <h2>{comment.name}</h2>
-    //     <p>{comment.comment}</p>
-    //   </div>
-    //  )
+
     if (this.state.loaded){
       return (
 
@@ -90,7 +76,7 @@ componentDidMount(){
 
           <Grid className="article-post">
             <Cell col={9}>
-              <h1 style={{fontSize:'1.8em',fontWeight:'bold'}}>{this.state.article[0].title}</h1>
+              <h1>{this.state.article[0].title}</h1>
 
               <p dangerouslySetInnerHTML={{__html: this.state.article[0].content}} />
             </Cell>
