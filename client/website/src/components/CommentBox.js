@@ -64,19 +64,8 @@ class CommentBox extends Component {
     let bgColor = this.state.bgColor ? this.state.bgColor : '';
     let message = this.state.msgSend ? "✔" : "Envoyer";
     return (
-      // <form>
-      //   <textarea
-      //     className="textarea"
-      //      placeholder="Écrivez un commentaire"
-      //      cols="100"
-      //      rows="5"
-      //      onChange={this.onChange}
-      //       onKeyUp={this.onKeyup}
-      //       value={this.state.comment}>
-      //     >
-      //
-      //   </textarea>
-        <div style={{textAlign:'center'}}>
+
+        <div>
           <Textfield
                   onChange={() => {}}
                   name="name"
@@ -90,6 +79,7 @@ class CommentBox extends Component {
                   style={{width: '400px'}}
               />
               <br/>
+              <br/>
               <Textfield
                       onChange={() => {}}
                       name="message"
@@ -102,6 +92,7 @@ class CommentBox extends Component {
                       rows={3}
                       style={{width: '400px'}}
                   />
+                  <br/>
         <Button id='contact-form' raised colored ripple style={{backgroundColor:bgColor}} onClick={() => this.onSubmit()} > {message}</Button>
 
        </div>

@@ -94,7 +94,7 @@ componentDidMount(){
               <p dangerouslySetInnerHTML={{__html: this.state.article[0].content}} />
             </Cell>
 
-            <Cell>
+            <Cell col={9}>
               <div id="commentaires" style={{textAlign:'center'}}>
 
                 <CommentBox db={firebase} />

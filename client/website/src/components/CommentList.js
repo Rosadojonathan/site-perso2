@@ -41,7 +41,7 @@ class CommentList extends Component {
     )
   });
     return (
-      <div>
+      <div style={{textAlign:'center',margin:'auto'}} >
       {commentsNodes}
       </div>
     );
