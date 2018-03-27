@@ -1,15 +1,7 @@
 module.exports.article = {
   content: `
   <style>
-  h2 {
-    font-size: 1.4em;
-    font-weight:900,
-  }
-
-  img {
-    width:100%;
-    height:auto;
-  }
+  
   </style>
 
   <p>Si vous utilisez Slack pour communiquer au sein de votre entreprise vous êtes probablement déjà au courant des possibilités qu'offre cette application en matière de messages automatisés.
