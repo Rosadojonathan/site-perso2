@@ -6157,6 +6157,14 @@ react-event-listener@^0.5.1:
     prop-types "^15.6.0"
     warning "^3.0.0"
 
+react-google-invisible-recaptcha@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/react-google-invisible-recaptcha/-/react-google-invisible-recaptcha-0.2.6.tgz#86ad16e50910a332075a9bd28886ec4f7ae336ec"
+  dependencies:
+    prop-types "^15.6.0"
+    react "^16.0.0"
+    uuid "^3.1.0"
+
 react-google-tag-manager@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/react-google-tag-manager/-/react-google-tag-manager-2.2.1.tgz#b0659c7b19d9263c7cb45d3c019f506529af9077"
@@ -6269,7 +6277,7 @@ react-transition-group@^1.2.1:
     prop-types "^15.5.6"
     warning "^3.0.0"
 
-react@^16.2.0:
+react@^16.0.0, react@^16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
   dependencies:

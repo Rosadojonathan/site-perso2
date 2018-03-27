@@ -1,38 +1,25 @@
 import React, { Component } from 'react';
 import trim from 'trim';
 import {Textfield,CardTitle,Button } from 'react-mdl';
+import Recaptcha from 'react-google-invisible-recaptcha';
 
 class CommentBox extends Component {
   constructor(props){
     super(props);
     this.onKeyup = this.onKeyup.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       comment: '',
       name:''
 
     };
 
+
   }
 
   onSubmit = () => {
     if (this.state.name && this.state.comment){
-
-      this.setState({message:'',name:'', bgColor:'green',msgSend:true})
-      let date = new Date().toLocaleString()
-
-      let dbCon = this.props.db.database().ref(`articles/${decodeURIComponent(window.location.pathname.split('/')[2])}`);
-      dbCon.push({
-        comment: trim(this.state.comment),
-        name:trim(this.state.name),
-        date: date
-      });
-      this.setState({
-        comment: '',
-        name:'',
-
-      });
-
-      setTimeout(()=> this.setState({bgColor:'',msgSend:false}),1200)
+      this.recaptcha.execute();
     }
     else {
       alert("Remplissez tous les champs s'il vous plaît")
@@ -43,26 +30,37 @@ class CommentBox extends Component {
   onKeyup(e){
     if(e.keyCode === 13 && trim(e.target.value) !== '' && this.state.name){
       e.preventDefault();
-      let date = new Date().toLocaleString()
-      let dbCon = this.props.db.database().ref(`articles/${decodeURIComponent(window.location.pathname.split('/')[2])}`);
-      dbCon.push({
-        comment: trim(e.target.value),
-        name:trim(this.state.name),
-        date: date
-      });
-      this.setState({
-        comment: '',
-        name:'',
-        bgColor:'green',
-        msgSend:true
-      });
-      setTimeout(()=> this.setState({bgColor:'',msgSend:false}),1200)
+      this.recaptcha.execute();
     }
+  }
+
+
+
+
+  handleSubmit(){
+
+    let date = new Date().toLocaleString()
+    let dbCon = this.props.db.database().ref(`articles/${decodeURIComponent(window.location.pathname.split('/')[2])}`);
+    dbCon.push({
+      comment: trim(this.state.comment),
+      name:trim(this.state.name),
+      date: date
+    });
+    this.setState({message:'',name:'', bgColor:'green',msgSend:true})
+    this.setState({
+      comment: '',
+      name:'',
+
+    });
+
+    setTimeout(()=> this.setState({bgColor:'',msgSend:false}),1200)
+
   }
 
   render() {
     let bgColor = this.state.bgColor ? this.state.bgColor : '';
     let message = this.state.msgSend ? "✔" : "Envoyer";
+
     return (
 
         <div>
@@ -94,6 +92,10 @@ class CommentBox extends Component {
                   />
                   <br/>
         <Button id='contact-form' raised colored ripple style={{backgroundColor:bgColor}} onClick={() => this.onSubmit()} > {message}</Button>
+        <Recaptcha
+          ref={ ref => this.recaptcha = ref }
+          sitekey="6LfDTE8UAAAAAA-2-bFtrk5cFi3pQMh2SiWh2cDj"
+          onResolved={ this.handleSubmit } />
 
        </div>
       // </form>

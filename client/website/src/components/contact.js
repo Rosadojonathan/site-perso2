@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Helmet} from 'react-helmet';
 import { Grid,Cell,Textfield,Button} from 'react-mdl';
 import axios from 'axios';
+import Recaptcha from 'react-google-invisible-recaptcha';
 
 import Chatbot from './chatbot';
 
@@ -15,21 +16,23 @@ class Contact extends Component {
 
  onSubmit = () => {
    if (this.state.name && this.state.email && this.state.message){
-     console.log(this.state);
 
-     this.setState({email: '',message:'',name:'', bgColor:'green',msgSend:true})
-     this.handleSubmit();
-     setTimeout(()=> this.setState({bgColor:'',msgSend:false}),1200)
+     this.recaptcha.execute();
+
    }
    else {
-     alert("Remplissez tous les champs s'il vous plaît")
+     alert("Remplissez tous les champs s'il vous plaît");
+     this.recaptcha.reset();
    }
  }
 
   handleSubmit = async () => {
 
-
    const { name, email, message } = this.state;
+
+   this.setState({email: '',message:'',name:'', bgColor:'green',msgSend:true})
+   setTimeout(()=> this.setState({bgColor:'',msgSend:false}),1200)
+
 
    const form = await axios.post('/contactform', {
      name,
@@ -38,11 +41,14 @@ class Contact extends Component {
    })
 
 
+
  }
 
  showChatbot = () => {
    this.setState({showChatbot:true})
  }
+
+
 
   render() {
 
@@ -108,6 +114,10 @@ class Contact extends Component {
 
             <br/>
         <Button id='contact-form' raised colored ripple style={{backgroundColor:bgColor}} onClick={() => this.onSubmit()} > {message}</Button>
+        <Recaptcha
+          ref={ ref => this.recaptcha = ref }
+          sitekey="6LfDTE8UAAAAAA-2-bFtrk5cFi3pQMh2SiWh2cDj"
+          onResolved={ this.handleSubmit } />
 
           <br/>
           <br/>

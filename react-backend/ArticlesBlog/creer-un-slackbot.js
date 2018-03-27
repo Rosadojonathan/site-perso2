@@ -9,6 +9,7 @@ module.exports.article = {
     h2 {
       font-size: 1.6em;
       font-weight:bold;
+
     }
     p {
       font-size: 1.1em;
