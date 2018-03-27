@@ -11,7 +11,7 @@ module.exports.article = {
       font-weight:bold;
     }
     p {
-      font-size: 1em;
+      font-size: 1.1em;
     }
 
     img {
