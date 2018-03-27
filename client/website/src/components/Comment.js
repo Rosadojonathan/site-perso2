@@ -5,8 +5,8 @@ class Comment extends Component {
 
   render() {
     return (
-      <div style={{padding:'2em 2em',textAlign:'center'}}>
-        <Card shadow={5} style={{margin:'auto',backgroundColor:'#fdfdfb',width:'380px'}} >
+      <div style={{padding:'2em 0em',textAlign:'center'}}>
+        <Card shadow={5} style={{margin:'auto',backgroundColor:'#fdfdfb',width:'100%'}} >
           <CardTitle style={{color:'black',fontWeight:'bold',fontSize:'16px'}} > {this.props.name}</CardTitle>
           <CardText style={{color:'black',fontSize:'1em'}}>
 
