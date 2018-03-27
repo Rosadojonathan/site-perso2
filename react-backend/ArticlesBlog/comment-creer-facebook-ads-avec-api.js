@@ -287,16 +287,23 @@ module.exports.article =  {
   </pre></div>
 
   <style>
+    h1 {
+      font-size: 1.9em;
+      font-weight: bold;
+    }
 
-  h2   {
-    font-size: 1.4em;
-    font-weight:900,
-  }
-  img {
-    width:90%;
-    height:auto;
-  }
-  
+    h2 {
+      font-size: 1.6em;
+      font-weight:bold;
+    }
+    p {
+      font-size: 1.1em;
+    }
+
+    img {
+      width:100%;
+      height:auto;
+    }
 
   </style>
 

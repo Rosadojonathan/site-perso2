@@ -1,16 +1,23 @@
 module.exports.article = {
   content: `
   <style>
+    h1 {
+      font-size: 1.9em;
+      font-weight: bold;
+    }
 
-  h2   {
-    font-size: 1.4em;
-    font-weight:900,
-  }
-  img {
-    width:90%;
-    height:auto;
-  }
+    h2 {
+      font-size: 1.6em;
+      font-weight:bold;
+    }
+    p {
+      font-size: 1.1em;
+    }
 
+    img {
+      width:90%;
+      height:auto;
+    }
   </style>
 
   <p>Les Tableaux Croisés Dynamiques sont les meilleurs amis des SEA Managers. En quelques clics vous pouvez en sortir des insights précieux. Dans cet article, j'explique comment déterminer les horaires / jours de la semaine et meilleurs appareils en termes de coûts d'acquisition sur votre compte AdWords grâce à Excel.</p>
