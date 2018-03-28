@@ -14,7 +14,7 @@ const url = `mongodb://${passwords.user}:${passwords.password}@ds115729.mlab.com
 
 
 
-router.post('/', function(req, res, next) {
+router.get('/', function(req, res, next) {
 
   const article = req.body.currentArticle;
   const email = req.body.email;
@@ -27,11 +27,13 @@ router.post('/', function(req, res, next) {
     collection.insert({email:email,article:article})
 
     console.log('user added to newsletter db')
+    mongo.close();
+
+    res.sendStatus(200).send('all ok');
+
   })
 
-  mongo.close();
 
-  res.sendStatus(200).send('all ok');
 
 
 });
