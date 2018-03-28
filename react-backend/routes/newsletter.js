@@ -14,7 +14,7 @@ const url = `mongodb://${passwords.user}:${passwords.password}@ds115729.mlab.com
 
 
 
-router.get('/', function(req, res, next) {
+router.post('/', function(req, res, next) {
 
   const article = req.body.currentArticle;
   const email = req.body.email;
