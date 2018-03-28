@@ -13,7 +13,7 @@ class SignupForm extends Component {
 
   }
 
-  onSend = () => {
+  onSend = async () => {
     if (this.state.email && this.state.email.includes('@')){
       const currentArticle = encodeURIComponent(window.location.pathname.split('/')[2]);
       const email = this.state.email;
@@ -24,14 +24,9 @@ class SignupForm extends Component {
       setTimeout(()=> this.setState({bgColor:'#990000',msgSend:false}),1200)
 
 
-      axios.post('/newsletter', {
+      var data = await axios.post('/newsletter', {
         email,
         currentArticle
-      }).then(response => {
-        console.log(response)
-      })
-      .catch(error => {
-        console.log(error.response);
       })
 
     }
