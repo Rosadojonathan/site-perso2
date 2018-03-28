@@ -27,7 +27,8 @@ router.post('/', function(req, res, next) {
     collection.insert({email:email,article:article})
 
     console.log('user added to newsletter db')
-    
+
+
 
 
 
