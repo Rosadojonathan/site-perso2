@@ -65,7 +65,7 @@ class CommentBox extends Component {
 
   render() {
     let bgColor = this.state.bgColor ? this.state.bgColor : '';
-    let message = this.state.msgSend ? "✔" : "Envoyer";
+    let message = this.state.msgSend ? "✔" : "Commenter";
 
     return (
 

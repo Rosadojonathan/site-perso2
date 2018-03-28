@@ -4,6 +4,7 @@ import { Grid, Cell,Textfield, Card} from 'react-mdl';
 import CommentList from './CommentList';
 import CommentBox from './CommentBox';
 import LikeCounter from './LikeCounter';
+import SignupForm from './SignupForm';
 import * as firebase from 'firebase';
 
 import firebasecredentials from '../firebasecredentials';
@@ -79,6 +80,12 @@ componentDidMount(){
               <h1>{this.state.article[0].title}</h1>
 
               <p dangerouslySetInnerHTML={{__html: this.state.article[0].content}} />
+            </Cell>
+            <Cell col={3}>
+
+              <SignupForm />
+
+
             </Cell>
 
             <Cell col={9}>
