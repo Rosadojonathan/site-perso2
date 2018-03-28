@@ -42,7 +42,7 @@ app.get('/blog/:whatever', (req,res) => {
 });
 
 app.use('/', (req,res) => {
-  res.sendFile(path.join(__dirname,'../client/website/build/static/index.html'));
+  res.sendFile(path.join(__dirname,'../client/website/build/index.html'));
 });
 
 
@@ -68,4 +68,4 @@ app.use(function(err, req, res, next) {
 
 });
 
-module.exports = app;
+module.exports = app;;
