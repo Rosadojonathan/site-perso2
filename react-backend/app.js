@@ -10,6 +10,7 @@ var posts = require('./routes/posts');
 var articles = require('./routes/articles');
 var contactform = require('./routes/contact-form');
 var recaptcha = require('./routes/recaptcha');
+var newsletter = require('./routes/newsletter');
 
 const articlesDB = require('./filesystem/articlesDB').articlesDB;
 
@@ -35,6 +36,7 @@ app.use('/posts', posts);
 app.use('/articles',articles);
 app.use('/contactform',contactform);
 app.use('/api/recaptcha',recaptcha);
+app.use('/api/newsletter',newsletter);
 app.get('/blog/:whatever', (req,res) => {
   res.sendFile(path.join(__dirname, '../client/website/build/index.html'));
 });
