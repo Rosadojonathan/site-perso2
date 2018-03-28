@@ -42,9 +42,6 @@ class Contact extends Component {
      email,
      message,
    })
-
-
-
  }
 
  showChatbot = () => {
@@ -64,8 +61,8 @@ componentWillMount(){
 
   render() {
 
-    let bgColor = this.state.bgColor ? this.state.bgColor : '';
-    let message = this.state.msgSend ? "✔" : "Envoyer";
+    const bgColor = this.state.bgColor ? this.state.bgColor : '';
+    const message = this.state.msgSend ? "✔" : "Envoyer";
     return (
   <div style={{width:'100%',margin:'auto'}}>
     <Helmet>
