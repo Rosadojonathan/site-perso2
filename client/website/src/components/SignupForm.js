@@ -27,8 +27,12 @@ class SignupForm extends Component {
       axios.post('/api/newsletter', {
         email,
         currentArticle
+      }).then(response => {
+        console.log(response)
       })
-
+      .catch(error => {
+        console.log(error.response);
+      })
 
     }
   }
