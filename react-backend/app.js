@@ -36,7 +36,7 @@ app.use('/posts', posts);
 app.use('/articles',articles);
 app.use('/contactform',contactform);
 app.use('/api/recaptcha',recaptcha);
-app.use('/api/newsletter',newsletter);
+app.use('/newsletter',newsletter);
 app.get('/blog/:whatever', (req,res) => {
   res.sendFile(path.join(__dirname, '../client/website/build/index.html'));
 });

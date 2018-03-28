@@ -24,7 +24,7 @@ class SignupForm extends Component {
       setTimeout(()=> this.setState({bgColor:'#990000',msgSend:false}),1200)
 
 
-      axios.post('/api/newsletter', {
+      axios.post('/newsletter', {
         email,
         currentArticle
       }).then(response => {
