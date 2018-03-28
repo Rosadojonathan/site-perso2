@@ -27,13 +27,14 @@ router.post('/', function(req, res, next) {
     collection.insert({email:email,article:article})
 
     console.log('user added to newsletter db')
-    mongo.close();
+    
 
-    res.sendStatus(200).send('all ok');
+
 
   })
 
 
+    res.sendStatus(200).send('all ok');
 
 
 });
