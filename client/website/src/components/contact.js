@@ -29,6 +29,9 @@ class Contact extends Component {
   handleSubmit = async () => {
 
    const { name, email, message } = this.state;
+   localStorage.setItem('name',JSON.stringify(this.state.name))
+   localStorage.setItem('email',JSON.stringify(this.state.email))
+
 
    this.setState({email: '',message:'',name:'', bgColor:'green',msgSend:true})
    setTimeout(()=> this.setState({bgColor:'',msgSend:false}),1200)
@@ -48,6 +51,15 @@ class Contact extends Component {
    this.setState({showChatbot:true})
  }
 
+componentWillMount(){
+  localStorage.getItem('name') && this.setState({
+    name: JSON.parse(localStorage.getItem('name'))
+  })
+
+  localStorage.getItem('email') && this.setState({
+    email: JSON.parse(localStorage.getItem('email'))
+  })
+}
 
 
   render() {

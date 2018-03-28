@@ -31,6 +31,7 @@ class CommentBox extends Component {
     if(e.keyCode === 13 && trim(e.target.value) !== '' && this.state.name){
       e.preventDefault();
       this.recaptcha.execute();
+
     }
   }
 
@@ -41,6 +42,7 @@ class CommentBox extends Component {
 
     let date = new Date().toLocaleString()
     let dbCon = this.props.db.database().ref(`articles/${decodeURIComponent(window.location.pathname.split('/')[2])}`);
+    localStorage.setItem('name',JSON.stringify(this.state.name))
     dbCon.push({
       comment: trim(this.state.comment),
       name:trim(this.state.name),
@@ -55,6 +57,10 @@ class CommentBox extends Component {
 
     setTimeout(()=> this.setState({bgColor:'',msgSend:false}),1200)
 
+  }
+
+  componentWillMount(){
+    localStorage.getItem('name') && this.setState({name: JSON.parse(localStorage.getItem('name'))})
   }
 
   render() {
