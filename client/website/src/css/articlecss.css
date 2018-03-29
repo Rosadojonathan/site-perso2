@@ -9,3 +9,11 @@ h1 {
 #commentaires {
   text-align: center;
 }
+
+
+@media (min-width: 800px){
+
+#signupform {
+  width:95%;
+}
+}

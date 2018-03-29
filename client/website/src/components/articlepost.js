@@ -81,7 +81,7 @@ componentDidMount(){
 
               <p dangerouslySetInnerHTML={{__html: this.state.article[0].content}} />
             </Cell>
-            <Cell col={3}>
+            <Cell id='signupform' col={3}>
 
               <SignupForm />
 
