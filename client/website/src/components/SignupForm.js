@@ -15,7 +15,7 @@ class SignupForm extends Component {
 
   onSend = async () => {
     if (this.state.email && this.state.email.includes('@')){
-      const currentArticle = encodeURIComponent(window.location.pathname.split('/')[2]);
+      const currentArticle = decodeURIComponent(window.location.pathname.split('/')[2]);
       const email = this.state.email;
       localStorage.setItem('email',JSON.stringify(this.state.email));
       localStorage.setItem('signedUp',true);
