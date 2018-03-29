@@ -30,9 +30,9 @@ class Article extends Component {
       <Cell col={9} style={{padding:'8px'}}>
         {/* <Link to={`/blog/${this.props.linkTitle}`} > */}
         <a href={`/blog/${this.props.linkTitle}`} style={{textDecoration:'none'}}>
-          <Card shadow={5} onMouseEnter={this.onHover} onMouseLeave={this.onHover} style={{width:'95%',margin:'auto',maxHeight:'280px',backgroundColor: this.state.coloredArticle ? '#E0F2F1' : ''}}>
+          <Card shadow={5} onMouseEnter={this.onHover} onMouseLeave={this.onHover} style={{width:'95%',margin:'auto',maxHeight:'280px',backgroundColor: this.state.coloredArticle ? '#D7F8E3' : ''}}>
 
-              <CardTitle style={{color:'black',maxHeight:'90px',marginTop:'15px'}}><h2 style={{fontSize:'1.6em',lineHeight:'0.9em',fontWeight:'bold',color: this.state.coloredArticle ? 'black' : ''}}>{this.props.cardTitle}</h2></CardTitle>
+              <CardTitle style={{color:'black',maxHeight:'90px',marginTop:'15px'}}><h2 style={{fontSize:'1.6em',lineHeight:'0.9em',fontWeight:'bold',color: this.state.coloredArticle ? '#082008' : ''}}>{this.props.cardTitle}</h2></CardTitle>
               <CardText style={{maxHeight:'150px',color: this.state.coloredArticle ? 'black' : ''}} > { this.props.cardText.length > 350 ? this.props.cardText.substr(0,347) + '...' : this.props.cardText}</CardText>
 
           </Card>
