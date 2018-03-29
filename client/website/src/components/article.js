@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import {Cell, Card, CardTitle,CardText, Link} from 'react-mdl';
 
-import '../css/article.css';
+import '../css/articlecss.css';
 
 
 
