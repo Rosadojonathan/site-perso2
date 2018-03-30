@@ -33,7 +33,7 @@ componentDidMount(){
 
  let  handle = this.props.match.params.article;
 
-  console.log(handle);
+
 
   fetch(`/articles/${handle}`)
   .then(res => res.json())
@@ -51,7 +51,7 @@ componentDidMount(){
 
 
   render() {
-    console.log(this.state.article);
+
 
 
     if (this.state.loaded){
