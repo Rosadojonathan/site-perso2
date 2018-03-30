@@ -40,6 +40,9 @@ app.use('/newsletter',newsletter);
 app.get('/blog/:whatever', (req,res) => {
   res.sendFile(path.join(__dirname, '../client/website/build/index.html'));
 });
+app.use('/robots.txt', (req,res) => {
+  res.sendFile(path.join(__dirname,'../client/website/build/robots.txt'));
+});
 
 app.use('/', (req,res) => {
   res.sendFile(path.join(__dirname,'../client/website/build/index.html'));
