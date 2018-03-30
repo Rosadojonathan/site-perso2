@@ -71,7 +71,7 @@ function onListening() {
 var fs = require('fs');
 var https = require('https');
 var http_port = normalizePort(process.env.PORT || '8080');
-var https_port    =   process.env.PORT_HTTPS || 443; 
+var https_port    =   process.env.PORT_HTTPS || 1337; 
 var options = {
  key  : fs.readFileSync('./sslcert/privkey.pem'),
  cert : fs.readFileSync('./sslcert/fullchain.pem')
