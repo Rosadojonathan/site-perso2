@@ -6,7 +6,7 @@ class Chatbot extends Component {
   render() {
     return (
       <div >
-        <iframe style={{width:'100%',height:'700px'}}  src="https://landbot.io/u/H-33762-YWNLL9YTF1WXRRLI/index.html" frameborder="0"></iframe>
+        <iframe id="landbotIoIframe" style={{width:'100%',height:'700px'}}  src="https://landbot.io/u/H-33762-YWNLL9YTF1WXRRLI/index.html" frameborder="0"></iframe>
       </div>
     );
   }
