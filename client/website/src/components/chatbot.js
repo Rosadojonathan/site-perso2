@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../App.css';
 
 class Chatbot extends Component {
  //var widget = '<div style="width: 100%; height:600px; position: relative; overflow: hidden;"><iframe width="100%" height="100%" frameborder="0" src=""></iframe></div>'

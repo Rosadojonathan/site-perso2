@@ -46,6 +46,11 @@ class Contact extends Component {
 
  showChatbot = () => {
    this.setState({showChatbot:true})
+   setTimeout(function(){
+    var btnLandbotIo =  document.querySelector('#hu-footer > div > p > a');
+     btnLandbotIo.style.display = 'none';
+   }, 2000);
+
  }
 
 componentWillMount(){
