@@ -6,13 +6,13 @@ import App from './App';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import { BrowserRouter } from 'react-router-dom';
-import TagManager from 'react-gtm-module';
-
-const tagManagerArgs = {
-  gtmId: 'GTM-WQ35TQS'
-}
-
-TagManager.initialize(tagManagerArgs)
+// import TagManager from 'react-gtm-module';
+//
+// const tagManagerArgs = {
+//   gtmId: 'GTM-WQ35TQS'
+// }
+// 
+// TagManager.initialize(tagManagerArgs)
 
 ReactDOM.render(
 <BrowserRouter>
