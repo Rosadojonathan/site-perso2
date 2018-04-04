@@ -59,7 +59,7 @@ class SignupForm extends Component {
             />
             <br/>
             <br/>
-        <Button raised colored ripple style={{backgroundColor:bgColor}} onClick={() => this.onSend()} > {message}</Button>
+        <Button id="signup" raised colored ripple style={{backgroundColor:bgColor}} onClick={() => this.onSend()} > {message}</Button>
 
 
       </div>
