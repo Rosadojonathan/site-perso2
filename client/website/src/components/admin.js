@@ -9,7 +9,6 @@ class Admin extends Component {
   render() {
     return (
       <div>
-        <div>What's up boss ?</div>
         <Textfield
           name="text"
           label="Input text..."
@@ -20,6 +19,7 @@ class Admin extends Component {
           floatingLabel
           style={{ width: "400px" }}
         />
+
         <div>
           This is a div and the text written in the input is: {this.state.text}
         </div>
