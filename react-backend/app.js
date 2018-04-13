@@ -19,11 +19,11 @@ const articlesDB = require("./filesystem/articlesDB").articlesDB;
 const app = express();
 const limiter = require("express-limiter")(app, redisClient);
 limiter({
-  path: "*",
-  method: "all",
+  path: "/",
+  method: "get",
   lookup: "headers.x-forwarded-for",
-  total: 10,
-  expire: 1000 * 60 * 60
+  total: 150,
+  expire: 1000 * 60 * 5
 });
 
 // view engine setup
