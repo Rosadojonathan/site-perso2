@@ -26,10 +26,12 @@ module.exports.article = {
   <br>
   <h2>1) Automatisez des tâches chronophages</h2>
 
-  <p>C'est le premier avantage évident. En apprenant à coder vous pouvez facilement créer un <b>script qui exécute automatiquement des tâches à votre place</b>. Vous récupérez quotidiennement des données d'un site internet ? Un scraper de contenu est facile à mettre en place en Python, ce programme ira visiter les pages internet que vous lui spécifiez pour récupérer les informations vous intéressant, vous récupérerez ensuite les résultats sous forme de CSV ou toute autre format vous convenant.
-  Vous créez des publicités manuellement ? Facebook et AdWords mettent des API à disposition des marketers pour qu'ils puissent automatiser ces tâches là, j'en parle notamment dans mon article sur <a href="creer-facebook-ads-avec-api">l'automatisation des Facebook Ads</a>. Vous en avez marre de faire du reporting pendant des heures ?
-  Encore une fois, les API existent pour que vous puissiez rapidement récupérer les données qui vous intéressent.
-  </p>
+
+  <p>C'est le premier avantage évident. En apprenant à coder vous pouvez facilement créer un <b>script qui exécute automatiquement des tâches à votre place</b>.</p>
+  <p>Vous récupérez quotidiennement des données d'un site internet ? Un scraper de contenu est facile à mettre en place en Python, ce programme ira visiter les pages internet que vous lui spécifiez pour récupérer les informations qui vous intéressent, vous récupérerez ensuite les résultats sous forme de CSV ou toute autre format qui vous convient. </p>
+  <p>Vous créez des publicités manuellement ? Facebook et AdWords mettent des API à disposition des marketers pour qu'ils puissent automatiser ces tâches là, j'en parle notamment dans mon article sur <a href="/creer-facebook-ads-avec-api">l'automatisation des Facebook Ads</a>.</p>
+  <p> Vous en avez marre de faire du reporting pendant des heures ?
+  Encore une fois, les API existent pour que vous puissiez rapidement récupérer les données qui vous intéressent.</p>
 
 
   <h2>2) Améliorez votre communication avec les développeurs</h2>
@@ -50,7 +52,7 @@ module.exports.article = {
   <p>Lorsque j'étais en stage et chargé de l'ouverture de produits dans le backoffice d'un site e-commerce, mes compétences naissantes en code m'avaient permis de détecter une opportunité d'automatisation simple à mettre en place que je n'aurais pas remarqué autrement.
   En effet, les détails des fiches produits à ouvrir nous étaient transmises par un Google Sheets. Il fallait donc que je recopie manuellement ces informations dans back-office du site pour pouvoir créer la fiche produit. C'était une perte de temps d'une dizaine de minutes à chaque fois à cause des divers aller-retours pour vérifier les informations. Et malgré tout, pas une semaine ne passait sans qu'il n'y ait une petite erreur sur des fiches produits. Heureusement, je m'étais déjà amusé avec l'API Google Sheets et je savais qu'il était possible de récupérer les informations de manière automatisée tant qu'un template était respecté. Je savais donc comment récupérer les données, il ne me restait plus qu'à savoir comment les incorporer automatiquement dans le BO du site. La solution que à laquelle j'avais pensé était d'automatiser le navigateur pour qu'il remplisse les formulaires du BO à ma place, je savais que c'était techniquement assez simple à mettre en place. En discutant avec un collègue plus techniquement expérimenté j'ai appris qu'il était beaucoup plus facile de profiter des API de notre site et de lui envoyer les données que j'avais récupéré sous un certain format pour que la fiche soit automatiquement créé.
   </p>
-  <p>Résultats ? Ce qui nous prennait une dizaine de minutes à chaque fois était fait automatiquement en une dizaine de secondes et avec moins d'erreurs.</p>
+  <p>Résultats ? Ce qui nous prennait une <b> dizaine de minutes à chaque fois est dorénavant fait automatiquement en une dizaine de secondes et avec moins d'erreurs.</b></p>
 
   <h2>4) Prototypez rapidement vos idées</h2>
 
@@ -119,9 +121,11 @@ module.exports.article = {
   <p>Grâce à une interface interactive vous voyez en direct les résultats des exercices que vous codez et le site vous corrige lorsque vous commettez des erreurs.</p>
   <img src="https://i.ytimg.com/vi/YMw293DELs0/maxresdefault.jpg" alt="codecademy">
 
+
   <br />
   <p><a href="https://www.freecodecamp.org/">FreeCodeCamp</a> vous apprendra à résoudre des problèmes par vous mêmes, en effet il vous tient bien moins par la main que Codecademy. Lors du parcours FreeCodeCamp vous apprendrez le JavaScript côté Front-end et Back-end. </p>
   <img src="https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/540/173/540173-edb33c4f1722ac3202e2d949b49401e74a73de53.png?1434260165" alt="freecodecamp">
+
 
   <br />
   <p><a href="https://www.datacamp.com/">DataCamp</a> pour ceux qui sont intéressés par l'analyse de données et le Machine Learning en Python. Vous apprendrez de bonnes bases mais n'hésitez pas à appliquer ce que vous apprenez dans vos projets persos car le site tient un peu trop ses élèves par la main, tout comme Codecademy malheureusement.</p>
