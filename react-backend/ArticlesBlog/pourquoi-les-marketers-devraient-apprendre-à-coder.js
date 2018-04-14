@@ -55,7 +55,7 @@ module.exports.article = {
   <h2>4) Prototypez rapidement vos idées</h2>
 
   <p>Vous avez une intuition qui vous dit que rajouter une certaine feature à votre site vous permettrait d'obtenir plus de conversions ? Mais vous ne savez pas coder, donc vous allez être obligé de demander à votre développeur de le faire pour vous. Ca pourrait être une feature rapide à coder, mais votre développer a un pipe surchargé. Il ne pourra pas s'en occuper avant la semaine prochaine.
-  Résultats ? Vous perdez 5 jours précieux à attendre pour une tâche qui peut être en une dizaine de minutes. En développant vos compétences en code vous réduirez considérablement le temps entre l'idée et son exécution.
+  Résultats ? Vous perdez 5 jours précieux à attendre pour une tâche qui peut être faite en une dizaine de minutes. En développant vos compétences en code vous réduirez considérablement le délai entre l'idée et son exécution.
   </p>
 
 
@@ -66,7 +66,7 @@ module.exports.article = {
   <p>D'une part, en apprenant le JavaScript vous comprendrez comment sont collectées les données qui s'affichent dans Google Analytics, à quoi elles font exactement référence et pourquoi elles sont parfois incorrectes.</p>
   <br>
   <p>D'autre part, grâce à des langages comme Python vous pourrez améliorer l'efficacité de votre processus d'analyse de données.
-  Python est en effet un langage fantastique qui vous permet de réaliser de nombreuses tâches rapidement et simplement. Il comporte de nombreuses librairies comme <a href="https://pandas.pydata.org/">Pandas</a>  ou <a href="http://www.numpy.org/">Numpy</a> pour analyser des volumes de données conséquents. </p>
+  Python est en effet un langage fantastique qui vous permet de réaliser de nombreuses tâches rapidement et simplement. Il bénéficie de nombreuses librairies comme <a href="https://pandas.pydata.org/">Pandas</a>  ou <a href="http://www.numpy.org/">Numpy</a> pour analyser des volumes de données conséquents. </p>
   <p>Vous pourrez facilement vérifier si des données sont corrélées. Exemple ici avec une heatmap créé à partir de deux lignes de code en Python</p>
   <br>
   <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">sns</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">heatmap(data</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">corr(),cmap</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;Greens&#39;</span><span style="color: #f8f8f2">)</span>
@@ -119,9 +119,11 @@ module.exports.article = {
   <p>Grâce à une interface interactive vous voyez en direct les résultats des exercices que vous codez et le site vous corrige lorsque vous commettez des erreurs.</p>
   <img src="https://i.ytimg.com/vi/YMw293DELs0/maxresdefault.jpg" alt="codecademy">
 
+  <br />
   <p><a href="https://www.freecodecamp.org/">FreeCodeCamp</a> vous apprendra à résoudre des problèmes par vous mêmes, en effet il vous tient bien moins par la main que Codecademy. Lors du parcours FreeCodeCamp vous apprendrez le JavaScript côté Front-end et Back-end. </p>
   <img src="https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/540/173/540173-edb33c4f1722ac3202e2d949b49401e74a73de53.png?1434260165" alt="freecodecamp">
 
+  <br />
   <p><a href="https://www.datacamp.com/">DataCamp</a> pour ceux qui sont intéressés par l'analyse de données et le Machine Learning en Python. Vous apprendrez de bonnes bases mais n'hésitez pas à appliquer ce que vous apprenez dans vos projets persos car le site tient un peu trop ses élèves par la main, tout comme Codecademy malheureusement.</p>
   <img src="http://community.datacamp.com.s3.amazonaws.com/community/production/ckeditor_assets/pictures/84/content_screenshot_2016-07-15_11_33_05.png" alt="datacamp python">
 `
