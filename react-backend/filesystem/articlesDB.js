@@ -18,7 +18,7 @@ module.exports.articlesDB = [
 
   {
     id: 2,
-    path: "comment-créer-un-slackbot",
+    path: "comment-creer-un-slackbot",
     title: "Comment créer un Slackbot ?",
     description: `Si vous utilisez Slack pour communiquer au sein de votre entreprise vous êtes probablement déjà au courant des possibilités qu'offre cette application en matière de messages automatisés.Il est très facile de plugger Slack à des applications de IFTTT comme Zapier pour automatiser l'envoi de messages dépendant de déclencheurs simples tels qu'un flux RSS ou des cartes Trello.
 Mais peut-être que vous désirez connecter un élément déclencheur qui n'est pas proposé par votre service d'IFTTT. Heureusement, il est extrêmement simple de créer son propre Slackbot.`,
@@ -27,7 +27,7 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
 
   {
     id: 3,
-    path: "tableaux-croisés-dynamiques-et-sea",
+    path: "tableaux-croises-dynamiques-et-sea",
     title:
       "Améliorez l'analyse de vos campagnes AdWords grâce aux Tableaux Croisés Dynamiques",
     description: `Les Tableaux Croisés Dynamiques sont les meilleurs amis des SEA Managers. En quelques clics vous pouvez en sortir des insights précieux. Dans cet article, j'explique comment déterminer les horaires / jours de la semaine et meilleurs appareils en termes de coûts d'acquisition sur votre compte AdWords grâce à Excel.`,
@@ -35,7 +35,7 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
   },
   {
     id: 4,
-    path: "pourquoi-les-marketers-devraient-apprendre-à-coder",
+    path: "pourquoi-les-marketers-devraient-apprendre-a-coder",
     title: "Pourquoi les Marketers devraient apprendre à coder ?",
     description: `Coder ne devrait pas être l'apanage des développeurs, cette compétence a ses avantages à tous les niveaux d'une entreprise et notamment pour le marketing. Développer une double-compétence peut être le meilleur choix que vous ayez fait cette année... `,
     content: `${marketersCode.content}`
