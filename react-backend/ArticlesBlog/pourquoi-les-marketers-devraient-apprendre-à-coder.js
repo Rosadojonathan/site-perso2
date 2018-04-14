@@ -1,16 +1,23 @@
 module.exports.article = {
   content: `
   <style>
+    h1 {
+      font-size: 1.9em;
+      font-weight: bold;
+    }
 
-  h2   {
-    font-size: 1.4em;
-    font-weight:900,
-  }
-  img {
-    width:90%;
-    height:auto;
-  }
+    h2 {
+      font-size: 1.6em;
+      font-weight:bold;
+    }
+    p {
+      font-size: 1.1em;
+    }
 
+    img {
+      width:90%;
+      height:auto;
+    }
   </style>
 
   <p>Coder ne devrait pas être l'apanage des développeurs, cette compétence a ses avantages à tous les niveaux d'une entreprise et notamment pour le marketing. Développer une double-compétence peut être le meilleur choix que vous ayez fait cette année... </p>
