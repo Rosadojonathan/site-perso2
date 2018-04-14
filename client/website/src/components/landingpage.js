@@ -76,7 +76,7 @@ class Landing extends Component {
             <h3>Articles récents...</h3>
             <br />
             <div className="projects-grid">
-              {this.state.postsHome.slice(-3).map(post => (
+              {this.state.postsHome.slice(0, 3).map(post => (
                 <Card
                   key={post.id}
                   shadow={5}
