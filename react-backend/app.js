@@ -39,6 +39,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static("static"));
 app.use(express.static(`${__dirname}/../client/website/build`));
+// app.use(
+//   require("prerender-node").set("prerenderToken", "ZXkgVzlyxjh1bS5BJ3ck")
+// );
 
 app.use("/posts", posts);
 app.use("/articles", articles);
