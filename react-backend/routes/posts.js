@@ -12,9 +12,11 @@ const articlesDB = require("../filesystem/articlesDB").articlesDB;
 /* GET users listing. */
 router.get("/", function(req, res, next) {
   res.json(
-    articlesDB.sort(function(a, b) {
-      return b.id - a.id;
-    })
+    articlesDB
+      .sort(function(a, b) {
+        return b.id - a.id;
+      })
+      .slice(0, 3)
   );
 });
 
