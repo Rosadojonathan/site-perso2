@@ -27,7 +27,7 @@ module.exports.article = {
   <h2>1) Automatisez des tâches chronophages</h2>
 
   <p>C'est le premier avantage évident. En apprenant à coder vous pouvez facilement créer un <b>script qui exécute automatiquement des tâches à votre place</b>. Vous récupérez quotidiennement des données d'un site internet ? Un scraper de contenu est facile à mettre en place en Python, ce programme ira visiter les pages internet que vous lui spécifiez pour récupérer les informations vous intéressant, vous récupérerez ensuite les résultats sous forme de CSV ou toute autre format vous convenant.
-  Vous créez des publicités manuellement ? Facebook et AdWords mettent des API à disposition des marketers pour qu'ils puissent automatiser ces tâches là, j'en parle notamment dans mon article sur <a href="/creer-facebook-ads-avec-api">l'automatisation des Facebook Ads</a>. Vous en avez marre de faire du reporting pendant des heures ?
+  Vous créez des publicités manuellement ? Facebook et AdWords mettent des API à disposition des marketers pour qu'ils puissent automatiser ces tâches là, j'en parle notamment dans mon article sur <a href="blog/creer-facebook-ads-avec-api">l'automatisation des Facebook Ads</a>. Vous en avez marre de faire du reporting pendant des heures ?
   Encore une fois, les API existent pour que vous puissiez rapidement récupérer les données qui vous intéressent.
   </p>
 

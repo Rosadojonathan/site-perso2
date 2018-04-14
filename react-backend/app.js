@@ -4,7 +4,7 @@ const favicon = require("serve-favicon");
 const logger = require("morgan");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
-const redisClient = require("redis").createClient();
+// const redisClient = require("redis").createClient();
 
 const index = require("./routes/index");
 const posts = require("./routes/posts");
@@ -17,14 +17,14 @@ const login = require("./routes/login");
 const articlesDB = require("./filesystem/articlesDB").articlesDB;
 
 const app = express();
-const limiter = require("express-limiter")(app, redisClient);
-limiter({
-  path: "/",
-  method: "get",
-  lookup: "headers.x-forwarded-for",
-  total: 150,
-  expire: 1000 * 60 * 5
-});
+// const limiter = require("express-limiter")(app, redisClient);
+// limiter({
+//   path: "/",
+//   method: "get",
+//   lookup: "headers.x-forwarded-for",
+//   total: 150,
+//   expire: 1000 * 60 * 5
+// });
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
