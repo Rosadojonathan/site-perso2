@@ -122,12 +122,12 @@ module.exports.article = {
   <img src="https://i.ytimg.com/vi/YMw293DELs0/maxresdefault.jpg" alt="codecademy">
 
 
-  <br />
+  <br>
   <p><a href="https://www.freecodecamp.org/">FreeCodeCamp</a> vous apprendra à résoudre des problèmes par vous mêmes, en effet il vous tient bien moins par la main que Codecademy. Lors du parcours FreeCodeCamp vous apprendrez le JavaScript côté Front-end et Back-end. </p>
   <img src="https://d2gn4xht817m0g.cloudfront.net/p/product_screenshots/images/original/000/540/173/540173-edb33c4f1722ac3202e2d949b49401e74a73de53.png?1434260165" alt="freecodecamp">
 
 
-  <br />
+  <br>
   <p><a href="https://www.datacamp.com/">DataCamp</a> pour ceux qui sont intéressés par l'analyse de données et le Machine Learning en Python. Vous apprendrez de bonnes bases mais n'hésitez pas à appliquer ce que vous apprenez dans vos projets persos car le site tient un peu trop ses élèves par la main, tout comme Codecademy malheureusement.</p>
   <img src="http://community.datacamp.com.s3.amazonaws.com/community/production/ckeditor_assets/pictures/84/content_screenshot_2016-07-15_11_33_05.png" alt="datacamp python">
 `
