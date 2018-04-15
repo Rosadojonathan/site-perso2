@@ -101,7 +101,7 @@ module.exports.article = {
   <p>Le second langage à apprendre est sans aucun doute <b>JavaScript</b>. C'est LE langage du web par excellence. Tous vos outils de tracking tels que Google Analytics, MixPanel, Hotjar, etc. utilisent JavaScript pour analyser le comportement des internautes. En apprenant ce langage vous serez plus à même de tracker efficacement les métriques qui vous intéressent.</p>
   <p>Si vous êtes un peu ambitieux vous pourrez ensuite vous aventurer dans le domaine des frameworks JavaScript tels que React et Express qui vous permettront de créer le front-end et le back-end d'un site internet moderne, dans un seul et même langage. Et en plus de ça vous serez cools. </p>
 
-  <p>Un langage un peu moins populaire en ce moment mais extrêmement répandu est <b>Php</b>. Si vous utilisez un site WordPress ou une plateforme e-commerce PrestaShop ou Shopify appprendre ce langage vous permettra de modifier directement son comportement sans passer par un développeur.</p>
+  <p>Un langage un peu moins populaire en ce moment mais extrêmement répandu est <b>Php</b>. Si vous utilisez un site WordPress ou une plateforme e-commerce comme PrestaShop appprendre ce langage vous permettra de modifier directement son comportement sans passer par un développeur.</p>
 
   <p>Pas vraiment un langage de programmation mais tout de même utile à connaître <b>SQL</b> est un langage qui vous permet de récupérer des données dans une base de données. Sa syntaxe est très proche de l'anglais, il est donc assez simple d'en apprendre les bases et d'être opérationnel. </p>
 
