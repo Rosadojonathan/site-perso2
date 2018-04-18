@@ -38,7 +38,7 @@ module.exports.article = {
 
   <p>Second avantage crucial. Les marketers ont souvent l'impression de parler une langue différente des développeurs et de nager dans un océan d'incompréhension. "Mais je voulais un bouton qui redirige vers ma landing page ? Comment veux-tu que je sois plus clair ?"</p>
   <br>
-  <img src="../images/pourquoi-les-marketers-devraient-apprendre-à-coder/projects.jpg" alt="communiquer avec les développeurs est parfois compliqué">
+  <img src="react-backend/public/images/pourquoi-les-marketers-devraient-apprendre-à-coder/projects.jpg" alt="communiquer avec les développeurs est parfois compliqué">
   <br>
   <p><b>En apprenant à coder vous aller comprendre la façon de penser des développeurs</b>. Il vous sera ensuite bien plus facile d'écrire des specs claires qui demandent moins d'aller-retours pour des clarifications. Résultat ? Du temps gagné pour les deux parties.</p>
   <br>
