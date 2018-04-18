@@ -76,7 +76,7 @@ module.exports.article = {
   </pre></div>
   <br>
 
-  <img src="../images/pourquoi-les-marketers-devraient-apprendre-à-coder/heatmap.jpg" alt="heatmap de données corrélées">
+  <img src="https://jonathanrosado.fr/images/pourquoi-les-marketers-devraient-apprendre-à-coder/heatmap.jpg" alt="heatmap de données corrélées">
 
   <p>En deux lignes de code je peux déterminer quelles dimensions sont corrélées grâce à la densité de la coloration. Si j'avais du faire ce travail manuellement avec Excel ça m'aurait pris bien plus de temps...</p>
   <br>
@@ -86,7 +86,7 @@ module.exports.article = {
   <span style="color: #f8f8f2">plt</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">show()</span>
   </pre></div>
   <br>
-  <img src="../images/pourquoi-les-marketers-devraient-apprendre-à-coder/barplot.jpg" alt="barplot corrélation entre nombre de fans sur Deezer et genre musical">
+  <img src="https://jonathanrosado.fr/images/pourquoi-les-marketers-devraient-apprendre-à-coder/barplot.jpg" alt="barplot corrélation entre nombre de fans sur Deezer et genre musical">
   <br>
   <p>En deux lignes de code je peux tracer un graphique me montrant le nombre moyens de fans Deezer par artistes d'un petit dataset regroupés selon leur genre musical. Les barres noires représentent l'incertitude autour de cette mesure.</p>
   <br>
