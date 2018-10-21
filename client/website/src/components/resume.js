@@ -119,7 +119,7 @@ class Resume extends Component {
 
             <a
               style={{ cursor: "pointer" }}
-              href="https://www.linkedin.com/in/jonathan-rosado-967067130/"
+              href="https://www.linkedin.com/in/jonathan-emil-rosado/"
             >
             
               <img
