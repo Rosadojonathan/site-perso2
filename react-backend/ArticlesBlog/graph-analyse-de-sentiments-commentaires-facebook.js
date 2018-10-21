@@ -1,6 +1,10 @@
 module.exports.article = {
     content: `
     <style>
+    h1 {
+        font-size: 1.9em;
+        font-weight: bold;
+      }
 
     h2   {
       font-size: 1.4em;
@@ -10,6 +14,9 @@ module.exports.article = {
       width:90%;
       height:auto;
     }
+    p {
+        font-size: 1.1em;
+      }
     
     </style>
 

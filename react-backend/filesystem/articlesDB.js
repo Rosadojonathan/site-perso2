@@ -44,8 +44,8 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
   },
   {
     id: 5,
-    path: "graph-analyse-de-sentiments-commentaires-facebook",
-    title: "Analyse de sentiments de commentaires de Facebook Ads",
+    path: "graph-analyse-de-sentiments-commentaires-facebook-ads",
+    title: "Analyse de sentiments de commentaires Facebook Ads",
     description: `L'analyse de sentiments de commentaires de publicités Facebook permet au Marketer de garder une vision globale sur la réception de ses publicités par son audience.
     Il s'agit d'une métrique importante car si de nombreux commentaires négatifs sont laissés non-traités la situation peut nuire à votre capacité de conversion de prospects.`,
     content: `${sentimentGraph.content}`
