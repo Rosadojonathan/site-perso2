@@ -121,6 +121,7 @@ class Resume extends Component {
               style={{ cursor: "pointer" }}
               href="https://www.linkedin.com/in/jonathan-rosado-967067130/"
             >
+            
               <img
                 src={linkedinLogo}
                 style={{ height: "50px", width: "50px" }}
@@ -132,11 +133,13 @@ class Resume extends Component {
               style={{ cursor: "pointer" }}
               href="https://github.com/Rosadojonathan"
             >
-            img</a>
+            
+            <img
                 src={githubLogo}
                 style={{ height: "50px", width: "50px" }}
                 alt="github logo"
               />
+            </a>
 
             <hr style={{ borderTop: "3px solid #3E2723", width: "50%" }} />
             <h5>Certifications</h5>
@@ -184,7 +187,7 @@ class Resume extends Component {
             <Education
               startYear={2017}
               endYear={2018}
-              schoolName="Université Capitole - IAE Toulouse"
+              schoolName="Université Capitole - IAE Toulouse - Mention Très Bien"
               schoolDescription="Cette formation m'a permis de consolider mes connaissances en Marketing Digital acquises lors de mon expérience professionnelle en alternance, notamment en SEO et en stratégie Marketing. Mes mémoires traitent de l'automatisation du SEA et Social Media Advertising ainsi que de l'utilisation de Data Mining et d'algorithmes prédictifs pour accroître les performances d'acquisition de trafic. "
               schoolDegree="Master 2 - Marketing Digital"
             />
