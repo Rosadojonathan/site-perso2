@@ -4,6 +4,8 @@ const articleSlackbot = require("../ArticlesBlog/creer-un-slackbot.js").article;
 const tcdsea = require("../ArticlesBlog/tcdsea.js").article;
 const marketersCode = require("../ArticlesBlog/pourquoi-les-marketers-devraient-apprendre-à-coder.js")
   .article;
+const sentimentGraph = require("../ArticlesBlog/graph-analyse-de-sentiments-commentaires-facebook.js")
+.article;
 
 module.exports.articlesDB = [
   {
@@ -39,5 +41,13 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
     title: "Pourquoi les Marketers devraient apprendre à coder ?",
     description: `Coder ne devrait pas être l'apanage des développeurs, cette compétence a ses avantages à tous les niveaux d'une entreprise et notamment pour le marketing. Développer une double-compétence peut être le meilleur choix que vous ayez fait cette année... `,
     content: `${marketersCode.content}`
+  },
+  {
+    id: 5,
+    path: "graph-analyse-de-sentiments-commentaires-facebook",
+    title: "Analyse de sentiments de commentaires de Facebook Ads",
+    description: `L'analyse de sentiments de commentaires de publicités Facebook permet au Marketer de garder une vision globale sur la réception de ses publicités par son audience.
+    Il s'agit d'une métrique importante car si de nombreux commentaires négatifs sont laissés non-traités la situation peut nuire à votre capacité de conversion de prospects.`,
+    content: `${sentimentGraph.content}`
   }
 ];
