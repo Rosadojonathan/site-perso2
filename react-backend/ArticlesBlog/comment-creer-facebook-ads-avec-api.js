@@ -1,7 +1,12 @@
 
 module.exports.article =  {
   content: `
-
+  <style>
+  h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  </style>
 
 
   <p> Créer des publicités sur Facebook peut rapidement devenir un processus ennuyeux et répétitif. Si vous avez déjà remarqué qu'il existe peu de variation de contenu entre vos annonces à part quelques éléments,

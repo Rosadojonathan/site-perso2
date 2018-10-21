@@ -2,7 +2,7 @@ module.exports.article = {
   content: `
   <style>
     h1 {
-      font-size: 1.9em;
+      font-size: 2.5em;
       font-weight: bold;
     }
 
