@@ -12,7 +12,8 @@ import datacampLogo from "../img/datacamp.png";
 import hubspotLogo from "../img/hubspot-logo.jpg";
 import freecodecampLogo from "../img/freecodecamp.jpeg";
 import linkedinLogo from "../img/linkedin.png";
-import imageJonathan from "../img/imagecv7.jpg";
+import githubLogo from "../img/github.png";
+import imageJonathan from "../img/jonathan-rosado-image-cv.jpg";
 
 import "../App.css";
 
@@ -60,7 +61,7 @@ class Resume extends Component {
       <div>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>CV de Jonathan Rosado - Tech Marketer </title>
+          <title>CV de Jonathan Rosado - Technical Marketer </title>
 
           <meta
             name="description"
@@ -71,7 +72,7 @@ class Resume extends Component {
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
-            content="CV de Jonathan Rosado - Tech Marketer"
+            content="CV de Jonathan Rosado - Technical Marketer"
           />
           <meta
             property="og:description"
@@ -98,14 +99,14 @@ class Resume extends Component {
               />
             </div>
             <h2 style={{ paddingTop: "2em" }}>Jonathan Rosado</h2>
-            <h4 style={{ color: "grey" }}>Tech-Marketer</h4>
+            <h4 style={{ color: "grey" }}>Technical Marketer</h4>
             <hr style={{ borderTop: "3px solid #3E2723", width: "50%" }} />
             <p>
               D'abord autodidacte dans le domaine des langues, j'ai ensuite
               développé un intérêt pour le Marketing Digital, la programmation
-              et les statistiques que je combine pour aider les entreprises à
-              atteindre leur croissance. J'essaie quotidiennement de me
-              challenger afin de développer de nouvelles compétences.
+              et les statistiques que je fusionne pour aider les entreprises à
+              accélérer leur croissance. Je cherche quotidiennement de nouveaux
+              challenges intellectuels afin de développer mes compétences.
             </p>
             <hr style={{ borderTop: "3px solid #3E2723", width: "50%" }} />
             <h5>Adresse</h5>
@@ -126,6 +127,16 @@ class Resume extends Component {
                 alt="linkedin logo"
               />
             </a>
+            <h5>GitHub</h5>
+            <a
+              style={{ cursor: "pointer" }}
+              href="https://github.com/Rosadojonathan"
+            >
+            img</a>
+                src={githubLogo}
+                style={{ height: "50px", width: "50px" }}
+                alt="github logo"
+              />
 
             <hr style={{ borderTop: "3px solid #3E2723", width: "50%" }} />
             <h5>Certifications</h5>
@@ -164,8 +175,8 @@ class Resume extends Component {
             <Experience
               startYear="Février 2017"
               endYear="Maintenant"
-              jobName="SEA Manager & Market-Tech"
-              jobDescription="En charge de l'acquisition payante sur les plateformes publicitaires (AdWords, Facebook Ads, Instagram Ads, Snapchat Ads) en FR, EN, ES, DE, IT et NL. J'ai mis en place de nombreux scripts d'automatisation et un modèle prédictif de Machine Learning afin d'augmenter mon efficacité et aider la startup à scaler son système d'acquisition."
+              jobName="SEA Manager & Technical Marketer"
+              jobDescription="En charge de l'acquisition payante sur les plateformes publicitaires (AdWords, Facebook Ads, Instagram Ads, Snapchat Ads) en FR, EN, ES, DE, IT et NL. J'ai mis en place de nombreux programmes d'automatisation et un modèle prédictif de Machine Learning afin d'augmenter mon efficacité et aider la startup à scaler son système d'acquisition."
             />
 
             <hr style={{ borderTop: "3px solid white" }} />
@@ -174,7 +185,7 @@ class Resume extends Component {
               startYear={2017}
               endYear={2018}
               schoolName="Université Capitole - IAE Toulouse"
-              schoolDescription="Cette formation m'a permis de consolider mes connaissances en Marketing Digital acquises lors de mon expérience professionnelle en alternance, notamment en SEO et en stratégie Marketing. Mon mémoire traite de l'automatisation du SEA et Social Media Advertising: quelle réalisation, enjeux et bénéfices pour le Marketeur?"
+              schoolDescription="Cette formation m'a permis de consolider mes connaissances en Marketing Digital acquises lors de mon expérience professionnelle en alternance, notamment en SEO et en stratégie Marketing. Mes mémoires traitent de l'automatisation du SEA et Social Media Advertising ainsi que de l'utilisation de Data Mining et d'algorithmes prédictifs pour accroître les performances d'acquisition de trafic. "
               schoolDegree="Master 2 - Marketing Digital"
             />
 
@@ -198,11 +209,14 @@ class Resume extends Component {
             <h3>Compétences</h3>
             <Skills skill="SEA" progress={85} />
             <Skills skill="Data Analysis" progress={85} />
-            <Skills skill="SEO" progress={70} />
+            <Skills skill="Python" progress={75} />
+            <Skills skill="Machine Learning" progress={70} />
+            <Skills skill="Statistiques" progress={70} />
             <Skills skill="Analytics" progress={70} />
-            <Skills skill="Python" progress={65} />
-            <Skills skill="JavaScript" progress={60} />
-            <Skills skill="Machine Learning" progress={60} />
+            <Skills skill="SEO" progress={70} />
+            <Skills skill="JavaScript" progress={65} />
+            <Skills skill="R" progress={60} />
+            
             <hr style={{ borderTop: "3px solid white" }} />
             <h3>Langues</h3>
             <Bar

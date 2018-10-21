@@ -53,6 +53,18 @@ class Projects extends Component {
                <IconButton name="share"/>
              </CardMenu>
           </Card>
+          <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
+            <CardTitle style={{color:'#fff',height:'176px',background:`url(${machineLearningIcon}) center / cover`}}></CardTitle>
+            <CardTitle style={{color:'black', fontWeight:'bold'}}>Projet Data Viz: Graph d'analyse de sentiments de Facebook Ads</CardTitle>
+            <CardText>J'ai développé une petite interface en Dash pour visualiser la polarité des commentaires reçus sur des Facebook Ads grâce à la librairie VADER. </CardText>
+             <CardActions border>
+             <Button colored style={{textAlign:'center'}}><a style={{ textDecoration:'none',color:'#000080'}} href="https://github.com/Rosadojonathan/facebook-ads-sentiment-grapher">GitHub</a></Button>
+
+             </CardActions>
+             <CardMenu style={{color:'#fff'}}>
+               <IconButton name="share"/>
+             </CardMenu>
+          </Card>
         </div>
 
       )
@@ -156,7 +168,7 @@ class Projects extends Component {
 
         <Tabs style={{padding:'0px 10px',width:"100%"}}activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
           <Tab style={{width:'25%'}}><p>React</p></Tab>
-          <Tab style={{width:'25%'}}> <p>Machine Learning</p></Tab>
+          <Tab style={{width:'25%'}}> <p>Data Science/Viz</p></Tab>
           <Tab style={{width:'25%'}}><p>Ads Automation</p></Tab>
           <Tab style={{width:'25%'}}><p>Slackbots</p></Tab>
 
