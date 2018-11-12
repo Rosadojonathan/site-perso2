@@ -3,14 +3,26 @@ import ReactDom from 'react-dom';
 import {Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
 import Main from './components/main';
-
+import { Widget, addResponseMessage } from 'react-chat-widget';
 import { Link } from 'react-router-dom';
 import './App.css';
+import jonathanLogo from './img/jonathan-rosado-image-cv-small.jpg'
 
-
+import 'react-chat-widget/lib/styles.css';
 
 
 class App extends Component {
+  componentDidMount() {
+    addResponseMessage("Visiteur, mon chatbot te salue !");
+  }
+
+  handleNewUserMessage = (newMessage) => {
+    console.log(`New message incoming! ${newMessage}`);
+    // Now send the message throught the backend API
+
+    const response = "super !"
+    setTimeout(addResponseMessage(response), 3000);
+  }
 
 
   render() {
@@ -41,6 +53,15 @@ class App extends Component {
             <Main/>
           </Content>
       </Layout>
+      <Widget 
+      handleNewUserMessage={this.handleNewUserMessage}
+      profileAvatar={jonathanLogo}
+      title=""
+      subtitle="Chatbot de Jonathan"
+      senderPlaceHolder="Écrivez un message"
+      badge="1"
+
+      />
     </MuiThemeProvider>
   </div>
     );

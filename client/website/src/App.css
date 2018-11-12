@@ -152,6 +152,36 @@ margin-top: 10px;
   background-color: transparent;
 }
 
+.mdl-layout__drawer-button {
+  color: white !important;
+}
+
+.rcw-conversation-container  .rcw-header {
+  background-color: #141E30 !important;
+}
+.rcw-close-button {
+  background-color: #141E30 !important;
+
+}
+
+.rcw-message > .rcw-response {
+  background-color:black;
+  opacity: .8;
+  color: white;
+}
+
+.rcw-launcher {
+  background-color: #141E30 !important;
+}
+.rcw-launcher .rcw-badge {
+  background-color: #a82011 !important;
+}
+.rcw-client {
+  background-color:black !important;
+  opacity: .4;
+  color: white;
+}
+
 @media (max-width: 800px){
   .category-tabs {
     margin-top:45px;
@@ -183,3 +213,4 @@ a .hu-background-color_button-background hu-background-color_button-background-l
  }
 
 }
+
