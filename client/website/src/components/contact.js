@@ -3,8 +3,11 @@ import {Helmet} from 'react-helmet';
 import { Grid,Cell,Textfield,Button} from 'react-mdl';
 import axios from 'axios';
 import Recaptcha from 'react-google-invisible-recaptcha';
+import { Widget, addResponseMessage } from 'react-chat-widget';
+import jonathanLogo from '../img/jonathan-rosado-image-cv-small.jpg'
 
 import Chatbot from './chatbot';
+import 'react-chat-widget/lib/styles.css';
 
 class Contact extends Component {
  state = {
@@ -12,7 +15,39 @@ class Contact extends Component {
    message:'',
    name:'',
    'showChatbot':false,
+   widgetClicked:false,
  };
+
+ componentDidMount() {
+  addResponseMessage("Bienvenue dans le chat de discussion avec mon chatbot");
+}
+
+handleNewUserMessage = (newMessage) => {
+  // fetch(`/api/chatbot/${newMessage}`)
+  fetch("http://127.0.0.1:5005/conversations/default/respond",
+   {method: "POST",
+   headers: {
+    "Accept":"application/json",
+    "Content-Type":"application/json"
+   },
+   body: JSON.stringify({
+     "query":`${newMessage}`
+   })
+})
+  .then( function(res) {
+    console.log(res);
+    return res.json()
+  })
+  .then( function(res) {
+    console.log(res);
+    addResponseMessage(res[0].text);
+   }
+  )
+}
+
+handleWidgetClicked = () => {
+  this.setState({widgetClicked:true})
+}
 
  onSubmit = () => {
    if (this.state.name && this.state.email && this.state.message){
@@ -132,6 +167,16 @@ componentWillMount(){
           sitekey="6LfDTE8UAAAAAA-2-bFtrk5cFi3pQMh2SiWh2cDj"
           onResolved={ this.handleSubmit } />
 
+          <div onClick={this.handleWidgetClicked}>
+          <Widget 
+              handleNewUserMessage={this.handleNewUserMessage}
+              profileAvatar={jonathanLogo}
+              title="Chatbot de Jonathan"
+              subtitle=""
+              senderPlaceHolder="Écrivez un message"
+              badge={this.state.widgetClicked ? "0" : "1" }
+            />
+            </div>
           <br/>
           <br/>
     </Cell>
