@@ -17,11 +17,9 @@ class Contact extends Component {
    name:'',
    'showChatbot':false,
    widgetClicked:false,
+   firstClick: true,
  };
 
- componentDidMount() {
-  addResponseMessage("Bienvenue dans le chat de discussion avec mon chatbot");
-}
 
 handleNewUserMessage = (newMessage) => {
   // fetch(`/api/chatbot/${newMessage}`)
@@ -48,6 +46,7 @@ handleNewUserMessage = (newMessage) => {
 
 handleWidgetClicked = () => {
   this.setState({widgetClicked:true})
+  
 }
 
  onSubmit = () => {
