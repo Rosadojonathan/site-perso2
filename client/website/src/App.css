@@ -156,6 +156,40 @@ margin-top: 10px;
   color: white !important;
 }
 
+@media (min-width: 800px){
+.rcw-widget-container {
+  margin-right:auto !important;
+  margin-left: auto !important;
+  position: relative !important;
+  display: block !important;
+  }
+}
+
+@media screen and (max-width: 800px){
+
+  .rcw-launcher {
+    margin-bottom:300px !important;
+    margin-right: auto !important;
+    margin-left:auto !important;
+    position: relative !important;
+}
+}
+
+@media screen and (max-width: 430px){
+
+  .rcw-launcher {
+    margin-bottom:15px !important;
+    margin-right: auto !important;
+    margin-left:auto !important;
+    position: relative !important;
+}
+.rcw-widget-container {
+  position: relative !important;
+}
+.rcw-widget-container.rcw-opened {
+  position: absolute !important;
+}
+}
 .rcw-conversation-container  .rcw-header {
   background-color: #141E30 !important;
 }

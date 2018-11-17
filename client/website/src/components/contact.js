@@ -5,9 +5,8 @@ import axios from 'axios';
 import Recaptcha from 'react-google-invisible-recaptcha';
 import { Widget, addResponseMessage } from 'react-chat-widget';
 import jonathanLogo from '../img/jonathan-rosado-image-cv-small.jpg'
-
-import Chatbot from './chatbot';
 import 'react-chat-widget/lib/styles.css';
+import '../App.css';
 
 
 class Contact extends Component {
@@ -170,7 +169,7 @@ componentWillMount(){
           sitekey="6LfDTE8UAAAAAA-2-bFtrk5cFi3pQMh2SiWh2cDj"
           onResolved={ this.handleSubmit } />
 
-          <div onClick={this.handleWidgetClicked}>
+          {/* <div onClick={this.handleWidgetClicked}>
           <Widget 
               handleNewUserMessage={this.handleNewUserMessage}
               profileAvatar={jonathanLogo}
@@ -179,7 +178,7 @@ componentWillMount(){
               senderPlaceHolder="Écrivez un message"
               badge={this.state.widgetClicked ? "0" : "1" }
             />
-            </div>
+            </div> */}
           <br/>
           <br/>
     </Cell>
@@ -188,19 +187,40 @@ componentWillMount(){
           <div style={{alignItems:'center'}}>
           <h3> ... ou passer par le chatbot ?</h3>
           <br/>
-          <Button id='contact-form' raised colored ripple style={{backgroundColor:'#9D0313'}} onClick={() => this.showChatbot()} > Voyons ça !</Button>
+          {/* <Button id='contact-form' raised colored ripple style={{backgroundColor:'#9D0313'}} onClick={() => this.showChatbot()} > Voyons ça !</Button> */}
+          <div onClick={this.handleWidgetClicked}>
+          <Widget 
+              handleNewUserMessage={this.handleNewUserMessage}
+              profileAvatar={jonathanLogo}
+              title="Chatbot de Jonathan"
+              subtitle=""
+              senderPlaceHolder="Écrivez un message"
+              badge={this.state.widgetClicked ? "0" : "1" }
+              showCloseButton="false"
+            />
+            </div>
 
 
           </div>
 
       </Cell>
-      <Cell col={12} style={{display: this.state.showChatbot ? 'block' : 'none'}}>
+      <Cell col={12} style={{ display:this.state.showChatbot ? 'block':'none' }}>
 
 
 
 
-        <Chatbot style={{width:'100%',height:'600px' }} />
-
+        {/* <Chatbot style={{width:'100%',height:'600px' }} /> */}
+        <div onClick={this.handleWidgetClicked}>
+          <Widget 
+              handleNewUserMessage={this.handleNewUserMessage}
+              profileAvatar={jonathanLogo}
+              title="Chatbot de Jonathan"
+              subtitle=""
+              senderPlaceHolder="Écrivez un message"
+              badge={this.state.widgetClicked ? "0" : "1" }
+              showCloseButton="false"
+            />
+            </div>
 
 
       </Cell>
