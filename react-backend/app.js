@@ -13,6 +13,7 @@ const contactform = require("./routes/contact-form");
 const recaptcha = require("./routes/recaptcha");
 const newsletter = require("./routes/newsletter");
 const login = require("./routes/login");
+const chatbot = require("./routes/chatbot");
 
 const articlesDB = require("./filesystem/articlesDB").articlesDB;
 
@@ -48,6 +49,7 @@ app.use("/articles", articles);
 app.use("/contactform", contactform);
 app.use("/api/recaptcha", recaptcha);
 app.use("/api/login", login);
+app.use("/api/chatbot",chatbot);
 app.use("/newsletter", newsletter);
 app.get("/blog/:whatever", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/website/build/index.html"));
