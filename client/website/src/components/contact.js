@@ -9,6 +9,7 @@ import jonathanLogo from '../img/jonathan-rosado-image-cv-small.jpg'
 import Chatbot from './chatbot';
 import 'react-chat-widget/lib/styles.css';
 
+
 class Contact extends Component {
  state = {
    email: '',
@@ -24,7 +25,7 @@ class Contact extends Component {
 
 handleNewUserMessage = (newMessage) => {
   // fetch(`/api/chatbot/${newMessage}`)
-  fetch("http://127.0.0.1:5005/conversations/default/respond",
+  fetch(`http://${window.location.hostname}:5005/conversations/default/respond`,
    {method: "POST",
    headers: {
     "Accept":"application/json",

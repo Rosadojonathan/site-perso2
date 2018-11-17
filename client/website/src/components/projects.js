@@ -65,6 +65,18 @@ class Projects extends Component {
                <IconButton name="share"/>
              </CardMenu>
           </Card>
+          <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
+            <CardTitle style={{color:'#fff',height:'176px',background:`url("https://raw.githubusercontent.com/Rosadojonathan/rasa-core-bot/master/chatbot.jpg") center / cover`}}></CardTitle>
+            <CardTitle style={{color:'black', fontWeight:'bold'}}>Projet NLU: Chatbot RASA Stack</CardTitle>
+            <CardText>J'ai créé un petit chatbot disponible sur ma page de contact en utilisant la Stack RASA NLU / RASA Core. </CardText>
+             <CardActions border>
+             <Button colored style={{textAlign:'center'}}><a style={{ textDecoration:'none',color:'#000080'}} href="https://github.com/Rosadojonathan/rasa-core-bot">GitHub</a></Button>
+
+             </CardActions>
+             <CardMenu style={{color:'#fff'}}>
+               <IconButton name="share"/>
+             </CardMenu>
+          </Card>
         </div>
 
       )
