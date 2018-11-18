@@ -25,7 +25,7 @@ class Contact extends Component {
 
 handleNewUserMessage = (newMessage) => {
   // fetch(`/api/chatbot/${newMessage}`)
-  fetch(`http://${window.location.hostname}:5005/conversations/default/respond`,
+  fetch(`https://${window.location.hostname}:5005/conversations/default/respond`,
    {method: "POST",
    headers: {
     "Accept":"application/json",
