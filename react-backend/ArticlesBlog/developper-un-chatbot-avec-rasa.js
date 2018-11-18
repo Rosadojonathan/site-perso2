@@ -3,12 +3,12 @@ module.exports.article = {
 
     h2   {
       font-size: 1.4em;
-      font-weight:bold,
+      font-weight:900;
       
     }
     h3  {
       font-size: 1.2em;
-      font-weight:bold,
+      font-weight:900;
     }
     @media screen and (max-width:430px){
     img {
