@@ -4,15 +4,17 @@ module.exports.article = {
 
     h2   {
       font-size: 1.4em;
-      font-weight:900,
+      font-weight: bold,
     }
     h3  {
       font-size: 1.2em;
-      font-weight:900,
+      font-weight:bold,
     }
+    @media screen and (max-width:430px){
     img {
       width:90%;
       height:auto;
+    }
     }
     
     </style>
