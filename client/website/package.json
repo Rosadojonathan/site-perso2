@@ -31,5 +31,13 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://jonathanrosado.fr"
+  "proxy": {
+    "/api/*": {
+      "target":"https://jonathanrosado.fr"
+    },
+    "/conversations/*":{
+      "target":"localhost:5005/"
+    }
+  }
+  
 }

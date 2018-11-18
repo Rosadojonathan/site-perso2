@@ -24,7 +24,7 @@ class Landing extends Component {
   }
 
   componentDidMount() {
-    fetch("/posts")
+    fetch("/api/posts")
       .then(res => res.json())
       .then(postsHome => this.setState({ postsHome }))
       .catch(function(error) {

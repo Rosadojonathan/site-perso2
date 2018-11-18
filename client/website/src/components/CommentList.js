@@ -12,7 +12,7 @@ class CommentList extends Component {
     let app = this.props.db
       .database()
       .ref(
-        `articles/${decodeURIComponent(window.location.pathname.split("/")[2])}`
+        `/api/articles/${decodeURIComponent(window.location.pathname.split("/")[2])}`
       );
     app.on("value", snapshot => {
       this.getData(snapshot.val());

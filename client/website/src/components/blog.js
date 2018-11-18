@@ -27,7 +27,7 @@ class Blog extends Component {
   }
 
   componentDidMount() {
-    fetch("/posts")
+    fetch("/api/posts")
       .then(res => res.json())
       .then(posts => this.setState({ posts }))
       .catch(function(error) {

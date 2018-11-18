@@ -23,7 +23,7 @@ class ArticlePost extends Component {
 
   componentDidMount() {
     let handle = this.props.match.params.article;
-    fetch(`/articles/${handle}`)
+    fetch(`/api/articles/${handle}`)
       .then(res => res.json())
       .then(article => this.setState({ article, loaded: true }))
       .catch(function(error) {

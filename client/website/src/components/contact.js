@@ -25,7 +25,7 @@ class Contact extends Component {
 
 handleNewUserMessage = (newMessage) => {
   // fetch(`/api/chatbot/${newMessage}`)
-  fetch(`https://${window.location.hostname}:5005/conversations/default/respond`,
+  fetch(`/conversations/default/respond`,
    {method: "POST",
    headers: {
     "Accept":"application/json",
@@ -74,7 +74,7 @@ handleWidgetClicked = () => {
    setTimeout(()=> this.setState({bgColor:'',msgSend:false}),1200)
 
 
-   const form = await axios.post('/contactform', {
+   const form = await axios.post('/api/contactform', {
      name,
      email,
      message,

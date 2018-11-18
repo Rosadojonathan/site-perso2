@@ -43,12 +43,12 @@ app.use(express.static(`${__dirname}/../client/website/build`));
 //   require("prerender-node").set("prerenderToken", "ZXkgVzlyxjh1bS5BJ3ck")
 // );
 
-app.use("/posts", posts);
-app.use("/articles", articles);
-app.use("/contactform", contactform);
+app.use("/api/posts", posts);
+app.use("/api/articles", articles);
+app.use("/api/contactform", contactform);
 app.use("/api/recaptcha", recaptcha);
 app.use("/api/login", login);
-app.use("/newsletter", newsletter);
+app.use("/api/newsletter", newsletter);
 app.get("/blog/:whatever", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/website/build/index.html"));
 });
