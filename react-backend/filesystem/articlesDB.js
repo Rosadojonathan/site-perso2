@@ -6,6 +6,7 @@ const marketersCode = require("../ArticlesBlog/pourquoi-les-marketers-devraient-
   .article;
 const sentimentGraph = require("../ArticlesBlog/graph-analyse-de-sentiments-commentaires-facebook.js")
 .article;
+const rasaChatbot = require('../ArticlesBlog/developper-un-chatbot-avec-rasa.js')
 
 module.exports.articlesDB = [
   {
@@ -49,5 +50,12 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
     description: `L'analyse de sentiments de commentaires de publicités Facebook permet au Marketer de garder une vision globale sur la réception de ses publicités par son audience.
     Il s'agit d'une métrique importante car si de nombreux commentaires négatifs sont laissés non-traités la situation peut nuire à votre capacité de conversion de prospects.`,
     content: `${sentimentGraph.content}`
+  },
+  {
+    id: 6,
+    path: "developper-un-chatbot-avec-rasa",
+    title: "Développer un chatbot avec RASA",
+    description: `Dans cet article j'explique comment j'ai utilisé une librairie open source de NLU pour créer un chatbot pouvant tourner en local ou sur votre propre serveur.`,
+    content: `${rasaChatbot.content}`
   }
 ];
