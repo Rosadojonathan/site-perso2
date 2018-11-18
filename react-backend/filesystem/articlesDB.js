@@ -6,7 +6,7 @@ const marketersCode = require("../ArticlesBlog/pourquoi-les-marketers-devraient-
   .article;
 const sentimentGraph = require("../ArticlesBlog/graph-analyse-de-sentiments-commentaires-facebook.js")
 .article;
-const rasaChatbot = require('../ArticlesBlog/developper-un-chatbot-avec-rasa.js')
+const rasaChatbot = require('../ArticlesBlog/developper-un-chatbot-avec-rasa.js').article;
 
 module.exports.articlesDB = [
   {
