@@ -36,7 +36,7 @@
       "target":"https://jonathanrosado.fr"
     },
     "/conversations/*":{
-      "target":"localhost:5005/"
+      "target":"localhost:5005"
     }
   }
   
