@@ -98,6 +98,7 @@ class Blog extends Component {
                 cardText={post.description}
                 linkTitle={post.path}
                 image={post.image}
+                date={post.date}
               />
             ))}
         </div>
