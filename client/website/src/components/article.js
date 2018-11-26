@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-import {Cell, Card, CardTitle,CardText, Link,TextField} from 'react-mdl';
+import {Cell, Grid, Card, CardTitle,CardText, Link,TextField} from 'react-mdl';
 
 import '../css/articlecss.css';
 
@@ -29,18 +29,34 @@ class Article extends Component {
 
 
     return (
-      <Cell col={9} style={{padding:'8px'}}>
-        {/* <Link to={`/blog/${this.props.linkTitle}`} > */}
         <a href={`/blog/${this.props.linkTitle}`} style={{textDecoration:'none'}}>
-          <Card shadow={5} onMouseEnter={this.onHover} onMouseLeave={this.onHover} style={{width:'95%',margin:'auto',maxHeight:'280px',backgroundColor: this.state.coloredArticle ? '#D7F8E3' : ''}}>
+        <Grid onMouseEnter={this.onHover} onMouseLeave={this.onHover} style={{marginBottom:"20px"}}>
+          <Cell col={8}>
+            <Card   style={{width:'95%', height:"320px", margin:'auto'}}>
+                <CardTitle> <h2 style={{fontSize:'1.4em',lineHeight:'0.9em',fontWeight:'bold',color: this.state.coloredArticle ? '#082008' : ''}}>{this.props.cardTitle}</h2></CardTitle>
+                <CardText style={{color: this.state.coloredArticle ? 'black' : ''}} > { this.props.cardText.length > 350 ? this.props.cardText.substr(0,347) + '...' : this.props.cardText}</CardText>
+                <CardTitle> <h6 style={{fontSize:'0.75em',lineHeight:'0.9em',color: this.state.coloredArticle ? 'black' : '', fontWeight: this.state.coloredArticle ? 'bold' : ''}}> Écrit le : {this.props.date} </h6></CardTitle>
+            </Card>
 
-              <CardTitle id="article-title" style={{color:'black',maxHeight:'90px',marginTop:'15px'}}><h2 style={{fontSize:'1.6em',lineHeight:'0.9em',fontWeight:'bold',color: this.state.coloredArticle ? '#082008' : ''}}>{this.props.cardTitle}</h2></CardTitle>
-              <CardText style={{maxHeight:'150px',color: this.state.coloredArticle ? 'black' : ''}} > { this.props.cardText.length > 350 ? this.props.cardText.substr(0,347) + '...' : this.props.cardText}</CardText>
+          </Cell>
+          <Cell col={4}>
+            <Card >
+             <CardTitle  style={{color:'black', background: `url(${this.props.image}) center`,height:'320px', width:"100%",padding:"20px",backgroundRepeat:"no-repeat",backgroundSize:"contain",marginRight:"auto",marginLeft:"auto"}} />
+            </Card>
+            </Cell>
+        </Grid>   
+            
+          
+          
 
-          </Card>
+
+
+          {/* <div style={{backgroundColor:"white",padding:"20px",marginTop:"20px"}}>
+              <h2>{this.props.cardTitle}</h2>
+              <div class="image" style={{background: `url(${this.props.image})`, height:'200px', width:"100%",padding:"20px",backgroundRepeat:"no-repeat",backgroundSize:"contain"}}></div>
+              <p>{ this.props.cardText.length > 350 ? this.props.cardText.substr(0,347) + '...' : this.props.cardText}</p>
+          </div> */}
         </a>
-      {/* </Link> */}
-      </Cell>
     );
   }
 

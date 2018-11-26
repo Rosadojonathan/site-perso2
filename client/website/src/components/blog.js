@@ -90,12 +90,14 @@ class Blog extends Component {
               }
             })
             .map(post => (
+
               <Article
                 style={{ width: "80%" }}
                 key={post.id}
                 cardTitle={post.title}
                 cardText={post.description}
                 linkTitle={post.path}
+                image={post.image}
               />
             ))}
         </div>
@@ -104,7 +106,8 @@ class Blog extends Component {
 
     if (!this.state.search) {
       return (
-        <div className="article-grid">
+        <div className="">
+        <Grid>
           <Helmet>
             <meta charSet="utf-8" />
             <title>Blog - Tech-Marketer</title>
@@ -135,16 +138,20 @@ class Blog extends Component {
             floatingLabel
             style={{ width: "95%", marginTop: "30px", marginLeft: "20px" }}
           />
-
+          
           {this.state.posts.map(post => (
+          
             <Article
               style={{ width: "80%" }}
               key={post.id}
               cardTitle={post.title}
               cardText={post.description}
               linkTitle={post.path}
+              image={post.image}
+              date={post.date}
             />
           ))}
+        </Grid>
         </div>
       );
     }

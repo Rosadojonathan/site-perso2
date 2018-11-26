@@ -33,10 +33,14 @@
   },
   "proxy": {
     "/api/*": {
-      "target":"https://jonathanrosado.fr"
+      "target":"http://localhost:1337"
+
+    },
+    "/images/*":{
+      "target":"http://localhost:1337"
     },
     "/conversations/*":{
-      "target":"localhost:5005"
+      "target":"http://localhost:5005"
     }
   }
   

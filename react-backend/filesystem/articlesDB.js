@@ -16,7 +16,9 @@ module.exports.articlesDB = [
       "Comment automatiser la création d'une Facebook Ad à partir de l'API ?",
     description:
       "Créer des publicités sur Facebook peut rapidement devenir un processus ennuyeux et répétitif. Si vous déjà remarqué qu'il existe peu de variation de contenu entre vos annonces à part quelques éléments c'est que l'automatisation peut potentiellement vous être utile. Dans cet article nous allons voir comment créer un script qui semi-automatise la création de Facebook Ads grâce à Python et l'API de Facebook.",
-    content: `  ${articleFacebookAdsApi.content}`
+    content: `  ${articleFacebookAdsApi.content}`,
+    image:'/images/facebook-api1.jpg',
+    date:"07/03/2018"
   },
 
   {
@@ -25,7 +27,9 @@ module.exports.articlesDB = [
     title: "Comment créer un Slackbot ?",
     description: `Si vous utilisez Slack pour communiquer au sein de votre entreprise vous êtes probablement déjà au courant des possibilités qu'offre cette application en matière de messages automatisés.Il est très facile de plugger Slack à des applications de IFTTT comme Zapier pour automatiser l'envoi de messages dépendant de déclencheurs simples tels qu'un flux RSS ou des cartes Trello.
 Mais peut-être que vous désirez connecter un élément déclencheur qui n'est pas proposé par votre service d'IFTTT. Heureusement, il est extrêmement simple de créer son propre Slackbot.`,
-    content: `${articleSlackbot.content}`
+    content: `${articleSlackbot.content}`,
+    image:"/images/slack4.jpg",
+    date:"10/03/2018"
   },
 
   {
@@ -34,14 +38,18 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
     title:
       "Améliorez l'analyse de vos campagnes AdWords grâce aux Tableaux Croisés Dynamiques",
     description: `Les Tableaux Croisés Dynamiques sont les meilleurs amis des SEA Managers. En quelques clics vous pouvez en sortir des insights précieux. Dans cet article, j'explique comment déterminer les horaires / jours de la semaine et meilleurs appareils en termes de coûts d'acquisition sur votre compte AdWords grâce à Excel.`,
-    content: `${tcdsea.content}`
+    content: `${tcdsea.content}`,
+    image:'/images/tcd7.jpg',
+    date:"17/03/2018"
   },
   {
     id: 4,
     path: "pourquoi-les-marketers-devraient-apprendre-a-coder",
     title: "Pourquoi les Marketers devraient apprendre à coder ?",
     description: `Coder ne devrait pas être l'apanage des développeurs, cette compétence a ses avantages à tous les niveaux d'une entreprise et notamment pour le marketing. Développer une double-compétence peut être le meilleur choix que vous ayez fait cette année... `,
-    content: `${marketersCode.content}`
+    content: `${marketersCode.content}`,
+    image:'/images/pourquoi-les-marketers-devraient-apprendre-à-coder/projects.jpg',
+    date:"21/03/2018"
   },
   {
     id: 5,
@@ -49,13 +57,18 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
     title: "Analyse de sentiments de commentaires Facebook Ads",
     description: `L'analyse de sentiments de commentaires de publicités Facebook permet au Marketer de garder une vision globale sur la réception de ses publicités par son audience.
     Il s'agit d'une métrique importante car si de nombreux commentaires négatifs sont laissés non-traités la situation peut nuire à votre capacité de conversion de prospects.`,
-    content: `${sentimentGraph.content}`
+    content: `${sentimentGraph.content}`,
+    image: '/images/analyse-de-sentiments.jpg',
+    date:"21/10/2018"
   },
   {
     id: 6,
     path: "developper-un-chatbot-avec-rasa",
     title: "Développer un chatbot avec RASA",
-    description: `Dans cet article j'explique comment j'ai utilisé une librairie open source de NLU pour créer un chatbot pouvant tourner en local ou sur votre propre serveur.`,
-    content: `${rasaChatbot.content}`
+    description: `Dans cet article j'explique comment j'ai utilisé une librairie open source de NLU pour créer un chatbot pouvant tourner en local ou sur votre propre serveur. Il s'agit de la Stack RASA : composée de Rasa Core et Rasa NLU. J'ai cherché à utiliser RASA pour un projet de chatbot qui puisse automatiquement répondre à des demandes assez simples sur ma page de contact. Ensuite, je l'ai déployé sur mon serveur grâce à Docker et Nginx.`,
+    content: `${rasaChatbot.content}`,
+    image: '/images/chatbot.jpg',
+    date:"22/11/2018"
+
   }
 ];
