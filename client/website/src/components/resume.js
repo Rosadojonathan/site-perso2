@@ -131,11 +131,8 @@ class Resume extends Component {
               href="https://www.linkedin.com/in/jonathan-emil-rosado/"
             >
             
-              <img
-                src={linkedinLogo}
-                style={{ height: "50px", width: "50px" }}
-                alt="linkedin logo"
-              />
+            <Logo logo={linkedinLogo} logoName="linkedin logo"/>
+
             </a>
             <h5>GitHub</h5>
             <a
@@ -143,41 +140,19 @@ class Resume extends Component {
               href="https://github.com/Rosadojonathan"
             >
             
-            <img
-                src={githubLogo}
-                style={{ height: "50px", width: "50px" }}
-                alt="github logo"
-              />
+            <Logo logo={githubLogo} logoName="github logo"/>
+
             </a>
 
             <hr style={{ borderTop: "3px solid #3E2723", width: "65%",marginLeft:"auto", marginRight:"auto" }} />
             <h5>Certifications</h5>
-            <img
-              src={adwordsLogo}
-              style={{ height: "100px", width: "100px" }}
-              alt="adwords logo"
-            />
-            <img
-              src={googleAnalyticsLogo}
-              style={{ height: "100px", width: "100px" }}
-              alt="google analytics logo"
-            />
-            <img
-              src={datacampLogo}
-              style={{ height: "100px", width: "100px" }}
-              alt="datacamp logo"
-            />
-            <br />
-            <img
-              src={hubspotLogo}
-              style={{ height: "100px", width: "200px" }}
-              alt="hubspot logo"
-            />
-            <img
-              src={freecodecampLogo}
-              style={{ height: "100px", width: "100px" }}
-              alt="free code camp logo"
-            />
+
+            <Logo logo={adwordsLogo} logoName="adwords logo"/>
+            <Logo logo={googleAnalyticsLogo} logoName="google analytics logo"/>
+            <Logo logo={datacampLogo} logoName="datacamp logo"/>
+            <Logo logo={hubspotLogo} logoName="adwords logo"/>
+            <Logo logo={freecodecampLogo} logoName="FreeCodeCamp logo"/>
+
             <br />
             {/* <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/> */}
             </div>
