@@ -62,12 +62,17 @@ class Blog extends Component {
             />
           </Helmet>
           <Textfield
-            onChange={() => {}}
             name="article"
             label="Recherchez un article..."
+            onChange ={e => this.setState({ search: e.target.value })}
             value={this.state.search}
-            onChange={e => this.setState({ search: e.target.value })}
             floatingLabel
+            autoFocus
+            onFocus={function(e) {
+              var val = e.target.value;
+              e.target.value = '';
+              e.target.value = val;
+            }}
             style={{ width: "95%", marginTop: "30px", marginLeft: "20px" }}
           />
 

@@ -5,6 +5,7 @@ import { Bar } from "react-chartjs-2";
 import Education from "./education";
 import Experience from "./experience";
 import Skills from "./skills";
+import Logo from "./logo";
 
 import adwordsLogo from "../img/adwords-logo-website.png";
 import googleAnalyticsLogo from "../img/google-analytics.png";
@@ -14,6 +15,13 @@ import freecodecampLogo from "../img/freecodecamp.jpeg";
 import linkedinLogo from "../img/linkedin.png";
 import githubLogo from "../img/github.png";
 import imageJonathan from "../img/jonathan-rosado-image-cv.jpg";
+import reactLogo from "../img/react.png";
+import nodejsLogo from "../img/nodejs.png";
+import pythonLogo from "../img/python.png";
+import dockerLogo from "../img/docker.png";
+import rLogo from "../img/rlogo.png";
+import nginxLogo from "../img/nginx.png";
+import postgresLogo from "../img/postgres.png";
 
 import "../App.css";
 
@@ -98,9 +106,10 @@ class Resume extends Component {
                 }}
               />
             </div>
+            <div style={{textAlign:"center"}}>
             <h2 style={{ paddingTop: "2em" }}>Jonathan Rosado</h2>
             <h4 style={{ color: "grey" }}>Technical Marketer</h4>
-            <hr style={{ borderTop: "3px solid #3E2723", width: "50%" }} />
+            <hr style={{ borderTop: "3px solid #3E2723", width: "65%",marginLeft:"auto", marginRight:"auto" }} />
             <p>
               D'abord autodidacte dans le domaine des langues, j'ai ensuite
               développé un intérêt pour le Marketing Digital, la programmation
@@ -108,7 +117,7 @@ class Resume extends Component {
               accélérer leur croissance. Je cherche quotidiennement de nouveaux
               challenges intellectuels afin de développer mes compétences.
             </p>
-            <hr style={{ borderTop: "3px solid #3E2723", width: "50%" }} />
+            <hr style={{ borderTop: "3px solid #3E2723", width: "65%",marginLeft:"auto", marginRight:"auto" }} />
             <h5>Adresse</h5>
             <p>Toulouse, Occitanie</p>
             <h5>Téléphone</h5>
@@ -141,7 +150,7 @@ class Resume extends Component {
               />
             </a>
 
-            <hr style={{ borderTop: "3px solid #3E2723", width: "50%" }} />
+            <hr style={{ borderTop: "3px solid #3E2723", width: "65%",marginLeft:"auto", marginRight:"auto" }} />
             <h5>Certifications</h5>
             <img
               src={adwordsLogo}
@@ -171,6 +180,7 @@ class Resume extends Component {
             />
             <br />
             {/* <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/> */}
+            </div>
           </Cell>
           <Cell className="resume-right-col" col={8}>
             <h3>Expérience</h3>
@@ -208,6 +218,18 @@ class Resume extends Component {
             />
 
             <hr style={{ borderTop: "3px solid white" }} />
+            <h3>Technologies</h3>
+            <Logo logo={reactLogo} logoName="react logo" />
+            <Logo logo={nodejsLogo} logoName="nodejs logo"/>
+            <Logo logo={pythonLogo} logoName="python logo" />
+            <Logo logo={dockerLogo} logoName="docker logo" />
+            <Logo logo={postgresLogo} logoName="postgres logo" />            
+            <Logo logo={nginxLogo} logoName="nginx logo" />            
+            <Logo logo={rLogo} logoName="R logo" />            
+
+            <br/>
+            <hr style={{ borderTop: "3px solid white",marginTop:"3em" }} />
+
 
             <h3>Compétences</h3>
             <Skills skill="SEA" progress={85} />
@@ -220,7 +242,7 @@ class Resume extends Component {
             <Skills skill="JavaScript" progress={65} />
             <Skills skill="R" progress={60} />
             
-            <hr style={{ borderTop: "3px solid white" }} />
+            <hr style={{ borderTop: "3px solid white",marginTop:"3em" }} />
             <h3>Langues</h3>
             <Bar
               data={this.state.chartData}
