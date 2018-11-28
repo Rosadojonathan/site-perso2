@@ -1,14 +1,23 @@
 import React from 'react';
+import asyncComponent from './AsyncComponent';
+
 import {Switch, Route, Redirect} from 'react-router-dom';
 import LandingPage from './landingpage';
 import AboutMe from './aboutme';
-import Contact from './contact';
-import Projects from './projects';
+// import Contact from './contact';
+// import Projects from './projects';
 import Blog from './blog';
-import Resume from './resume';
+// import Resume from './resume';
 import Login from './login';
-import Admin from './admin';
+// import Admin from './admin';
 import ArticlePost from './articlepost';
+
+const AsyncContact = asyncComponent(() => import('./contact'));
+const AsyncResume = asyncComponent(() => import('./resume'));
+const AsyncAdmin = asyncComponent(() => import('./admin'));
+const AsyncProjects = asyncComponent(() => import('./projects'));
+
+
 
 
 const fakeAuth = {
@@ -45,13 +54,13 @@ const Main = () => (
   <Switch>
     <Route exact path="/" component={LandingPage}/>
     <Route path="/apropos" component={AboutMe}/>
-    <Route path="/contact" component={Contact}/>
-    <Route path="/projets" component={Projects}/>
-    <Route path="/cv" component={Resume}/>
+    <Route path="/contact" component={AsyncContact}/>
+    <Route path="/projets" component={AsyncProjects}/>
+    <Route path="/cv" component={AsyncResume}/>
     <Route exact path="/blog" component={Blog} />
     <Route path="/blog/:article" component={ArticlePost} />
     <Route path="/login" component={MyLoginForm} />
-    <PrivateRoute path="/admin" component={Admin} />
+    <PrivateRoute path="/admin" component={AsyncAdmin} />
 
 
   </Switch>

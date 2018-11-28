@@ -5,8 +5,9 @@ const bcrypt = require("bcrypt");
 
 const logins = require("../admin-credentials.js").logins;
 
-router.post("/", function(req, res, next) {
+router.post("/", function(req, res) {
   const { username, password } = req.body;
+
   if (username === logins.username && password) {
     bcrypt.compare(password, logins.password, function(err, isMatch) {
       if (err) throw err;
