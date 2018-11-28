@@ -1,28 +1,24 @@
 import React, { Component } from "react";
-import { Textfield } from "react-mdl";
+import { Grid, Cell, Textfield, Card } from "react-mdl";
+import TextEditor from './TextEditor/TextEditor';
+
+
+
 
 class Admin extends Component {
-  state = {
-    text: ""
-  };
 
   render() {
     return (
-      <div>
-        <Textfield
-          name="text"
-          label="Input text..."
-          value={this.state.text}
-          onChange={e => this.setState({ text: e.target.value })}
-          pattern="\S+.*"
-          error="Entrez du text quand même..."
-          floatingLabel
-          style={{ width: "400px" }}
-        />
 
-        <div>
-          This is a div and the text written in the input is: {this.state.text}
-        </div>
+      <div>
+        <Grid> 
+          <Cell col={2} style={{backgroundColor:"grey",height:"900px"}}></Cell>
+          <Cell col={7}>
+              <TextEditor />
+          </Cell>
+          <Cell col={3} style={{backgroundColor:"grey",height:"900px"}}></Cell>
+        </Grid>
+
       </div>
     );
   }
