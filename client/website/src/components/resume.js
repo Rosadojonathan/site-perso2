@@ -164,6 +164,7 @@ class Resume extends Component {
               startYear="Février 2017"
               endYear="Maintenant"
               jobName="SEA Manager & Technical Marketer"
+              company="Maestro Corporation"
               jobDescription="En charge de l'acquisition payante sur les plateformes publicitaires (AdWords, Facebook Ads, Instagram Ads, Snapchat Ads) en FR, EN, ES, DE, IT et NL. J'ai mis en place de nombreux programmes d'automatisation et un modèle prédictif de Machine Learning afin d'augmenter mon efficacité et aider la startup à scaler son système d'acquisition."
             />
 
