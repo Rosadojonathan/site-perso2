@@ -2,30 +2,38 @@ import { Editor } from 'slate-react'
 import { Value } from 'slate'
 
 import React from 'react'
-import ReactDOM from 'react-dom'
 import initialValue from './value.json'
-import styled from 'react-emotion'
 import { isKeyHotkey } from 'is-hotkey'
-import { Button, Icon, Menu } from './components'
+import { Button, Icon, Toolbar } from './components'
+import InsertImages from 'slate-drop-or-paste-images'
+import PasteLinkify from 'slate-paste-linkify'
+
+
+const plugins = [
+  InsertImages({
+    extensions: ['png'],
+    insertImage: (change, file) => {
+      return change.insertBlock({
+        type: 'image',
+        isVoid: true,
+        data: { file }
+      })
+    }
+  }),
+  PasteLinkify()
+]
+
+
+
 
 /**
- * Give the menu some styles.
+ * Define the default node type.
  *
- * @type {Component}
+ * @type {String}
  */
 
-const StyledMenu = styled(Menu)`
-  padding: 8px 7px 6px;
-  position: absolute;
-  z-index: 1;
-  top: -10000px;
-  left: -10000px;
-  margin-top: -6px;
-  opacity: 0;
-  background-color: #222;
-  border-radius: 4px;
-  transition: opacity 0.75s;
-`
+const DEFAULT_NODE = 'paragraph'
+
 /**
  * Define hotkey matchers.
  *
@@ -37,84 +45,15 @@ const isItalicHotkey = isKeyHotkey('mod+i')
 const isUnderlinedHotkey = isKeyHotkey('mod+u')
 const isCodeHotkey = isKeyHotkey('mod+`')
 
-
 /**
- * The hovering menu.
- *
- * @type {Component}
- */
-
-class HoverMenu extends React.Component {
-  /**
-   * Render.
-   *
-   * @return {Element}
-   */
-
-  render() {
-    const { className, innerRef } = this.props
-    const root = window.document.getElementById('root')
-
-    return ReactDOM.createPortal(
-      <StyledMenu className={className} innerRef={innerRef}>
-        {this.renderMarkButton('bold', 'format_bold')}
-        {this.renderMarkButton('italic', 'format_italic')}
-        {this.renderMarkButton('underlined', 'format_underlined')}
-        {this.renderMarkButton('code', 'code')}
-      </StyledMenu>,
-      root
-    )
-  }
-
-  /**n
-   * Render a mark-toggling toolbar button.
-   *
-   * @param {String} type
-   * @param {String} icon
-   * @return {Element}
-   */
-
-  renderMarkButton(type, icon) {
-    const { editor } = this.props
-    const { value } = editor
-    const isActive = value.activeMarks.some(mark => mark.type == type)
-    return (
-      <Button
-        reversed
-        active={isActive}
-        onMouseDown={event => this.onClickMark(event, type)}
-      >
-        <Icon>{icon}</Icon>
-      </Button>
-    )
-  }
-
-  /**
-   * When a mark button is clicked, toggle the current mark.
-   *
-   * @param {Event} event
-   * @param {String} type
-   */
-
-  onClickMark(event, type) {
-    const { editor } = this.props
-    event.preventDefault()
-    editor.toggleMark(type)
-  }
-}
-
-
-
-
-/**
- * The hovering menu example.
+ * The rich text example.
  *
  * @type {Component}
  */
 
 class TextEditor extends React.Component {
   /**
-   * Deserialize the raw initial value.
+   * Deserialize the initial editor value.
    *
    * @type {Object}
    */
@@ -124,62 +63,37 @@ class TextEditor extends React.Component {
   }
 
   /**
-   * On update, update the menu.
+   * Check if the current selection has a mark with `type` in it.
+   *
+   * @param {String} type
+   * @return {Boolean}
    */
 
-  componentDidMount = () => {
-    this.updateMenu()
-  }
-
-  componentDidUpdate = () => {
-    this.updateMenu()
+  hasMark = type => {
+    const { value } = this.state
+    return value.activeMarks.some(mark => mark.type == type)
   }
 
   /**
-   * Update the menu's absolute position.
+   * Check if the any of the currently selected blocks are of `type`.
+   *
+   * @param {String} type
+   * @return {Boolean}
    */
 
-  updateMenu = () => {
-    const menu = this.menu
-    if (!menu) return
-
+  hasBlock = type => {
     const { value } = this.state
-    const { fragment, selection } = value
-
-    if (selection.isBlurred || selection.isCollapsed || fragment.text === '') {
-      menu.removeAttribute('style')
-      return
-    }
-
-    const native = window.getSelection()
-    const range = native.getRangeAt(0)
-    const rect = range.getBoundingClientRect()
-    menu.style.opacity = 1
-    menu.style.top = `${rect.top + window.pageYOffset - menu.offsetHeight}px`
-
-    menu.style.left = `${rect.left +
-      window.pageXOffset -
-      menu.offsetWidth / 2 +
-      rect.width / 2}px`
+    return value.blocks.some(node => node.type == type)
   }
 
-  onKeyDown = (event, editor, next) => {
-    let mark
+  /**
+   * Store a reference to the `editor`.
+   *
+   * @param {Editor} editor
+   */
 
-    if (isBoldHotkey(event)) {
-      mark = 'bold'
-    } else if (isItalicHotkey(event)) {
-      mark = 'italic'
-    } else if (isUnderlinedHotkey(event)) {
-      mark = 'underlined'
-    } else if (isCodeHotkey(event)) {
-      mark = 'code'
-    } else {
-      return next()
-    }
-
-    event.preventDefault()
-    editor.toggleMark(mark)
+  ref = editor => {
+    this.editor = editor
   }
 
   /**
@@ -191,44 +105,116 @@ class TextEditor extends React.Component {
   render() {
     return (
       <div>
+        <Toolbar>
+          {this.renderMarkButton('bold', 'format_bold')}
+          {this.renderMarkButton('italic', 'format_italic')}
+          {this.renderMarkButton('underlined', 'format_underlined')}
+          {this.renderMarkButton('code', 'code')}
+          {this.renderBlockButton('heading-one', 'looks_one')}
+          {this.renderBlockButton('heading-two', 'looks_two')}
+          {this.renderBlockButton('block-quote', 'format_quote')}
+          {this.renderBlockButton('numbered-list', 'format_list_numbered')}
+          {this.renderBlockButton('bulleted-list', 'format_list_bulleted')}
+        </Toolbar>
         <Editor
-          placeholder="Enter some text..."
+          spellCheck
+          autoFocus
+          placeholder="Enter some rich text..."
+          ref={this.ref}
           value={this.state.value}
           onChange={this.onChange}
-          renderEditor={this.renderEditor}
-          renderMark={this.renderMark}
           onKeyDown={this.onKeyDown}
+          renderNode={this.renderNode}
+          renderMark={this.renderMark}
+          plugins={plugins}
         />
       </div>
     )
   }
 
   /**
-   * Render the editor.
+   * Render a mark-toggling toolbar button.
    *
-   * @param {Object} props
-   * @param {Function} next
+   * @param {String} type
+   * @param {String} icon
    * @return {Element}
    */
 
-  renderEditor = (props, editor, next) => {
-    const children = next()
+  renderMarkButton = (type, icon) => {
+    const isActive = this.hasMark(type)
+
     return (
-      <React.Fragment>
-        {children}
-        <HoverMenu innerRef={menu => (this.menu = menu)} editor={editor} />
-      </React.Fragment>
+      <Button
+        active={isActive}
+        onMouseDown={event => this.onClickMark(event, type)}
+      >
+        <Icon>{icon}</Icon>
+      </Button>
     )
   }
 
+  /**
+   * Render a block-toggling toolbar button.
+   *
+   * @param {String} type
+   * @param {String} icon
+   * @return {Element}
+   */
 
+  renderBlockButton = (type, icon) => {
+    let isActive = this.hasBlock(type)
+
+    if (['numbered-list', 'bulleted-list'].includes(type)) {
+      const { value: { document, blocks } } = this.state
+
+      if (blocks.size > 0) {
+        const parent = document.getParent(blocks.first().key)
+        isActive = this.hasBlock('list-item') && parent && parent.type === type
+      }
+    }
+
+    return (
+      <Button
+        active={isActive}
+        onMouseDown={event => this.onClickBlock(event, type)}
+      >
+        <Icon>{icon}</Icon>
+      </Button>
+    )
+  }
+
+  /**
+   * Render a Slate node.
+   *
+   * @param {Object} props
+   * @return {Element}
+   */
+
+  renderNode = (props, editor, next) => {
+    const { attributes, children, node } = props
+
+    switch (node.type) {
+      case 'block-quote':
+        return <blockquote {...attributes}>{children}</blockquote>
+      case 'bulleted-list':
+        return <ul {...attributes}>{children}</ul>
+      case 'heading-one':
+        return <h1 {...attributes}>{children}</h1>
+      case 'heading-two':
+        return <h2 {...attributes}>{children}</h2>
+      case 'list-item':
+        return <li {...attributes}>{children}</li>
+      case 'numbered-list':
+        return <ol {...attributes}>{children}</ol>
+      default:
+        return next()
+    }
+  }
 
   /**
    * Render a Slate mark.
    *
    * @param {Object} props
-   * @param {Editor} editor
-   * @param {Function} next
    * @return {Element}
    */
 
@@ -250,7 +236,7 @@ class TextEditor extends React.Component {
   }
 
   /**
-   * On change.
+   * On change, save the new `value`.
    *
    * @param {Editor} editor
    */
@@ -258,7 +244,7 @@ class TextEditor extends React.Component {
   onChange = ({ value }) => {
     this.setState({ value })
   }
-}
+
   /**
    * On key down, if it's a formatting command toggle a mark.
    *
@@ -267,7 +253,88 @@ class TextEditor extends React.Component {
    * @return {Change}
    */
 
+  onKeyDown = (event, editor, next) => {
+    let mark
 
+    if (isBoldHotkey(event)) {
+      mark = 'bold'
+    } else if (isItalicHotkey(event)) {
+      mark = 'italic'
+    } else if (isUnderlinedHotkey(event)) {
+      mark = 'underlined'
+    } else if (isCodeHotkey(event)) {
+      mark = 'code'
+    } else {
+      return next()
+    }
+
+    event.preventDefault()
+    editor.toggleMark(mark)
+  }
+
+  /**
+   * When a mark button is clicked, toggle the current mark.
+   *
+   * @param {Event} event
+   * @param {String} type
+   */
+
+  onClickMark = (event, type) => {
+    event.preventDefault()
+    this.editor.toggleMark(type)
+  }
+
+  /**
+   * When a block button is clicked, toggle the block type.
+   *
+   * @param {Event} event
+   * @param {String} type
+   */
+
+  onClickBlock = (event, type) => {
+    event.preventDefault()
+
+    const { editor } = this
+    const { value } = editor
+    const { document } = value
+
+    // Handle everything but list buttons.
+    if (type != 'bulleted-list' && type != 'numbered-list') {
+      const isActive = this.hasBlock(type)
+      const isList = this.hasBlock('list-item')
+
+      if (isList) {
+        editor
+          .setBlocks(isActive ? DEFAULT_NODE : type)
+          .unwrapBlock('bulleted-list')
+          .unwrapBlock('numbered-list')
+      } else {
+        editor.setBlocks(isActive ? DEFAULT_NODE : type)
+      }
+    } else {
+      // Handle the extra wrapping required for list buttons.
+      const isList = this.hasBlock('list-item')
+      const isType = value.blocks.some(block => {
+        return !!document.getClosest(block.key, parent => parent.type == type)
+      })
+
+      if (isList && isType) {
+        editor
+          .setBlocks(DEFAULT_NODE)
+          .unwrapBlock('bulleted-list')
+          .unwrapBlock('numbered-list')
+      } else if (isList) {
+        editor
+          .unwrapBlock(
+            type == 'bulleted-list' ? 'numbered-list' : 'bulleted-list'
+          )
+          .wrapBlock(type)
+      } else {
+        editor.setBlocks('list-item').wrapBlock(type)
+      }
+    }
+  }
+}
 
 /**
  * Export.
