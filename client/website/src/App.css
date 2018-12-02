@@ -166,7 +166,9 @@ margin-top: 10px;
 }
 
 @media screen and (max-width: 800px){
-
+  .mdl-layout__drawer-button{
+    color: black !important;
+  }
   .rcw-launcher {
     margin-bottom:300px !important;
     margin-right: auto !important;
