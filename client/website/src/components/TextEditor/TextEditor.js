@@ -11,7 +11,7 @@ import PasteLinkify from 'slate-paste-linkify'
 
 const plugins = [
   InsertImages({
-    extensions: ['png'],
+    extensions: ['png','jpg'],
     insertImage: (change, file) => {
       return change.insertBlock({
         type: 'image',
