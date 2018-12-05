@@ -7,6 +7,7 @@ const marketersCode = require("../ArticlesBlog/pourquoi-les-marketers-devraient-
 const sentimentGraph = require("../ArticlesBlog/graph-analyse-de-sentiments-commentaires-facebook.js")
 .article;
 const rasaChatbot = require('../ArticlesBlog/developper-un-chatbot-avec-rasa.js').article;
+const techMarketer = require('../ArticlesBlog/qu-est-ce-que-un-tech-marketer.js').article;
 
 module.exports.articlesDB = [
   {
@@ -70,5 +71,14 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
     image: '/images/chatbot.jpg',
     date:"22/11/2018"
 
+  },
+  {
+    id:7,
+    path:"qu-est-ce-qu-un-tech-marketer",
+    title:"Mais qu'est-ce qu'un Tech-Marketer ?",
+    description:`Le terme "Tech-Marketer" vous a peut-être intrigué, vous ne savez pas exactement ce qu'il représente et les différences avec les autres métiers du marketing technique ? Ici j'essaie de vous présenter ma vision du Tech-Marketer.`,
+    content:`${techMarketer.content}`,
+    image:'/images/qu-est-ce-qu-un-tech-marketer/tech-marketer.jpg',
+    date:'05/12/2018'
   }
 ];
