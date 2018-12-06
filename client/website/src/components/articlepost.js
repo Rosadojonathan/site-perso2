@@ -56,7 +56,7 @@ class ArticlePost extends Component {
             />
             <meta
               property="article:published_time"
-              content="2018-03-21T12:00:49+01:00"
+              content={this.state.article[0].date}
             />
           </Helmet>
 
