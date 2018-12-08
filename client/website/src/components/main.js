@@ -3,7 +3,6 @@ import asyncComponent from './AsyncComponent';
 
 import {Switch, Route, Redirect} from 'react-router-dom';
 import LandingPage from './landingpage';
-import AboutMe from './aboutme';
 // import Contact from './contact';
 // import Projects from './projects';
 import Blog from './blog';
@@ -53,7 +52,6 @@ const MyLoginForm = (props) => {
 const Main = () => (
   <Switch>
     <Route exact path="/" component={LandingPage}/>
-    <Route path="/apropos" component={AboutMe}/>
     <Route path="/contact" component={AsyncContact}/>
     <Route path="/projets" component={AsyncProjects}/>
     <Route path="/cv" component={AsyncResume}/>

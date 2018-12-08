@@ -163,7 +163,7 @@ componentWillMount(){
             />
 
             <br/>
-        <Button id='contact-form' raised colored ripple style={{backgroundColor:bgColor}} onClick={() => this.onSubmit()} > {message}</Button>
+        <Button id='contact-form' raised colored ripple style={{backgroundColor:bgColor, borderRadius:"8px"}} onClick={() => this.onSubmit()} > {message}</Button>
         <Recaptcha
           ref={ ref => this.recaptcha = ref }
           sitekey="6LfDTE8UAAAAAA-2-bFtrk5cFi3pQMh2SiWh2cDj"

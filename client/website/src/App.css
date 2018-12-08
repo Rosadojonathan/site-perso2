@@ -17,6 +17,8 @@ body {
   height:100%;
   text-align:center;
 }
+/* Landing page card CSS */
+
 .landing-cards {
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.12);
   border-radius:12px !important;
@@ -28,6 +30,7 @@ body {
   box-shadow: 0 8px 12px 6px rgba(0,0,0,0.12);
 }
 
+/* Project page card CSS */
 
 .project-card{
   box-shadow: 0 12px 6px 6px rgba(0,0,0,0.12);
@@ -39,6 +42,8 @@ body {
   transform: translateY(-9px) !important;
   box-shadow: 0 16px 14px 6px rgba(0,0,0,0.12);
 }
+
+/* Blog page card CSS */
 
 .blog-grid-article {
   border-radius:12px !important;
@@ -213,14 +218,15 @@ margin-top: 10px;
     margin-right: auto !important;
     margin-left:auto !important;
     position: relative !important;
+  }
+  .rcw-widget-container {
+    position: relative !important;
+  }
+  .rcw-widget-container.rcw-opened {
+    position: absolute !important;
+  }
 }
-.rcw-widget-container {
-  position: relative !important;
-}
-.rcw-widget-container.rcw-opened {
-  position: absolute !important;
-}
-}
+
 .rcw-conversation-container  .rcw-header {
   background-color: #141E30 !important;
 }
@@ -237,6 +243,16 @@ margin-top: 10px;
 
 .rcw-launcher {
   background-color: #141E30 !important;
+  box-shadow: 0 2px 3px 6px rgba(0,0,0,0.12);
+  transition: transform 0.2s cubic-bezier(0.37, 0.03, 0.11, 0.96),box-shadow 0.2s ease-out !important;
+
+}
+.rcw-widget-container:hover {
+  transform: translateY(-4px) !important;
+}
+.rcw-launcher:hover{
+  box-shadow: 0 4px 5px 4px rgba(0,0,0,0.12); 
+
 }
 .rcw-launcher .rcw-badge {
   background-color: #a82011 !important;
