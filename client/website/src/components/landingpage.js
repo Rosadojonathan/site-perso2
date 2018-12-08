@@ -79,7 +79,6 @@ class Landing extends Component {
               {this.state.postsHome.slice(0, 3).map(post => (
                 <Card
                   key={post.id}
-                  shadow={5}
                   style={{
                     margin: "auto",
                     marginBottom: "20px",
