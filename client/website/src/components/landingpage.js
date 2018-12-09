@@ -82,9 +82,9 @@ class Landing extends Component {
 
                  <p>D’abord <b>passionné de langues étrangères</b>, j’ai étudié plus d’une dizaine de langues européennes et non-européennes au cours de mon adolescence ce qui m’a permis de <b>comprendre les mécanismes de l’apprentissage et de la gestion de la motivation</b> - l'enseignement le plus utile dont j'ai fait l'expérience à mes yeux. </p>
 
-                 <p> Par la suite, j’ai découvert le Marketing qui m’a tout de suite captivé par l’étendue des domaines qu’il recouvre, de la psychologie au design en passant aussi par les statistiques et le digital. </p>
+                 <p> Par la suite, j’ai découvert le Marketing qui m’a tout de suite captivé par l’étendue des domaines qu’il recouvre, de la psychologie au design en passant aussi par les statistiques et le web. </p>
 
-                 <p>Lors de ma première expérience en Marketing Digital en startup j’ai pu acquérir des compétences en <b>acquisition de trafic, optimisation du taux de conversions, tracking et référencement.</b> J'ai appris à coder en <b>Python et JavaScript </b>pour créer des scripts d'automatisation de tâches chronophages, de scrapping de données et de création de sites internet en <b> React & Node.js.</b> (J'ai notamment réalisé mon site personnel en ces deux librairies)  </p>
+                 <p>Lors de mon expérience en Marketing Digital en startup j’ai pu acquérir des compétences en <b>acquisition de trafic, optimisation du taux de conversions, tracking et référencement.</b> J'ai appris à coder en <b>Python et JavaScript </b>pour créer des scripts d'automatisation de tâches chronophages, de scrapping de données et de création de sites internet en <b> React & Node.js.</b> (J'ai notamment réalisé mon site personnel en ces deux librairies)  </p>
 
                  <p> Finalement, je me suis découvert grâce à mon activité en marketing une nouvelle passion pour <b>l'analyse et l'exploitation de données par les outils statistiques ou de Machine Learning</b> que je trouve absolument fascinants.  </p>
 
