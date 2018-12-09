@@ -51,7 +51,7 @@ class Projects extends Component {
           <ProjectCard 
             background="https://raw.githubusercontent.com/Rosadojonathan/rasa-core-bot/master/chatbot.jpg"
             cardTitle="Projet NLU: Chatbot RASA Stack"
-            cardText="J'ai créé un petit chatbot disponible sur ma page de contact en utilisant la Stack RASA NLU / RASA Core."
+            cardText="J'ai créé un petit chatbot disponible sur ma page de contact en utilisant la Stack RASA NLU / RASA Core. La librairie est open source, l'on peut donc faire tourner le chatbot sur son propre serveur."
             githubLink="https://github.com/Rosadojonathan/rasa-core-bot"
           />
                     

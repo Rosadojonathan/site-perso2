@@ -1,6 +1,10 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif !important;
   font-family: 'Mina', sans-serif;
+}
+
+.mdl-layout-title > a {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .header-color{
@@ -8,6 +12,7 @@ body {
   background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 
 .landing-grid {
 
@@ -43,6 +48,10 @@ body {
   box-shadow: 0 16px 14px 6px rgba(0,0,0,0.12);
 }
 
+#card-title > h2 {
+  font-size:21px !important;
+}
+
 /* Blog page card CSS */
 
 .blog-grid-article {
@@ -69,6 +78,8 @@ body {
   width:75%;
   margin:auto;
   border-radius:10px;
+  font-family: 'Ubuntu', sans-serif;
+
 }
 
 /* #navigation > a {
@@ -288,6 +299,10 @@ a .hu-background-color_button-background hu-background-color_button-background-l
   margin-bottom:30px;
 }
 
+.mdl-card__supporting-text {
+  padding: 8px 16px !important;
+}
+
 @media (min-width: 800px){
 
 .projects-grid {
@@ -321,4 +336,24 @@ a .hu-background-color_button-background hu-background-color_button-background-l
 
 #signup:hover{
   background-color: rgb(103,0,0) !important;
+}
+
+#intro-paragraph {
+  text-align: justify;
+
+}
+
+#intro-paragraph > p {
+  font-size:20px;
+  margin: 0 0 16.5px;
+  color: #2c3e50;
+  text-align:"justify";
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+h1, h2, h3 {
+  font-family: 'Ubuntu', sans-serif !important;
+  font-weight:600 !important;
+
 }
