@@ -84,7 +84,7 @@ class Landing extends Component {
 
                  <p> Par la suite, j’ai découvert le Marketing qui m’a tout de suite captivé par l’étendue des domaines qu’il recouvre, de la psychologie au design en passant aussi par les statistiques et le web. </p>
 
-                 <p>Lors de mon expérience en startup j’ai pu acquérir des compétences en <b>acquisition de trafic, optimisation du taux de conversions, tracking et référencement.</b> J'ai appris à coder en <b>Python et JavaScript </b>pour créer des scripts d'automatisation de tâches chronophages, de scrapping de données et de création de sites internet en <b> React & Node.js.</b> (J'ai notamment réalisé mon site personnel en ces deux librairies)  </p>
+                 <p>Lors de mon expérience en marketing en startup j’ai pu acquérir des compétences en <b>acquisition de trafic, optimisation du taux de conversions, tracking et référencement.</b> J'ai appris à coder en <b>Python et JavaScript </b>pour créer des scripts d'automatisation de tâches chronophages, de scrapping de données et de création de sites internet en <b> React & Node.js.</b> (J'ai notamment réalisé mon site personnel en ces deux librairies)  </p>
 
                  <p> Finalement, je me suis découvert grâce à mon activité en marketing une nouvelle passion pour <b>l'analyse et l'exploitation de données par les outils statistiques ou de Machine Learning</b> que je trouve absolument fascinants.  </p>
 
