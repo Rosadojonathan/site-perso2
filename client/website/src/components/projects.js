@@ -36,7 +36,7 @@ class Projects extends Component {
     } else if(this.state.activeTab === 1) {
       return (
         <div className="projects-grid">
-
+        
           <ProjectCard 
             background={machineLearningIcon}
             cardTitle="Projet Machine Learning: Prédiction de pertinence d'un produit sur les canaux publicitaires"
@@ -54,6 +54,7 @@ class Projects extends Component {
             cardText="J'ai créé un petit chatbot disponible sur ma page de contact en utilisant la Stack RASA NLU / RASA Core."
             githubLink="https://github.com/Rosadojonathan/rasa-core-bot"
           />
+                    
         </div>
 
       )

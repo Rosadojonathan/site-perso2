@@ -280,9 +280,19 @@ a .hu-background-color_button-background hu-background-color_button-background-l
   display:none;
 }
 
+
+.project-card {
+  min-width: 330px;
+  margin: auto;
+  height:420px;
+  margin-bottom:30px;
+}
+
 @media (min-width: 800px){
+
 .projects-grid {
   display:flex;
+  flex-wrap: wrap;
  }
  .landing-cards{
    padding:10px;

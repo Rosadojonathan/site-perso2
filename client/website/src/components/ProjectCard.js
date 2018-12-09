@@ -5,8 +5,8 @@ import '../App.css'
 export default class ProjectCard extends Component {
   render() {
     return (
-      
-        <Card className="project-card" style={{minWidth:'450',margin:'auto',height:'420px'}}>
+    //   <Cell col={4}>
+        <Card className="project-card" >
           <CardTitle style={{color:'#fff',height:'176px',background:`url(${this.props.background}) center / cover`}}></CardTitle>
           <CardTitle style={{color:'black', fontWeight:'bold'}}>{this.props.cardTitle}</CardTitle>
           <CardText>{this.props.cardText}</CardText>
@@ -24,7 +24,7 @@ export default class ProjectCard extends Component {
              <IconButton name="share"/>
            </CardMenu>
         </Card>
-        
+        // </Cell> 
     
     )
   }
