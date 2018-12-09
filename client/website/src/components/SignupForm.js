@@ -43,7 +43,7 @@ class SignupForm extends Component {
     let message = this.state.msgSend ? "✔" : "S'abonner";
 
     return (
-      <div style={{textAlign:'center', display: this.state.signedUp ? 'none' : 'block',position:"sticky",top:"0px"}}>
+      <div style={{textAlign:'center', display: this.state.signedUp ? 'none' : 'block',position:"sticky",top:"64px"}}>
         <h3 style={{fontSize:'2em'}}>Préviens moi de tes prochains articles !</h3>
         <Textfield
                 onChange={() => {}}
