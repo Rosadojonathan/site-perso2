@@ -22,13 +22,14 @@ class Projects extends Component {
     if (this.state.activeTab === 0){
       return (
       <div className="projects-grid">
+      <Grid col={12}>
         <ProjectCard 
           background={reactIcon}
           cardTitle="Création d'un site internet sous React"
           cardText="Je me suis lancé dans le développement de ce site internet codé entièrement en JavaScript grâce aux technologies React et Node.js. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking."
           githubLink="https://github.com/Rosadojonathan/site-perso2"
         />
-
+      </Grid>
 
 
       </div>
@@ -36,6 +37,25 @@ class Projects extends Component {
     } else if(this.state.activeTab === 1) {
       return (
         <div className="projects-grid">
+          <Grid col={12}>
+          <ProjectCard 
+            background={machineLearningIcon}
+            cardTitle="Projet Machine Learning: Prédiction de pertinence d'un produit sur les canaux publicitaires"
+            cardText="Ce projet m'a permis de mettre en application mes connaissances en Statistiques et Machine Learning appliqué au Marketing grâce à Python."
+          />
+          <ProjectCard 
+            background="/images/analyse-de-sentiments.jpg"
+            cardTitle="Projet Data Viz: Graph d'analyse de sentiments de Facebook Ads"
+            cardText="J'ai développé une petite interface en Dash pour visualiser la polarité des commentaires reçus sur des Facebook Ads grâce à la librairie VADER."
+            githubLink="https://github.com/Rosadojonathan/facebook-ads-sentiment-grapher"
+          />
+          <ProjectCard 
+            background="https://raw.githubusercontent.com/Rosadojonathan/rasa-core-bot/master/chatbot.jpg"
+            cardTitle="Projet NLU: Chatbot RASA Stack"
+            cardText="J'ai créé un petit chatbot disponible sur ma page de contact en utilisant la Stack RASA NLU / RASA Core."
+            githubLink="https://github.com/Rosadojonathan/rasa-core-bot"
+          />
+
 
           <ProjectCard 
             background={machineLearningIcon}
@@ -54,6 +74,25 @@ class Projects extends Component {
             cardText="J'ai créé un petit chatbot disponible sur ma page de contact en utilisant la Stack RASA NLU / RASA Core."
             githubLink="https://github.com/Rosadojonathan/rasa-core-bot"
           />
+
+          <ProjectCard 
+            background={machineLearningIcon}
+            cardTitle="Projet Machine Learning: Prédiction de pertinence d'un produit sur les canaux publicitaires"
+            cardText="Ce projet m'a permis de mettre en application mes connaissances en Statistiques et Machine Learning appliqué au Marketing grâce à Python."
+          />
+          <ProjectCard 
+            background="/images/analyse-de-sentiments.jpg"
+            cardTitle="Projet Data Viz: Graph d'analyse de sentiments de Facebook Ads"
+            cardText="J'ai développé une petite interface en Dash pour visualiser la polarité des commentaires reçus sur des Facebook Ads grâce à la librairie VADER."
+            githubLink="https://github.com/Rosadojonathan/facebook-ads-sentiment-grapher"
+          />
+          <ProjectCard 
+            background="https://raw.githubusercontent.com/Rosadojonathan/rasa-core-bot/master/chatbot.jpg"
+            cardTitle="Projet NLU: Chatbot RASA Stack"
+            cardText="J'ai créé un petit chatbot disponible sur ma page de contact en utilisant la Stack RASA NLU / RASA Core."
+            githubLink="https://github.com/Rosadojonathan/rasa-core-bot"
+          />
+          </Grid>
         </div>
 
       )
@@ -61,6 +100,7 @@ class Projects extends Component {
     else if (this.state.activeTab === 2) {
       return (
         <div className="projects-grid">
+        <Grid col={12}>
           <ProjectCard 
             background={facebookIcon}
             cardTitle="Automatisation de la création de Facebook Ads avec Python"
@@ -72,13 +112,14 @@ class Projects extends Component {
             cardTitle="Automatisation de la sponsorisation de posts Facebook"
             cardText="Comment semi-automatiser la sponsorisation de posts Facebook d'une page à nouveau grâce au SDK Python de l'API Marketing de Facebook."
           />
+        </Grid>
         </div>
       )
     }
     else if (this.state.activeTab === 3){
       return (
         <div className="projects-grid">
-
+          <Grid col={12}>
           <ProjectCard 
             background={slackIcon}
             cardTitle="Slackbot d'alerte CPA Facebook Ads"
@@ -95,6 +136,7 @@ class Projects extends Component {
             cardTitle="Slackbot d'alerte absence de stocks sur fiche produit"
             cardText="Ce script itère toutes les heures sur les campagnes AdWords actives d'un compte pour lancer un crawler de type headless browser pour exécuter le JavaScript de la page et vérifier que le produit affiche bien des stocks dans la variante affichée par défaut."
           />   
+        </Grid>
           </div>
 
       )

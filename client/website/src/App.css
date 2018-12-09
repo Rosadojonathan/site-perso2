@@ -281,9 +281,9 @@ a .hu-background-color_button-background hu-background-color_button-background-l
 }
 
 @media (min-width: 800px){
-.projects-grid {
+/* .projects-grid {
   display:flex;
- }
+ } */
  .landing-cards{
    padding:10px;
    margin:auto;
