@@ -307,8 +307,18 @@ a .hu-background-color_button-background hu-background-color_button-background-l
 
 
 
-
+#contact-form{
+  border-radius:12px;
+}
 #contact-form:hover{
   background: #212a5e;
 
+}
+
+#signup{
+  border-radius:12px;
+}
+
+#signup:hover{
+  background-color: rgb(103,0,0) !important;
 }
