@@ -330,6 +330,7 @@ a .hu-background-color_button-background hu-background-color_button-background-l
 
 #contact-form{
   border-radius:12px;
+  transition: all 0.2s ease-in-out;
 }
 #contact-form:hover{
   background: #212a5e;
@@ -338,6 +339,7 @@ a .hu-background-color_button-background hu-background-color_button-background-l
 
 #signup{
   border-radius:12px;
+  transition: all 0.2s ease-in-out;
 }
 
 #signup:hover{
