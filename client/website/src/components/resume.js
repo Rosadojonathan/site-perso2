@@ -225,6 +225,7 @@ class Resume extends Component {
               data={this.state.chartData}
               width={500}
               height={400}
+
               options={{
                 title: {
                   display: true,
