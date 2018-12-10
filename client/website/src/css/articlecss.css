@@ -21,3 +21,21 @@ h1 {
   padding:1.5em;
 }
 }
+
+
+p > a {
+  color: rgb(162, 23, 23) !important;
+  text-decoration: none !important;
+  font-weight:600;
+  display: inline;
+  padding-bottom: 2px;
+  transition: all 0.3s linear;
+  background: linear-gradient(to bottom, rgb(162, 23, 23) 0%, rgb(162, 23, 23) 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 100%;
+}
+
+p > a:hover {
+  background-size: 100% 2px;
+}

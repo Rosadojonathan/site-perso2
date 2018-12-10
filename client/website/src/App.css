@@ -328,6 +328,8 @@ a .hu-background-color_button-background hu-background-color_button-background-l
 
 
 
+
+
 #contact-form{
   border-radius:12px;
   transition: all 0.2s ease-in-out;
@@ -363,5 +365,18 @@ a .hu-background-color_button-background hu-background-color_button-background-l
 h1, h2, h3 {
   font-family: 'Ubuntu', sans-serif !important;
   font-weight:600 !important;
+}
+
+#company-link {
+  padding-bottom:4px;
+  transition: all 0.35s linear;
+  background: linear-gradient(to bottom, white 0%, white 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 100%;
+}
+
+#company-link:hover{
+  background-size: 100% 2px;
 
 }
