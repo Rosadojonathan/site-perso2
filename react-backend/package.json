@@ -6,6 +6,16 @@
     "start": "PORT=1337 sudo node ./bin/www"
   },
   "dependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.0-beta.6",
+    "babel-plugin-dynamic-import-node": "^2.0.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react-app": "^6.1.0",
     "bcrypt": "^1.0.3",
     "bcryptjs": "^2.4.3",
     "body-parser": "~1.18.2",
@@ -13,6 +23,7 @@
     "debug": "~2.6.9",
     "express": "~4.15.5",
     "express-limiter": "^1.6.1",
+    "ignore-styles": "^5.0.1",
     "jade": "~1.11.0",
     "mongodb": "^2.2.33",
     "mongoose": "^5.0.10",
@@ -24,5 +35,8 @@
     "request": "^2.85.0",
     "serve-favicon": "^2.4.5",
     "slack-webhook": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.2.1"
   }
 }
