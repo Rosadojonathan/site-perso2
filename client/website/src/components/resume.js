@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { Grid, Cell } from "react-mdl";
 import { Bar } from "react-chartjs-2";
 import Education from "./education";
-import Experience from "./experience";
+import {Experience, MaestroExperience} from "./experience";
 import Skills from "./skills";
 import Logo from "./logo";
 
@@ -110,7 +110,7 @@ class Resume extends Component {
             <h2 style={{ paddingTop: "2em" }}>Jonathan Rosado</h2>
             <h4 style={{ color: "grey" }}>Technical Marketer</h4>
             <hr style={{ borderTop: "3px solid #3E2723", width: "65%",marginLeft:"auto", marginRight:"auto" }} />
-            <p>
+            <p style={{textAlign:'left'}}>
               D'abord autodidacte dans le domaine des langues, j'ai ensuite
               développé un intérêt pour le Marketing Digital, la programmation
               et les statistiques que je fusionne pour aider les entreprises à
@@ -159,6 +159,15 @@ class Resume extends Component {
           </Cell>
           <Cell className="resume-right-col" style={{borderRadius:"12px"}} col={8}>
             <h3>Expérience</h3>
+            <MaestroExperience
+              startYear="Octobre 2018"
+              endYear="Maintenant"
+              jobName="Technical Marketer & Data Scientist"
+              company="Maestro Corporation"
+              linkCompany="https://maestro-corporation.com/"
+              />
+
+
 
             <Experience
               startYear="Février 2017"
