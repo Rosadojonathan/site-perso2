@@ -76,7 +76,7 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
     id:7,
     path:"qu-est-ce-qu-un-tech-marketer",
     title:"Mais qu'est-ce qu'un Tech-Marketer ?",
-    description:`Le terme “Tech-Marketer” vous a peut-être intrigué, vous ne savez pas exactement ce qu'il représente et les différences avec les autres métiers du marketing technique ? Ici j'essaie de vous présenter ma vision du Tech-Marketer.`,
+    description:`Le terme 'Tech-Marketer' vous a peut-être intrigué, vous ne savez pas exactement ce qu'il représente et les différences avec les autres métiers du marketing technique ? Ici j'essaie de vous présenter ma vision du Tech-Marketer.`,
     content:`${techMarketer.content}`,
     image:'/images/qu-est-ce-qu-un-tech-marketer/tech-marketer.jpg',
     date:'2018-12-05'
