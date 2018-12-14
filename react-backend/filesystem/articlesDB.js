@@ -19,7 +19,7 @@ module.exports.articlesDB = [
       "Créer des publicités sur Facebook peut rapidement devenir un processus ennuyeux et répétitif. Si vous déjà remarqué qu'il existe peu de variation de contenu entre vos annonces à part quelques éléments c'est que l'automatisation peut potentiellement vous être utile. Dans cet article nous allons voir comment créer un script qui semi-automatise la création de Facebook Ads grâce à Python et l'API de Facebook.",
     content: `  ${articleFacebookAdsApi.content}`,
     image:'/images/facebook-api1.jpg',
-    date:"07/03/2018"
+    date:"2018-03-07"
   },
 
   {
@@ -30,7 +30,7 @@ module.exports.articlesDB = [
 Mais peut-être que vous désirez connecter un élément déclencheur qui n'est pas proposé par votre service d'IFTTT. Heureusement, il est extrêmement simple de créer son propre Slackbot.`,
     content: `${articleSlackbot.content}`,
     image:"/images/slack4.jpg",
-    date:"10/03/2018"
+    date:"2018-03-10"
   },
 
   {
@@ -41,7 +41,7 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
     description: `Les Tableaux Croisés Dynamiques sont les meilleurs amis des SEA Managers. En quelques clics vous pouvez en sortir des insights précieux. Dans cet article, j'explique comment déterminer les horaires / jours de la semaine et meilleurs appareils en termes de coûts d'acquisition sur votre compte AdWords grâce à Excel.`,
     content: `${tcdsea.content}`,
     image:'/images/tcd7.jpg',
-    date:"17/03/2018"
+    date:"2018-03-17"
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
     description: `Coder ne devrait pas être l'apanage des développeurs, cette compétence a ses avantages à tous les niveaux d'une entreprise et notamment pour le marketing. Développer une double-compétence peut être le meilleur choix que vous ayez fait cette année... `,
     content: `${marketersCode.content}`,
     image:'/images/pourquoi-les-marketers-devraient-apprendre-à-coder/projects.jpg',
-    date:"21/03/2018"
+    date:"2018-03-21"
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
     Il s'agit d'une métrique importante car si de nombreux commentaires négatifs sont laissés non-traités la situation peut nuire à votre capacité de conversion de prospects.`,
     content: `${sentimentGraph.content}`,
     image: '/images/analyse-de-sentiments.jpg',
-    date:"21/10/2018"
+    date:"2018-10-21"
   },
   {
     id: 6,
@@ -69,16 +69,16 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
     description: `Dans cet article j'explique comment j'ai utilisé une librairie open source de NLU pour créer un chatbot pouvant tourner en local ou sur votre propre serveur. Il s'agit de la Stack RASA : composée de Rasa Core et Rasa NLU. J'ai cherché à utiliser RASA pour un projet de chatbot qui puisse automatiquement répondre à des demandes assez simples sur ma page de contact. Ensuite, je l'ai déployé sur mon serveur grâce à Docker et Nginx.`,
     content: `${rasaChatbot.content}`,
     image: '/images/chatbot.jpg',
-    date:"22/11/2018"
+    date:"2018-11-22"
 
   },
   {
     id:7,
     path:"qu-est-ce-qu-un-tech-marketer",
     title:"Mais qu'est-ce qu'un Tech-Marketer ?",
-    description:`Le terme "Tech-Marketer" vous a peut-être intrigué, vous ne savez pas exactement ce qu'il représente et les différences avec les autres métiers du marketing technique ? Ici j'essaie de vous présenter ma vision du Tech-Marketer.`,
+    description:`Le terme “Tech-Marketer” vous a peut-être intrigué, vous ne savez pas exactement ce qu'il représente et les différences avec les autres métiers du marketing technique ? Ici j'essaie de vous présenter ma vision du Tech-Marketer.`,
     content:`${techMarketer.content}`,
     image:'/images/qu-est-ce-qu-un-tech-marketer/tech-marketer.jpg',
-    date:'05/12/2018'
+    date:'2018-12-05'
   }
 ];
