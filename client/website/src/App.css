@@ -302,7 +302,8 @@ a .hu-background-color_button-background hu-background-color_button-background-l
   min-width: 330px;
   margin: auto;
   height:420px;
-  margin-bottom:30px;
+  margin-top:25px;
+  margin-bottom:10px;
 }
 
 .mdl-card__supporting-text {
@@ -326,8 +327,11 @@ a .hu-background-color_button-background hu-background-color_button-background-l
  }
 
 }
-
-
+.logo {
+  width: auto !important;
+  height: "80px";
+  margin-right:"15px";
+}
 
 
 

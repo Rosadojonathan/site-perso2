@@ -9,7 +9,7 @@ class Logo extends Component {
       return (
         <img
             src={this.props.logo}
-            style={{ height: "80px", width: "auto", marginRight:"15px" }}
+            style={{ height: "80px", width: "auto !important", marginRight:"15px" }}
             alt={this.props.logoName}
         />
       );

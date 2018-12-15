@@ -34,14 +34,14 @@ h1 {
     width: 100%;
     margin: auto;
   }
-  img {
-    width:100% !important;
+  #article-post-div img {
+    width: 100% !important;
   }
 
-  h1 {
+  #article-post-div h1 {
     font-size: 1.6em !important;
   }
-  p {
+  #article-post-div p {
     font-size: 1.2em !important;
    
   }
