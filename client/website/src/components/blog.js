@@ -148,6 +148,7 @@ class Blog extends Component {
           {this.state.posts.map(post => (
           
             <Article
+
               style={{ width: "80%" }}
               key={post.id}
               cardTitle={post.title}

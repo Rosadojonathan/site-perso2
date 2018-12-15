@@ -31,7 +31,7 @@ class Article extends Component {
     return (
         <a href={`/blog/${this.props.linkTitle}`} style={{textDecoration:'none'}}>
         <Grid  className="blog-grid-article" onMouseEnter={this.onHover} onMouseLeave={this.onHover} style={{marginBottom:"20px"}}>
-          <Cell col={8}>
+          <Cell col={8} className="article-blog">
             <Card  style={{width:'95%', height:"320px", margin:'auto'}}>
                 <CardTitle> <h2 style={{fontSize:'1.4em',lineHeight:'0.9em',fontWeight:'bold',color: this.state.coloredArticle ? '#082008' : ''}}>{this.props.cardTitle}</h2></CardTitle>
                 <CardText style={{color: this.state.coloredArticle ? 'black' : ''}} > { this.props.cardText.length > 350 ? this.props.cardText.substr(0,347) + '...' : this.props.cardText}</CardText>
