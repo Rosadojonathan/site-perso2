@@ -146,6 +146,15 @@ body {
 
 
 /* Resume page Css */
+
+@media (min-width:430px) and (max-width: 840px){
+  #personal-description {
+    width: calc(70% - 16px);
+    margin: auto;
+  }
+
+
+}
 .resume-right-col {
   background: black;
   opacity:.8;

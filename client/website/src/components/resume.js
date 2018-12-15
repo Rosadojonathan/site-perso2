@@ -93,7 +93,7 @@ class Resume extends Component {
           />
         </Helmet>
         <Grid>
-          <Cell col={4}>
+          <Cell col={4} id="personal-description">
             <div style={{ textAlign: "center" }}>
               <img
                 src={imageJonathan}
@@ -110,7 +110,7 @@ class Resume extends Component {
             <h2 style={{ paddingTop: "2em" }}>Jonathan Rosado</h2>
             <h4 style={{ color: "grey" }}>Technical Marketer</h4>
             <hr style={{ borderTop: "3px solid #3E2723", width: "65%",marginLeft:"auto", marginRight:"auto" }} />
-            <div style={{backgroundColor:"rgb(251, 244, 235)", borderRadius:"10px"}}>
+            <div id="short-description" style={{backgroundColor:"rgb(251, 244, 235)", borderRadius:"10px"}}>
               <p style={{textAlign:'left', padding:'15px', color:"rgb(0,0,0,0.9)"}}>
                 D'abord autodidacte dans le domaine des langues, j'ai ensuite
                 développé un intérêt pour le Marketing Digital, la programmation
