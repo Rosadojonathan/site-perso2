@@ -1,3 +1,9 @@
+#article-post-div {
+  width: 80%;
+  margin: auto;
+}
+
+
 h1 {
   font-size: 1.9em;
   font-weight: bold;
@@ -20,6 +26,25 @@ h1 {
 #article-title {
   padding:1.5em;
 }
+}
+
+@media (max-width: 430px){
+
+  #article-post-div {
+    width: 100%;
+    margin: auto;
+  }
+  img {
+    width:100% !important;
+  }
+
+  h1 {
+    font-size: 1.6em !important;
+  }
+  p {
+    font-size: 1.2em !important;
+   
+  }
 }
 
 

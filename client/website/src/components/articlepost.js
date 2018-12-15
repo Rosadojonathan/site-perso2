@@ -34,7 +34,7 @@ class ArticlePost extends Component {
   render() {
     if (this.state.loaded) {
       return (
-        <div style={{ width: "80%", margin: "auto" }}>
+        <div  id="article-post-div">
           <Helmet>
             <meta charSet="utf-8" />
             <title>{this.state.article[0].title} - Tech-Marketer</title>

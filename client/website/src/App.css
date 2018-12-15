@@ -186,7 +186,7 @@ margin-top: 10px;
 }
 
 .like-heart-btn {
-  width: 3.4vw;
+  width: 3.4vw ;
 	height: 100px;
   cursor:pointer;
   border: none;
@@ -196,8 +196,8 @@ margin-top: 10px;
 
 .like-heart-btn {
 
-	height: 70px;
-  width:auto;
+	height: 70px !important;
+  width:auto !important;
   cursor:pointer;
   border: none;
   background-color: transparent;
