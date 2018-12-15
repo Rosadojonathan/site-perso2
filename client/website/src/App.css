@@ -332,6 +332,13 @@ a .hu-background-color_button-background hu-background-color_button-background-l
     font-size:1.2rem !important;
     overflow: visible !important;
   }
+
+  .intro {
+    width: 87% !important;
+    margin: auto !important;
+  }
+
+
 }
 
 .logo {
@@ -360,12 +367,13 @@ a .hu-background-color_button-background hu-background-color_button-background-l
   background-color: rgb(103,0,0) !important;
 }
 
-#intro-paragraph {
+.intro {
   text-align: justify;
-
+  width: 70%;
+  margin: auto;
 }
 
-#intro-paragraph > p {
+.intro-paragraph  p {
   font-size:20px;
   margin: 0 0 16.5px;
   color: #141E30;

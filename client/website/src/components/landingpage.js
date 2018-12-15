@@ -70,14 +70,14 @@ class Landing extends Component {
               <p>SEM - Programming - Data Science - Analytics</p>
             </div>
           </Cell>
-          <Cell col={12} style={{width:"70%", margin:"auto"}}>
+          <Cell col={12} className="intro-paragraph">
             <br/>
             <h2>Qui suis-je ?</h2>
             
             <h5>Jonathan Rosado - Marketer spécialisé en programmation et data</h5>
             <br/>
             <br/>
-            <div id="intro-paragraph" >
+            <div className="intro" >
                 <p>Grand convaincu des bénéfices de l'approche <b>autodidacte</b>, je défie mes croyances limitantes pour nourrir ma curiosité intellectuelle.</p>
 
                  <p>D’abord <b>passionné de langues étrangères</b>, j’ai étudié plus d’une dizaine de langues européennes et non-européennes au cours de mon adolescence ce qui m’a permis de <b>comprendre les mécanismes de l’apprentissage et de la gestion de la motivation</b> - l'enseignement le plus utile dont j'ai fait l'expérience à mes yeux. </p>
