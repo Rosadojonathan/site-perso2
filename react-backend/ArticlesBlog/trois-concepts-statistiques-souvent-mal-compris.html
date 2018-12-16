@@ -1,0 +1,43 @@
+
+<p>Oui, la corrélation n'induit pas la causalité. C'est bien connu. Mais à part ça ? Quels autres concepts statistiques ont une définition différente de ce que l'on imagine souvent ?</p>
+
+
+
+<h2>1) Que signifie vraiment la valeur de p ?</h2>
+<br>
+<p>Souvent mal comprise, parfois même par des professionnels se servant des statistiques dans leur quotidien, il est important de comprendre la définition d'une valeur p.</p>
+<p> <b>La valeur p n'indique pas la probabilité que l'hypothèse du test est vraie</b>.  </p>
+<p>En effet, le calcul de la valeur p se base sur des hypothèses et modèles statistiques sous-jacents (distribution gaussienne de la moyenne des échantillons notamment, il est donc invalide sur des petits échantillons de distributions non gaussiennes)</p>
+<p>Les valeurs p ne sont pas <b>la probabilité de commettre une erreur</b> non plus</p>
+<p>Bien qu'une faible valeur p indique effectivement que vos données sont improbables si l'hypothèse nulle est vraie, elle ne vous permet pas de déterminer si l'hypothèse nulle était vraie et que votre échantillon était inhabituel ou bien si l'hypothèse nulle était fausse.</p>
+<p>La définition d'une valeur p est :
+    <b>La probabilité de mesurer un effet au moins aussi extrême que celui de l'échantillon en supposant que l'hypothèse nulle soit vraie.</b>
+</p>
+<p>Les valeurs p sont donc une expression de la probabilité des données, pas une expression de la probabilité d'une hypothèse.</p>
+<p>Malheureusement pour nous, les valeurs p ne répondent pas à la question que l'on se pose vraiment. La probabilité que notre hypothèse est correcte ou la probabilité que l'on commete une erreur. En effet, étant donné que les valeurs p sont calculées sur les données contenues dans un échantillon, l'on ne peut pas savoir sans plus d'informations si ce dernier est représentatif de la population.</p>
+<p>Dans les faits, les taux d'erreur, ou la probabilité de commettre une erreur, sont souvent bien plus élevés que l'on imagine.</p>
+<p>En effet, l'on estime que pour une valeur p de 0.05 le taux d'erreur réel peut souvent être autour de 25% comme expliqué <a href="https://royalsocietypublishing.org/doi/10.1098/rsos.140216">dans cet article de David Colquhoun</a> !</p>
+<p>Donc souvenez-vous, <b>il ne faut pas associer les valeurs p à la probabilité d'une hypothèse ou d'une erreur !</b></p>
+<br>
+<h2>2) Significativité statistique =/= pertinence statistique</h2>
+<br>
+
+<p>L'on rencontre souvent cette erreur chez les débutants en Tests A/B.</p>
+<p>Par exemple, vous lancez un test A/B sur votre site avec deux variantes de CTA (Call To Action). L'un vous donne un taux de clic de 3% et l'autre 3,5%. Après avoir effectué votre test de significativité statistique vous obtenez un résultat positif. Mais qu'est-ce que cela veut vraiment dire ?</p>
+<p>En statistiques "significativité", signifie simplement qu'une différence existe. Cela ne signifie pas que la valeur réelle de cette différence est importante. Ici, la différence réelle ne sera pas forcément de 0.5%. Elle peut être moindre ou supérieure. Si vous laissez tourner un A/B Test à l'infini, vous finirez toujours par mesurer une différence statistiquement significative au fur et à mesure que la taille de votre échantillon augmente parce que vous mesurez deux versions différentes, il est donc hautement improbable qu'elles aient exactement le même impact sur vos visiteurs.  </p>
+<p>Dans le marketing, les coûts d'implémentation d'une nouvelle variante sont souvent faibles, et cette nuance n'est donc pas toujours cruciale. Cependant, dans un contexte médical où l'une seconde variante d'un médicament peut avoir des effets secondaires pénibles, il est important de se rappeler que la significativité statistique n'est pas égale à une significativité pertinente. Elle signifie juste qu'une différence existe.
+</p>
+
+<h2>3) Définition des intervalles de confiance</h2>
+<br>
+<p>On pourrait penser qu'un intervalle de confiance à 95% [x,y] signifie qu'il y a 95% de chances que la vraie valeur soit comprise dans notre intervalle [x,y]. </p>
+<p>Ce n'est malheureusement pas le cas. Encore une fois, les statistiques fréquentistes ne sont pas très intuitives.</p>
+<p>En réalité, l'intervalle de confiance 95% signifie que si l'on calculait des intervalles de confiance 95% sur une centaine d'échantillons, à peu 95% de ces échantillons contiendraient la valeur réelle de la population.</p>
+<p>Dans les faits, l'on calcule l'intervalle de confiance sur un seul échantillon. On ne sait donc pas si notre intervalle de confiance contient la valeur ou non, soit il la contient, soit il ne la contient pas.</p>
+<p>Le "95%" ici n'a rien à voir avec les valeurs limites de l'intervalle de confiance mais plutôt dans le processus de calcul de ces limites, qui, à terme, nous permettra d'obtenir des limites qui contiennent la valeur réelle de la population 95% du temps.</p>
+
+<h2>Bonus: Signification d'intervalles de confiance qui se chevauchent</h2>
+<br>
+<p>Alors que deux intervalles de confiance qui ne se chevauchent pas induit en effet une différence statistiquement significative, l'inverse n'est pas nécessairement vrai. Deux intervalles de confiance d'une moyenne peuvent se chevaucher et pourtant être statistiquement significatifs. </p>
+<p>Cette curiosité est dûe au fait que le test de Student pour déterminer la Significativité statistique part de l'hypothèse de l'égalité de la différence des moyennes. </p>
+<p>L'erreur standard utilisé pour calculer les intervalles de confiance de chaque moyenne sera donc plus grande que l'erreur standard de la différence des moyennes du test de Student.</p>

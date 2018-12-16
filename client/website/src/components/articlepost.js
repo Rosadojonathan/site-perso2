@@ -34,7 +34,7 @@ class ArticlePost extends Component {
   render() {
     if (this.state.loaded) {
       return (
-        <div style={{ width: "80%", margin: "auto" }}>
+        <div  id="article-post-div">
           <Helmet>
             <meta charSet="utf-8" />
             <title>{this.state.article[0].title} - Tech-Marketer</title>
@@ -56,8 +56,42 @@ class ArticlePost extends Component {
             />
             <meta
               property="article:published_time"
-              content="2018-03-21T12:00:49+01:00"
+              content={this.state.article[0].date}
             />
+            <script type="application/ld+json">
+            {`{
+            "@context": "http://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage":{
+            "@type":"WebPage",
+            "@id":"${window.location.href}"
+            },
+            "headline": "${this.state.article[0].title}",
+            "datePublished": "${this.state.article[0].date}",
+            "dateModified":"${this.state.article[0].date}",
+            "author": {
+            "@type": "Person",
+            "name": "Jonathan Rosado"
+            },
+            "image":{
+              "@type":"ImageObject",
+              "url":"${window.location.origin + this.state.article[0].image}"
+            },
+            "publisher":{
+              "@type":"Organization",
+              "name":"jonathanrosado.fr",
+              "logo":{
+                "@type":"ImageObject",
+                "url":"https://jonathanrosado.fr/static/media/thinking.59151a6a.jpeg"
+              }
+            },
+            "description": "${this.state.article[0].description}"
+
+          }`}
+              
+              
+              
+          </script>
           </Helmet>
 
           <Grid className="article-post">

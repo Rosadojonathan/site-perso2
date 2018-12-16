@@ -30,9 +30,9 @@ class Article extends Component {
 
     return (
         <a href={`/blog/${this.props.linkTitle}`} style={{textDecoration:'none'}}>
-        <Grid onMouseEnter={this.onHover} onMouseLeave={this.onHover} style={{marginBottom:"20px"}}>
-          <Cell col={8}>
-            <Card   style={{width:'95%', height:"320px", margin:'auto'}}>
+        <Grid  className="blog-grid-article" onMouseEnter={this.onHover} onMouseLeave={this.onHover} style={{marginBottom:"20px"}}>
+          <Cell col={8} className="article-blog">
+            <Card  style={{width:'100%', height:"320px", margin:'auto'}}>
                 <CardTitle> <h2 style={{fontSize:'1.4em',lineHeight:'0.9em',fontWeight:'bold',color: this.state.coloredArticle ? '#082008' : ''}}>{this.props.cardTitle}</h2></CardTitle>
                 <CardText style={{color: this.state.coloredArticle ? 'black' : ''}} > { this.props.cardText.length > 350 ? this.props.cardText.substr(0,347) + '...' : this.props.cardText}</CardText>
                 <CardTitle> <h6 style={{fontSize:'0.75em',lineHeight:'0.9em',color: this.state.coloredArticle ? 'black' : '', fontWeight: this.state.coloredArticle ? 'bold' : ''}}> Écrit le : {this.props.date} </h6></CardTitle>

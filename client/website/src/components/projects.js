@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Helmet} from 'react-helmet';
 import { Tabs, Tab,Grid,Cell,Card,CardTitle,Button,CardMenu,IconButton, CardText, CardActions} from 'react-mdl';
+import ProjectCard from './ProjectCard';
 
 import machineLearningIcon from '../img/machinelearningicon.svg';
 import facebookIcon from '../img/facebookicon.svg';
@@ -21,62 +22,39 @@ class Projects extends Component {
     if (this.state.activeTab === 0){
       return (
       <div className="projects-grid">
+        <ProjectCard 
+          background={reactIcon}
+          cardTitle="Création d'un site internet sous React"
+          cardText="Je me suis lancé dans le développement de ce site internet codé entièrement en JavaScript grâce aux technologies React et Node.js. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking."
+          githubLink="https://github.com/Rosadojonathan/site-perso2"
+        />
 
 
 
-        <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
-          <CardTitle style={{color:'#fff',height:'176px',background:`url(${reactIcon}) center / cover`}}></CardTitle>
-          <CardTitle style={{color:'black', fontWeight:'bold'}}>Création d'un site internet sous React</CardTitle>
-          <CardText>Je me suis lancé dans le développement de ce site internet codé entièrement en JavaScript grâce aux technologies React et Node.js. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking.</CardText>
-           <CardActions border>
-             <Button colored style={{textAlign:'center'}}><a style={{ textDecoration:'none',color:'#000080'}} href="https://github.com/Rosadojonathan/site-perso2">GitHub</a></Button>
-
-           </CardActions>
-           <CardMenu style={{color:'#fff'}}>
-             <IconButton name="share"/>
-           </CardMenu>
-        </Card>
       </div>
       )
     } else if(this.state.activeTab === 1) {
       return (
         <div className="projects-grid">
-          <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
-            <CardTitle style={{color:'#fff',height:'176px',background:`url(${machineLearningIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black', fontWeight:'bold'}}>Projet Machine Learning: Prédiction de pertinence d'un produit sur les canaux publicitaires</CardTitle>
-            <CardText>Ce projet m'a permis de mettre en application mes connaissances en Statistiques et Machine Learning appliqué au Marketing grâce à Python. </CardText>
-             <CardActions border>
-               <Button colored style={{textAlign:'center'}}>SOON ON GITHUB</Button>
-
-             </CardActions>
-             <CardMenu style={{color:'#fff'}}>
-               <IconButton name="share"/>
-             </CardMenu>
-          </Card>
-          <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
-            <CardTitle style={{color:'#fff',height:'176px',background:`url(${machineLearningIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black', fontWeight:'bold'}}>Projet Data Viz: Graph d'analyse de sentiments de Facebook Ads</CardTitle>
-            <CardText>J'ai développé une petite interface en Dash pour visualiser la polarité des commentaires reçus sur des Facebook Ads grâce à la librairie VADER. </CardText>
-             <CardActions border>
-             <Button colored style={{textAlign:'center'}}><a style={{ textDecoration:'none',color:'#000080'}} href="https://github.com/Rosadojonathan/facebook-ads-sentiment-grapher">GitHub</a></Button>
-
-             </CardActions>
-             <CardMenu style={{color:'#fff'}}>
-               <IconButton name="share"/>
-             </CardMenu>
-          </Card>
-          <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
-            <CardTitle style={{color:'#fff',height:'176px',background:`url("https://raw.githubusercontent.com/Rosadojonathan/rasa-core-bot/master/chatbot.jpg") center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black', fontWeight:'bold'}}>Projet NLU: Chatbot RASA Stack</CardTitle>
-            <CardText>J'ai créé un petit chatbot disponible sur ma page de contact en utilisant la Stack RASA NLU / RASA Core. </CardText>
-             <CardActions border>
-             <Button colored style={{textAlign:'center'}}><a style={{ textDecoration:'none',color:'#000080'}} href="https://github.com/Rosadojonathan/rasa-core-bot">GitHub</a></Button>
-
-             </CardActions>
-             <CardMenu style={{color:'#fff'}}>
-               <IconButton name="share"/>
-             </CardMenu>
-          </Card>
+        
+          <ProjectCard 
+            background={machineLearningIcon}
+            cardTitle="Projet Machine Learning: Prédiction de pertinence d'un produit sur les canaux publicitaires"
+            cardText="Ce projet m'a permis de mettre en application mes connaissances en Statistiques et Machine Learning appliqué au Marketing grâce à Python."
+          />
+          <ProjectCard 
+            background="/images/analyse-de-sentiments.jpg"
+            cardTitle="Projet Data Viz: Graph d'analyse de sentiments de Facebook Ads"
+            cardText="J'ai développé une petite interface en Dash pour visualiser la polarité des commentaires reçus sur des Facebook Ads grâce à la librairie VADER."
+            githubLink="https://github.com/Rosadojonathan/facebook-ads-sentiment-grapher"
+          />
+          <ProjectCard 
+            background="https://raw.githubusercontent.com/Rosadojonathan/rasa-core-bot/master/chatbot.jpg"
+            cardTitle="Projet NLU: Chatbot RASA Stack"
+            cardText="J'ai créé un petit chatbot disponible sur ma page de contact en utilisant la Stack RASA NLU / RASA Core. La librairie est open source, l'on peut donc faire tourner le chatbot sur son propre serveur."
+            githubLink="https://github.com/Rosadojonathan/rasa-core-bot"
+          />
+                    
         </div>
 
       )
@@ -84,75 +62,40 @@ class Projects extends Component {
     else if (this.state.activeTab === 2) {
       return (
         <div className="projects-grid">
-
-          <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
-            <a style={{ textDecoration:'none',color:'black'}} href="https://github.com/Rosadojonathan/facebook-ads-automation/blob/master/facebook-ads-automation.py">
-            <CardTitle style={{color:'#fff',height:'176px',background:`url(${facebookIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black', fontWeight:'bold'}}>Automatisation de la création de Facebook Ads avec Python</CardTitle>
-            </a>
-            <CardText style={{maxHeight:"50px"}}>Comment semi-automatiser la création de Facebook Ads grâce au SDK Python de l'API Marketing de Facebook en quelques heures.</CardText>
-             <CardActions border>
-
-               <Button colored style={{textAlign:'center'}}><a style={{ textDecoration:'none',color:'#000080'}} href="https://github.com/Rosadojonathan/facebook-ads-automation/blob/master/facebook-ads-automation.py">GitHub</a></Button>
-
-             </CardActions>
-             <CardMenu style={{color:'#fff'}}>
-               <IconButton name="share"/>
-             </CardMenu>
-          </Card>
-          <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
-            <CardTitle style={{color:'#fff',height:'176px',background:`url(${facebookIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black', fontWeight:'bold'}}>Automatisation de la sponsorisation de posts Facebook</CardTitle>
-            <CardText style={{maxHeight:"50px"}}>Comment semi-automatiser la sponsorisation de posts Facebook d'une page à nouveau grâce au SDK Python de l'API Marketing de Facebook.</CardText>
-             <CardActions border>
-               <Button colored style={{textAlign:'center'}}>SOON ON GITHUB</Button>
-             </CardActions>
-             <CardMenu style={{color:'#fff'}}>
-               <IconButton name="share"/>
-             </CardMenu>
-          </Card>
+          <ProjectCard 
+            background={facebookIcon}
+            cardTitle="Automatisation de la création de Facebook Ads avec Python"
+            cardText="Comment semi-automatiser la création de Facebook Ads grâce au SDK Python de l'API Marketing de Facebook en quelques heures."
+            githubLink="https://github.com/Rosadojonathan/facebook-ads-automation/blob/master/facebook-ads-automation.py"
+          />
+          <ProjectCard 
+            background={facebookIcon}
+            cardTitle="Automatisation de la sponsorisation de posts Facebook"
+            cardText="Comment semi-automatiser la sponsorisation de posts Facebook d'une page à nouveau grâce au SDK Python de l'API Marketing de Facebook."
+          />
         </div>
       )
     }
     else if (this.state.activeTab === 3){
       return (
         <div className="projects-grid">
-          <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
-            <CardTitle style={{color:'#fff',height:'176px',background:`url(${slackIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black', fontWeight:'bold'}}>Slackbot d'alerte CPA Facebook Ads</CardTitle>
-            <CardText style={{maxHeight:"70px"}}>Ce script envoie automatiquement des alertes sur un channel Slack lorsque les coûts d'acquisition publicitaires d'une campagne Facebook dépassent un certain montant.</CardText>
-             <CardActions border>
-               <Button colored style={{textAlign:'center'}}>SOON ON GITHUB</Button>
-             </CardActions>
-             <CardMenu style={{color:'#fff'}}>
-               <IconButton name="share"/>
-             </CardMenu>
-          </Card>
 
-          <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
-            <CardTitle style={{color:'#fff',height:'176px',background:`url(${slackIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black', fontWeight:'bold', fontWeight:'bold'}}>Slackbot d'alerte CPA Adwords</CardTitle>
-            <CardText style={{maxHeight:"70px"}}>Ce script envoie automatiquement des alertes sur un channel Slack lorsque les coûts d'acquisition publicitaires d'une campagne AdWords dépassent un certain montant.</CardText>
-             <CardActions border>
-               <Button colored style={{textAlign:'center'}}>SOON ON GITHUB</Button>
-             </CardActions>
-             <CardMenu style={{color:'#fff'}}>
-               <IconButton name="share"/>
-             </CardMenu>
-          </Card>
+          <ProjectCard 
+            background={slackIcon}
+            cardTitle="Slackbot d'alerte CPA Facebook Ads"
+            cardText="Ce script envoie automatiquement des alertes sur un channel Slack lorsque les coûts d'acquisition publicitaires d'une campagne Facebook dépassent un certain montant."
+          />
 
-            <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
-              <CardTitle style={{color:'#fff',height:'176px',background:`url(${slackIcon}) center / cover`}}></CardTitle>
-              <CardTitle style={{color:'black', fontWeight:'bold'}}>Slackbot d'alerte absence de stocks sur fiche produit</CardTitle>
-              <CardText style={{maxHeight:"70px"}}>Ce script itère toutes les heures sur les campagnes AdWords actives d'un compte pour lancer un crawler de type headless browser pour exécuter le JavaScript de la page et vérifier que le produit affiche bien des stocks dans la variante affichée par défaut.</CardText>
-               <CardActions border>
-                 <Button colored style={{textAlign:'center'}}>SOON ON GITHUB</Button>
-               </CardActions>
-               <CardMenu style={{color:'#fff'}}>
-                 <IconButton name="share"/>
-               </CardMenu>
-            </Card>
-
+          <ProjectCard 
+            background={slackIcon}
+            cardTitle="Slackbot d'alerte CPA Adwords"
+            cardText="Ce script envoie automatiquement des alertes sur un channel Slack lorsque les coûts d'acquisition publicitaires d'une campagne AdWords dépassent un certain montant."
+          />        
+          <ProjectCard 
+            background={slackIcon}
+            cardTitle="Slackbot d'alerte absence de stocks sur fiche produit"
+            cardText="Ce script itère toutes les heures sur les campagnes AdWords actives d'un compte pour lancer un crawler de type headless browser pour exécuter le JavaScript de la page et vérifier que le produit affiche bien des stocks dans la variante affichée par défaut."
+          />   
           </div>
 
       )

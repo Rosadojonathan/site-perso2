@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { Grid, Cell } from "react-mdl";
 import { Bar } from "react-chartjs-2";
 import Education from "./education";
-import Experience from "./experience";
+import {Experience, MaestroExperience} from "./experience";
 import Skills from "./skills";
 import Logo from "./logo";
 
@@ -93,7 +93,7 @@ class Resume extends Component {
           />
         </Helmet>
         <Grid>
-          <Cell col={4}>
+          <Cell col={4} id="personal-description">
             <div style={{ textAlign: "center" }}>
               <img
                 src={imageJonathan}
@@ -110,13 +110,15 @@ class Resume extends Component {
             <h2 style={{ paddingTop: "2em" }}>Jonathan Rosado</h2>
             <h4 style={{ color: "grey" }}>Technical Marketer</h4>
             <hr style={{ borderTop: "3px solid #3E2723", width: "65%",marginLeft:"auto", marginRight:"auto" }} />
-            <p>
-              D'abord autodidacte dans le domaine des langues, j'ai ensuite
-              développé un intérêt pour le Marketing Digital, la programmation
-              et les statistiques que je fusionne pour aider les entreprises à
-              accélérer leur croissance. Je cherche quotidiennement de nouveaux
-              challenges intellectuels afin de développer mes compétences.
-            </p>
+            <div id="short-description" style={{backgroundColor:"rgb(251, 244, 235)", borderRadius:"10px"}}>
+              <p style={{textAlign:'left', padding:'15px', color:"rgb(0,0,0,0.9)"}}>
+                D'abord autodidacte dans le domaine des langues, j'ai ensuite
+                développé un intérêt pour le Marketing Digital, la programmation
+                et les statistiques que je fusionne pour aider les entreprises à
+                accélérer leur croissance. Je cherche quotidiennement de nouveaux
+                challenges intellectuels afin de développer mes compétences.
+              </p>
+            </div>
             <hr style={{ borderTop: "3px solid #3E2723", width: "65%",marginLeft:"auto", marginRight:"auto" }} />
             <h5>Adresse</h5>
             <p>Toulouse, Occitanie</p>
@@ -154,16 +156,26 @@ class Resume extends Component {
             <Logo logo={freecodecampLogo} logoName="FreeCodeCamp logo"/>
 
             <br />
-            {/* <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/> */}
             </div>
           </Cell>
-          <Cell className="resume-right-col" col={8}>
+          <Cell className="resume-right-col" style={{borderRadius:"12px"}} col={8}>
             <h3>Expérience</h3>
+            <MaestroExperience
+              startYear="Octobre 2018"
+              endYear="Maintenant"
+              jobName="Technical Marketer & Data Scientist"
+              company="Maestro Corporation"
+              linkCompany="https://maestro-corporation.com/"
+              />
+
+
 
             <Experience
               startYear="Février 2017"
               endYear="Maintenant"
               jobName="SEA Manager & Technical Marketer"
+              company="Maestro Corporation"
+              linkCompany="https://maestro-corporation.com/"
               jobDescription="En charge de l'acquisition payante sur les plateformes publicitaires (AdWords, Facebook Ads, Instagram Ads, Snapchat Ads) en FR, EN, ES, DE, IT et NL. J'ai mis en place de nombreux programmes d'automatisation et un modèle prédictif de Machine Learning afin d'augmenter mon efficacité et aider la startup à scaler son système d'acquisition."
             />
 
@@ -223,6 +235,7 @@ class Resume extends Component {
               data={this.state.chartData}
               width={500}
               height={400}
+
               options={{
                 title: {
                   display: true,
