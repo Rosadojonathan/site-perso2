@@ -8,7 +8,7 @@ const sentimentGraph = require("../ArticlesBlog/graph-analyse-de-sentiments-comm
 .article;
 const rasaChatbot = require('../ArticlesBlog/developper-un-chatbot-avec-rasa.js').article;
 const techMarketer = require('../ArticlesBlog/qu-est-ce-que-un-tech-marketer.js').article;
-
+const conceptsStatistiques = require('../ArticlesBlog/trois-concepts-statistiques-souvent-mal-compris.js').article;
 module.exports.articlesDB = [
   {
     id: 1,
@@ -80,5 +80,14 @@ Mais peut-être que vous désirez connecter un élément déclencheur qui n'est 
     content:`${techMarketer.content}`,
     image:'/images/qu-est-ce-qu-un-tech-marketer/tech-marketer.jpg',
     date:'2018-12-05'
+  },
+  {
+    id:8,
+    path:"trois-concepts-statistiques-souvent-mal-compris",
+    title:"Trois concepts statistiques souvent mal compris",
+    description:`Oui, la corrélation n'induit pas la causalité. C'est bien connu. Mais à part ça ? Quels autres concepts statistiques ont une définition différente de ce que l'on imagine souvent ?`,
+    content:`${conceptsStatistiques.content}`,
+    image:'/images/confidence-intervals.png',
+    date:"2018-12-16"
   }
 ];
