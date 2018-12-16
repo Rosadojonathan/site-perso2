@@ -45,7 +45,10 @@ h3  {
     margin: auto;
   }
   #article-post-div img {
-    width: 100% !important;
+    width: 100% ;
+  }
+  #article-post-div .like-heart-btn {
+    width: auto ;
   }
 
   #article-post-div h1 {
