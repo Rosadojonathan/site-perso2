@@ -51,6 +51,14 @@ h3  {
   #article-post-div h1 {
     font-size: 1.6em !important;
   }
+
+  #article-post-div h2 {
+    font-size: 1.4em !important;
+  }
+
+  #article-post-div h3 {
+    font-size: 1.3em !important;
+  }
   #article-post-div p {
     font-size: 1.2em !important;
    
