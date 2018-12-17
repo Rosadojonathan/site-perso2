@@ -154,6 +154,7 @@ body {
   }
 
 
+
 }
 .resume-right-col {
   background: black;
@@ -172,10 +173,12 @@ body {
 margin-top: 10px;
 }
 
-.article-list:hover{
-  background-color: #e16600;
+.search-div {
+  position:sticky;
+  top:40px;
+  background-color: white;
+  z-index:2;
 }
-
 .link-hover:hover{
   transform: rotate(-10deg) skew(-10deg, 0);
 }
@@ -234,6 +237,12 @@ margin-top: 10px;
     margin-right: auto !important;
     margin-left:auto !important;
     position: relative !important;
+}
+.search-div {
+  position:sticky;
+  top:0px;
+  background-color: white;
+  z-index:2;
 }
 }
 
@@ -343,6 +352,9 @@ a .hu-background-color_button-background hu-background-color_button-background-l
     overflow: visible !important;
   }
 
+  .article-blog h2 {
+    font-size:1.4em !important;
+  }
   .intro {
     width: 87% !important;
     margin: auto !important;
