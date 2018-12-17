@@ -360,16 +360,25 @@ a .hu-background-color_button-background hu-background-color_button-background-l
     margin: auto !important;
   }
 
+  .parallax {
+    background-image: url("/static/media/thinking.59151a6a.jpeg");
+    background-attachment: inherit !important;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 450px;
+    margin-bottom: -60px !important;
+  }
+
 
 }
 
 .parallax {
-  background-image: url("/static/media/thinking.59151a6a.jpeg") !important;
-  background-attachment: fixed !important;
-  background-position: center top !important;
-  background-repeat: no-repeat !important;
-  height: 450px !important;
-  margin-bottom: -80px;
+  background-image: url("/static/media/thinking.59151a6a.jpeg");
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 450px;
+  margin-bottom: -100px;
 }
 
 .logo {
