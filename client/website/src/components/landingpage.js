@@ -59,18 +59,23 @@ class Landing extends Component {
         {/* <GoogleTagManager gtmId='GTM-WQ35TQS'> </GoogleTagManager> */}
         <Grid className="landing-grid">
           <Cell col={12}>
-            <img
+            <div className="parallax" style={{backgroundImage:`url(${avatar})`}}>
+
+            </div>
+            {/* <img
               className="avatar-img img-circle"
               src={avatar}
               alt="bitmoji jonathan"
-            />
-            <div className="banner-text">
-              <h1>Tech-Marketer</h1>
-              <hr />
-              <p>SEM - Programming - Data Science - Analytics</p>
-            </div>
+            /> */}
+            
           </Cell>
           <Cell col={12} className="intro-paragraph">
+          <div className="banner-text" style={{width:'80%'}}>
+              <h1>Tech-Marketer</h1>
+              <hr />
+              <p className="banner-topics">SEM - Programming - Data Science - Analytics</p>
+            </div>
+
             <br/>
             <h2>Qui suis-je ?</h2>
             

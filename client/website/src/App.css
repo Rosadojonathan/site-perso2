@@ -335,6 +335,7 @@ a .hu-background-color_button-background hu-background-color_button-background-l
    width:300px;
  }
 
+
 }
 @media (max-width: 430px){
   .article-blog .mdl-card__supporting-text {
@@ -348,6 +349,15 @@ a .hu-background-color_button-background hu-background-color_button-background-l
   }
 
 
+}
+
+.parallax {
+  background-image: url("/static/media/thinking.59151a6a.jpeg") !important;
+  background-attachment: fixed !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  height: 450px !important;
+  margin-bottom: -80px;
 }
 
 .logo {
@@ -390,6 +400,9 @@ a .hu-background-color_button-background hu-background-color_button-background-l
   font-family: 'Ubuntu', sans-serif;
 
 }
+.banner-text p {
+  color: white !important;
+}
 
 h1, h2, h3 {
   font-family: 'Ubuntu', sans-serif !important;
@@ -407,5 +420,6 @@ h1, h2, h3 {
 
 #company-link:hover{
   background-size: 100% 2px;
-
 }
+
+
