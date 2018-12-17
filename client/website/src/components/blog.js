@@ -61,21 +61,23 @@ class Blog extends Component {
               content="https://jonathanrosado.fr/images/homepage.jpg"
             />
           </Helmet>
-          <Textfield
-            name="article"
-            label="Recherchez un article..."
-            onChange ={e => this.setState({ search: e.target.value })}
-            value={this.state.search}
-            floatingLabel
-            autoFocus
-            onFocus={function(e) {
-              var val = e.target.value;
-              e.target.value = '';
-              e.target.value = val;
-            }}
-            style={{ width: "95%", marginTop: "30px", marginLeft: "20px" }}
-          />
-
+          <div className="search-div" style={{width:"100%"}}>
+            <Textfield
+              name="article"
+              label="Recherchez un article..."
+              onChange ={e => this.setState({ search: e.target.value })}
+              value={this.state.search}
+              floatingLabel
+              autoFocus
+              onFocus={function(e) {
+                var val = e.target.value;
+                e.target.value = '';
+                e.target.value = val;
+              }}
+              style={{ width: "95%", marginTop: "30px", marginLeft: "20px" }}
+            />
+          </div>
+          <div className='article-list'> 
           {this.state.posts
             .filter(post => {
               const results = [];
@@ -94,6 +96,7 @@ class Blog extends Component {
                 return true;
               }
             })
+
             .map(post => (
 
               <Article
@@ -106,6 +109,8 @@ class Blog extends Component {
                 date={post.date}
               />
             ))}
+
+            </div>
         </div>
       );
     }
@@ -136,6 +141,8 @@ class Blog extends Component {
               content="https://jonathanrosado.fr/images/homepage.jpg"
             />
           </Helmet>
+          <div className="search-div" style={{width:"100%"}}>
+
           <Textfield
             name="article"
             label="Recherchez un article..."
@@ -144,7 +151,8 @@ class Blog extends Component {
             floatingLabel
             style={{ width: "95%", marginTop: "30px", marginLeft: "20px" }}
           />
-          
+          </div>
+          <div className="article-list">
           {this.state.posts.map(post => (
           
             <Article
@@ -158,6 +166,7 @@ class Blog extends Component {
               date={post.date}
             />
           ))}
+          </div>
         </Grid>
         </div>
       );
