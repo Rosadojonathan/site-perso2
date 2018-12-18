@@ -4,20 +4,57 @@ import TextEditor from './TextEditor/TextEditor';
 import FileSaver from './TextEditor/FileSaver';
 
 
-
 class Admin extends Component {
+  state = {
+      title:"",
+      path:"",
+      image_link:"",
+      description:""
+    }
+  
+  onChangeTitle(text){
+    this.setState({
+      title:text
+    })
+  }
+  onChangePath(text){
+    this.setState({
+      path:text
+    })
+  }
+  onChangeImageLink(text){
+    this.setState({
+      image_link:text
+    })
+  }
+  onChangeDescription(text){
+    this.setState({
+      description:text
+    })
+  }
 
   render() {
     return (
 
       <div>
         <Grid> 
-          <Cell col={2} style={{backgroundColor:"lightgrey",height:"900px"}}></Cell>
+          <Cell col={2} style={{backgroundColor:"lavender",height:"900px"}}></Cell>
           <Cell col={7}>
-              <TextEditor />
+              <TextEditor
+                title={this.state.title}
+                path={this.state.path}
+                image_link={this.state.image_link}
+                description={this.state.description}
+
+              />
           </Cell>
-          <Cell col={3} style={{backgroundColor:"#FFFAF0",height:"900px"}}>
-              <FileSaver />
+          <Cell col={3} style={{backgroundColor:"lavender",height:"900px"}}>
+              <FileSaver 
+                onChangeDescription={this.onChangeDescription.bind(this)}
+                onChangeTitle={this.onChangeTitle.bind(this)}
+                onChangePath={this.onChangePath.bind(this)}
+                onChangeImageLink={this.onChangeImageLink.bind(this)}
+              />
           </Cell>
         </Grid>
 

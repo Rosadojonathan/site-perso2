@@ -8,7 +8,8 @@ import '../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 class CustomOption extends Component {
   saveToDB = () => {
-    const { editorState } = this.props;
+    const { editorState, description, image_link, title, path } = this.props;
+    console.log(this.props)
     const html = draftToHtml(convertToRaw(editorState.getCurrentContent()))
     console.log(html)
     if (window.confirm('Are you sure you want to save this thing into the database?')) {
@@ -19,7 +20,7 @@ class CustomOption extends Component {
           'Content-Type':'application/json'
         },
         method: 'POST',
-        body: JSON.stringify({'content':html})
+        body: JSON.stringify({'content':html,'title':this.props.title,'path':this.props.path,'image_link':this.props.image_link, 'description':this.props.description})
       })
       
       .then(response => {
@@ -65,13 +66,18 @@ export default class TextEditor extends Component {
       <div>
         <Editor
           editorState={editorState}
+          
           wrapperClassName="wrapper-class"
           editorClassName="editor-class"
           toolbarClassName="toolbar-class"
-          toolbarCustomButtons={[<CustomOption />]}
+          toolbarCustomButtons={[<CustomOption 
+            title={this.props.title}
+            path={this.props.path}
+            image_link={this.props.image_link}
+            description={this.props.description}
+            />]}
           onEditorStateChange={this.onEditorStateChange}
         />
-
         {/* <textarea style={{width:'100%', height:'80vh'}}
           disabled
           value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}

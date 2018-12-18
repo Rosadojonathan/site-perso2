@@ -6,6 +6,7 @@ import App from './App';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import { BrowserRouter } from 'react-router-dom';
+
 // import TagManager from 'react-gtm-module';
 //
 // const tagManagerArgs = {
