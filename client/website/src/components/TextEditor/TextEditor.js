@@ -8,10 +8,23 @@ import '../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 class CustomOption extends Component {
   saveToDB = () => {
-    const { editorState, onChange } = this.props;
-
+    const { editorState } = this.props;
+    const html = draftToHtml(convertToRaw(editorState.getCurrentContent()))
+    console.log(html)
     if (window.confirm('Are you sure you want to save this thing into the database?')) {
-      console.log(draftToHtml(convertToRaw(editorState.getCurrentContent())))
+
+      fetch('/api/article-creator', {
+        headers:{
+          'Accept': 'application/json',
+          'Content-Type':'application/json'
+        },
+        method: 'POST',
+        body: JSON.stringify({'content':html})
+      })
+      
+      .then(response => {
+        console.log(response);
+      })
     } else {
       // Do nothing!
   }
@@ -29,7 +42,7 @@ class CustomOption extends Component {
 export default class TextEditor extends Component {
   constructor(props) {
     super(props);
-    const html = '<p> What are you going to write about today ? 😀</p>';
+    const html = '<p style="text-align:center;"><code> What are you going to write about today? </code></p>';
     const contentBlock = htmlToDraft(html);
     if (contentBlock) {
       const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
@@ -52,8 +65,9 @@ export default class TextEditor extends Component {
       <div>
         <Editor
           editorState={editorState}
-          wrapperClassName="demo-wrapper"
-          editorClassName="demo-editor"
+          wrapperClassName="wrapper-class"
+          editorClassName="editor-class"
+          toolbarClassName="toolbar-class"
           toolbarCustomButtons={[<CustomOption />]}
           onEditorStateChange={this.onEditorStateChange}
         />
