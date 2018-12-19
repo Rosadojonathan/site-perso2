@@ -8,7 +8,7 @@ import '../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 class CustomOption extends Component {
   saveToDB = () => {
-    const { editorState, description, image_link, title, path } = this.props;
+    const { editorState, description, image_link, title, path, filename } = this.props;
     console.log(this.props)
     const html = draftToHtml(convertToRaw(editorState.getCurrentContent()))
     console.log(html)
@@ -20,7 +20,7 @@ class CustomOption extends Component {
           'Content-Type':'application/json'
         },
         method: 'POST',
-        body: JSON.stringify({'content':html,'title':this.props.title,'path':this.props.path,'image_link':this.props.image_link, 'description':this.props.description})
+        body: JSON.stringify({'content':html,'title':title,'path':path,'image_link':image_link, 'description':description, "filename":filename})
       })
       
       .then(response => {
@@ -75,6 +75,7 @@ export default class TextEditor extends Component {
             path={this.props.path}
             image_link={this.props.image_link}
             description={this.props.description}
+            filename={this.props.filename}
             />]}
           onEditorStateChange={this.onEditorStateChange}
         />

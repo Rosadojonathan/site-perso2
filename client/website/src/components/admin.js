@@ -9,7 +9,8 @@ class Admin extends Component {
       title:"",
       path:"",
       image_link:"",
-      description:""
+      description:"",
+      filename:""
     }
   
   onChangeTitle(text){
@@ -32,7 +33,11 @@ class Admin extends Component {
       description:text
     })
   }
-
+  onChangeFilename(text){
+    this.setState({
+      filename:text
+    })
+  }
   render() {
     return (
 
@@ -45,7 +50,7 @@ class Admin extends Component {
                 path={this.state.path}
                 image_link={this.state.image_link}
                 description={this.state.description}
-
+                filename={this.state.filename}
               />
           </Cell>
           <Cell col={3} style={{backgroundColor:"lavender",height:"900px"}}>
@@ -54,6 +59,7 @@ class Admin extends Component {
                 onChangeTitle={this.onChangeTitle.bind(this)}
                 onChangePath={this.onChangePath.bind(this)}
                 onChangeImageLink={this.onChangeImageLink.bind(this)}
+                onChangeFilename={this.onChangeFilename.bind(this)}
               />
           </Cell>
         </Grid>
