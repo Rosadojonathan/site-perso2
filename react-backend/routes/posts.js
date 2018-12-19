@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const articlesDB = require("../filesystem/articlesDB").articlesDB;
+const models = require('../models');
 
 // postList = [
 //   {id:1,date:'Mar 19 2018 07:00:00 PM',cardTitle:"Comment automatiser la création d'une Facebook Ad à partir de l'API ?",cardText:"Créer des publicités sur Facebook peut rapidement devenir un processus ennuyeux et répétitif. Si vous déjà remarqué qu'il existe peu de variation de contenu entre vos annonces à part quelques éléments c'est que l'automatisation peut potentiellement vous être utile. Dans cet article nous allons voir comment créer un script qui semi-automatise la création de Facebook Ads grâce à Python et l'API de Facebook.",linkTitle:"créer-facebook-ads-avec-api"},
@@ -11,11 +12,19 @@ const articlesDB = require("../filesystem/articlesDB").articlesDB;
 
 /* GET users listing. */
 router.get("/", function(req, res, next) {
-  res.json(
-    articlesDB.sort(function(a, b) {
-      return b.id - a.id;
-    })
-  );
+  // res.json(
+  //   articlesDB.sort(function(a, b) {
+  //     return b.id - a.id;
+  //   })
+  // );
+  models.Post.findAll({
+    raw:true,
+    order: [
+      ['id','DESC']
+    ]
+  }).then((data) => {
+    return res.json(data)
+  })
 });
 
 module.exports = router;

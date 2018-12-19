@@ -67,7 +67,7 @@ export default class TextEditor extends Component {
       <div>
         <Editor
           editorState={editorState}
-          
+          style={{fontFamily:'Ubuntu,sans-serif'}}
           wrapperClassName="wrapper-class"
           editorClassName="editor-class"
           toolbarClassName="toolbar-class"

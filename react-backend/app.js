@@ -13,8 +13,10 @@ const contactform = require("./routes/contact-form");
 const recaptcha = require("./routes/recaptcha");
 const newsletter = require("./routes/newsletter");
 const login = require("./routes/login");
+const articleCreator = require('./routes/articleCreator');
 
 const articlesDB = require("./filesystem/articlesDB").articlesDB;
+
 
 const app = express();
 // const limiter = require("express-limiter")(app, redisClient);
@@ -43,6 +45,7 @@ app.use(express.static(`${__dirname}/../client/website/build`));
 //   require("prerender-node").set("prerenderToken", "ZXkgVzlyxjh1bS5BJ3ck")
 // );
 
+app.use('/api/article-creator', articleCreator);
 app.use("/api/posts", posts);
 app.use("/api/articles", articles);
 app.use("/api/contactform", contactform);

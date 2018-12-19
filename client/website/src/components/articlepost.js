@@ -24,8 +24,11 @@ class ArticlePost extends Component {
   componentDidMount() {
     let handle = this.props.match.params.article;
     fetch(`/api/articles/${handle}`)
-      .then(res => res.json())
-      .then(article => this.setState({ article, loaded: true }))
+      .then((res) => { 
+        return res.json()})
+      .then((article) => { 
+        console.log(article)
+        return this.setState({ article, loaded: true })})
       .catch(function(error) {
         console.log(error);
       });
@@ -37,17 +40,17 @@ class ArticlePost extends Component {
         <div  id="article-post-div">
           <Helmet>
             <meta charSet="utf-8" />
-            <title>{this.state.article[0].title} - Tech-Marketer</title>
+            <title>{this.state.article.title} - Tech-Marketer</title>
             <meta
               name="description"
-              content={this.state.article[0].description}
+              content={this.state.article.description}
             />
             <meta property="og:locale" content="fr_FR" />
             <meta property="og:type" content="article" />
-            <meta property="og:title" content={this.state.article[0].title} />
+            <meta property="og:title" content={this.state.article.title} />
             <meta
               property="og:description"
-              content={this.state.article[0].description}
+              content={this.state.article.description}
             />
             <meta property="og:url" content={window.location.href} />
             <meta
@@ -56,7 +59,7 @@ class ArticlePost extends Component {
             />
             <meta
               property="article:published_time"
-              content={this.state.article[0].date}
+              content={this.state.article.date}
             />
             <script type="application/ld+json">
             {`{
@@ -66,16 +69,16 @@ class ArticlePost extends Component {
             "@type":"WebPage",
             "@id":"${window.location.href}"
             },
-            "headline": "${this.state.article[0].title}",
-            "datePublished": "${this.state.article[0].date}",
-            "dateModified":"${this.state.article[0].date}",
+            "headline": "${this.state.article.title}",
+            "datePublished": "${this.state.article.createdAt}",
+            "dateModified":"${this.state.article.createdAt}",
             "author": {
             "@type": "Person",
             "name": "Jonathan Rosado"
             },
             "image":{
               "@type":"ImageObject",
-              "url":"${window.location.origin + this.state.article[0].image}"
+              "url":"${window.location.origin + this.state.article.image}"
             },
             "publisher":{
               "@type":"Organization",
@@ -85,7 +88,7 @@ class ArticlePost extends Component {
                 "url":"https://jonathanrosado.fr/static/media/thinking.59151a6a.jpeg"
               }
             },
-            "description": "${this.state.article[0].description}"
+            "description": "${this.state.article.description}"
 
           }`}
               
@@ -96,10 +99,10 @@ class ArticlePost extends Component {
 
           <Grid className="article-post">
             <Cell col={9}>
-              <h1>{this.state.article[0].title}</h1>
+              <h1>{this.state.article.title}</h1>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: this.state.article[0].content
+                  __html: this.state.article.content
                 }}
               />
             </Cell>

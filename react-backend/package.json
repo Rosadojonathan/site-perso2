@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "PORT=1337 sudo node ./bin/www"
+    "start": "PORT=1337 sudo nodemon ./bin/www"
   },
   "dependencies": {
+    "babel-preset-env": "^1.7.0",
     "bcrypt": "^1.0.3",
     "bcryptjs": "^2.4.3",
     "body-parser": "~1.18.2",
@@ -18,10 +19,12 @@
     "mongoose": "^5.0.10",
     "morgan": "~1.9.0",
     "nodemailer": "^4.6.3",
+    "pg": "^7.7.1",
     "prerender-node": "^3.1.1",
     "recaptcha-verify": "^0.1.1",
     "redis": "^2.8.0",
     "request": "^2.85.0",
+    "sequelize": "^4.42.0",
     "serve-favicon": "^2.4.5",
     "slack-webhook": "^1.0.0"
   }
