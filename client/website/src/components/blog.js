@@ -106,7 +106,7 @@ class Blog extends Component {
                 cardText={post.description}
                 linkTitle={post.path}
                 image={post.image}
-                date={post.date}
+                date={new Date(post.createdAt).toISOString().split("T")[0]}
               />
             ))}
 
@@ -163,7 +163,7 @@ class Blog extends Component {
               cardText={post.description}
               linkTitle={post.path}
               image={post.image}
-              date={post.date}
+              date={new Date(post.createdAt).toISOString().split("T")[0]}
             />
           ))}
           </div>

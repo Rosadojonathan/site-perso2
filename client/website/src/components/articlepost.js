@@ -70,8 +70,8 @@ class ArticlePost extends Component {
             "@id":"${window.location.href}"
             },
             "headline": "${this.state.article.title}",
-            "datePublished": "${this.state.article.createdAt}",
-            "dateModified":"${this.state.article.createdAt}",
+            "datePublished": "${new Date(this.state.article.createdAt).toISOString().split("T")[0]}",
+            "dateModified":"${new Date(this.state.article.createdAt).toISOString().split("T")[0]}",
             "author": {
             "@type": "Person",
             "name": "Jonathan Rosado"
