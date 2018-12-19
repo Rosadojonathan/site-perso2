@@ -12,6 +12,7 @@ class CustomOption extends Component {
     console.log(this.props)
     const html = draftToHtml(convertToRaw(editorState.getCurrentContent()))
     console.log(html)
+    let today = new Date().toISOString().slice(0, 10)
     if (window.confirm('Are you sure you want to save this thing into the database?')) {
 
       fetch('/api/article-creator', {
@@ -20,7 +21,7 @@ class CustomOption extends Component {
           'Content-Type':'application/json'
         },
         method: 'POST',
-        body: JSON.stringify({'content':html,'title':title,'path':path,'image_link':image_link, 'description':description, "filename":filename})
+        body: JSON.stringify({'content':html,'title':title,'path':path,'image_link':image_link, 'description':description, "filename":filename, 'date':today})
       })
       
       .then(response => {
