@@ -76,11 +76,37 @@ class CustomOption extends Component {
       // Do nothing!
   }
    
-  };
+  }
+
+  destroyArticle = () => {
+    const {article } = this.props;
+    if (window.confirm('Are you sure you want to delete this article?')) {
+
+        fetch('/api/article-destroyer', {
+          headers:{
+            'Accept': 'application/json',
+            'Content-Type':'application/json'
+          },
+          method: 'POST',
+          body: JSON.stringify({'path':article.path})
+        })
+        
+        .then(response => response.json())
+        .then((res) => {
+          res.response === 'ok' ? window.alert('file correctly deleted ✅') : window.alert("file wasn't deleted ❌")
+        })
+      } else {
+        // Do nothing!
+    }
+
+  }
 
   render() {
     return (
+        <div style={{display:'flex'}}>
       <div className="rdw-option-wrapper" onClick={this.saveToDB}>💾</div>
+      <div className="rdw-option-wrapper" onClick={this.destroyArticle}>❌</div>
+      </div>
     );
   }
 }
