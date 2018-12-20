@@ -59,7 +59,7 @@ const Main = () => (
     <Route exact path="/blog" component={Blog} />
     <Route path="/blog/:article" component={ArticlePost} />
     <Route path="/login" component={MyLoginForm} />
-    <PrivateRoute path="/admin/:article" component={ArticlePostEditor} />
+    <Route path="/admin/:article" component={ArticlePostEditor} />
     <PrivateRoute path="/admin" component={AsyncAdmin} />
 
 
