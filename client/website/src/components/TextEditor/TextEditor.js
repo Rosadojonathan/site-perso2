@@ -24,8 +24,9 @@ class CustomOption extends Component {
         body: JSON.stringify({'content':html,'title':title,'path':path,'image_link':image_link, 'description':description, "filename":filename, 'date':today})
       })
       
-      .then(response => {
-        console.log(response);
+      .then(response => response.json())
+      .then((res) => {
+        res.response === 'ok' ? window.alert('file correctly saved ✅') : window.alert('file incorrectly saved ❌')
       })
     } else {
       // Do nothing!
