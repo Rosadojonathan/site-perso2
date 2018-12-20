@@ -10,6 +10,7 @@ import Blog from './blog';
 import Login from './login';
 // import Admin from './admin';
 import ArticlePost from './articlepost';
+import ArticlePostEditor from './TextEditor/ArticlePostEditor';
 
 const AsyncContact = asyncComponent(() => import('./contact'));
 const AsyncResume = asyncComponent(() => import('./resume'));
@@ -58,6 +59,7 @@ const Main = () => (
     <Route exact path="/blog" component={Blog} />
     <Route path="/blog/:article" component={ArticlePost} />
     <Route path="/login" component={MyLoginForm} />
+    <PrivateRoute path="/admin/:article" component={ArticlePostEditor} />
     <PrivateRoute path="/admin" component={AsyncAdmin} />
 
 

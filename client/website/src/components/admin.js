@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Grid, Cell, Textfield, Card } from "react-mdl";
+import { Grid, Cell, Tabs, Tab, Textfield, Card } from "react-mdl";
 import TextEditor from './TextEditor/TextEditor';
 import FileSaver from './TextEditor/FileSaver';
-
+import '../App.css';
+import ArticleDisplayer from './TextEditor/ArticleDisplayer';
 
 class Admin extends Component {
   state = {
@@ -10,7 +11,8 @@ class Admin extends Component {
       path:"",
       image_link:"",
       description:"",
-      filename:""
+      filename:"",
+      activeTab:0
     }
   
   onChangeTitle(text){
@@ -38,12 +40,11 @@ class Admin extends Component {
       filename:text
     })
   }
-  render() {
-    return (
 
-      <div>
-        <Grid> 
-          <Cell col={2} style={{backgroundColor:"lavender",height:"900px"}}></Cell>
+  toggleCategories(){
+    if (this.state.activeTab === 0){
+      return (
+        <React.Fragment>
           <Cell col={7}>
               <TextEditor
                 title={this.state.title}
@@ -53,7 +54,7 @@ class Admin extends Component {
                 filename={this.state.filename}
               />
           </Cell>
-          <Cell col={3} style={{backgroundColor:"lavender",height:"900px"}}>
+          <Cell col={3} style={{backgroundColor:"lavender",height:"500vh"}}>
               <FileSaver 
                 onChangeDescription={this.onChangeDescription.bind(this)}
                 onChangeTitle={this.onChangeTitle.bind(this)}
@@ -62,6 +63,31 @@ class Admin extends Component {
                 onChangeFilename={this.onChangeFilename.bind(this)}
               />
           </Cell>
+          </React.Fragment>
+      )
+    } else if (this.state.activeTab === 1){
+      return (
+        <React.Fragment>
+          <Cell col={10}>
+          <ArticleDisplayer />
+          </Cell>
+          
+        </React.Fragment>
+      )
+    }
+  }
+  render() {
+    return (
+
+      <div>
+        <Grid> 
+          <Cell col={2} style={{backgroundColor:"lavender",height:"500vh"}}>
+            <Tabs style={{padding:'0px 10px', display:"block !important", width:"95%"}} activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
+              <Tab style={{width:'100%'}}><p>Write Article</p></Tab>
+              <Tab style={{width:'100%'}}> <p>Edit Article</p></Tab>
+            </Tabs> 
+          </Cell>
+          {this.toggleCategories()}
         </Grid>
 
       </div>
