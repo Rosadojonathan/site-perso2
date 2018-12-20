@@ -17,6 +17,7 @@ router.get("/", function(req, res, next) {
   //     return b.id - a.id;
   //   })
   // );
+  console.log('hellooooooo')
   models.Post.findAll({
     raw:true,
     order: [
@@ -24,6 +25,9 @@ router.get("/", function(req, res, next) {
     ]
   }).then((data) => {
     return res.json(data)
+  })
+  .catch((err) => {
+    res.json(err)
   })
 });
 

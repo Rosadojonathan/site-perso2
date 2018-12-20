@@ -52,25 +52,25 @@ import FileSaverEditor from './FileSaverEditor';
 
 class CustomOption extends Component {
   saveToDB = () => {
-    const { editorState, description, image_link, title, path, filename } = this.props;
+    const { editorState, article } = this.props;
     console.log(this.props)
     const html = draftToHtml(convertToRaw(editorState.getCurrentContent()))
     console.log(html)
     let today = new Date().toISOString().slice(0, 10)
     if (window.confirm('Are you sure you want to save this thing into the database?')) {
 
-      fetch('/api/article-creator', {
+      fetch('/api/article-updator', {
         headers:{
           'Accept': 'application/json',
           'Content-Type':'application/json'
         },
         method: 'POST',
-        body: JSON.stringify({'content':html,'title':title,'path':path,'image_link':image_link, 'description':description, "filename":filename, 'date':today})
+        body: JSON.stringify({'content':html,'title':article.title,'path':article.path,'image_link':article.image_link, 'description':article.description})
       })
       
       .then(response => response.json())
       .then((res) => {
-        res.response === 'ok' ? window.alert('file correctly saved ✅') : window.alert('file incorrectly saved ❌')
+        res.response === 'ok' ? window.alert('file correctly updated ✅') : window.alert('file incorrectly updated ❌')
       })
     } else {
       // Do nothing!
@@ -89,7 +89,7 @@ class CustomOption extends Component {
 class ArticlePostEditor extends Component {
   constructor(props) {
     super(props);
-    const html = '<p> test </p>';
+    const html = '<p> loading </p>';
     const contentBlock = htmlToDraft(html);
     if (contentBlock) {
       const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
@@ -97,7 +97,7 @@ class ArticlePostEditor extends Component {
       this.state = {
         editorState,
         article: {},
-        loaded: false
+        loaded: false,
       };
     }
   }
@@ -118,8 +118,6 @@ class ArticlePostEditor extends Component {
         const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
         const editorState = EditorState.createWithContent(contentState);
         this.setState({editorState})
-        
-
       });
   }
 
@@ -128,6 +126,24 @@ class ArticlePostEditor extends Component {
       editorState,
     });
   };
+
+  onChangeTitle(text){
+    this.setState({
+        article: {...this.state.article, title:text}
+    })
+  }
+  onChangePath(text){
+    this.setState({
+        article: {...this.state.article, path:text}    })
+  }
+  onChangeImageLink(text){
+    this.setState({
+        article: {...this.state.article, image_link:text}    })
+  }
+  onChangeDescription(text){
+    this.setState({
+        article: {...this.state.article, description:text}    })
+  }
 
   render() {
     const { editorState,article } = this.state;
@@ -143,11 +159,7 @@ class ArticlePostEditor extends Component {
                 editorClassName="editor-class"
                 toolbarClassName="toolbar-class"
                 toolbarCustomButtons={[<CustomOption 
-                    title={this.props.title}
-                    path={this.props.path}
-                    image_link={this.props.image_link}
-                    description={this.props.description}
-                    filename={this.props.filename}
+                
                     article={article}
                     />]}
                 onEditorStateChange={this.onEditorStateChange}
@@ -155,10 +167,12 @@ class ArticlePostEditor extends Component {
             </Cell>
             <Cell col={3}>
                 <FileSaverEditor 
-                    path={this.state.article.path}
                     title={this.state.article.title}
                     image_link={this.state.article.image}
                     description={this.state.article.description}
+                    onChangeDescription={this.onChangeDescription.bind(this)}
+                    onChangeTitle={this.onChangeTitle.bind(this)}
+                    onChangeImageLink={this.onChangeImageLink.bind(this)}
                 />
             </Cell>
         {/* <textarea style={{width:'100%', height:'80vh'}}

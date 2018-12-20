@@ -14,6 +14,8 @@ const recaptcha = require("./routes/recaptcha");
 const newsletter = require("./routes/newsletter");
 const login = require("./routes/login");
 const articleCreator = require('./routes/articleCreator');
+const articleUpdator = require('./routes/articleUpdator');
+
 
 const articlesDB = require("./filesystem/articlesDB").articlesDB;
 
@@ -46,6 +48,7 @@ app.use(express.static(`${__dirname}/../client/website/build`));
 // );
 
 app.use('/api/article-creator', articleCreator);
+app.use('/api/article-updator', articleUpdator);
 app.use("/api/posts", posts);
 app.use("/api/articles", articles);
 app.use("/api/contactform", contactform);
