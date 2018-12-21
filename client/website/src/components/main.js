@@ -11,7 +11,7 @@ import Login from './login';
 // import Admin from './admin';
 import ArticlePost from './articlepost';
 import ArticlePostEditor from './TextEditor/ArticlePostEditor';
-
+import { connect } from 'react-redux';
 const AsyncContact = asyncComponent(() => import('./contact'));
 const AsyncResume = asyncComponent(() => import('./resume'));
 const AsyncAdmin = asyncComponent(() => import('./admin'));
@@ -32,19 +32,28 @@ const fakeAuth = {
   }
 }
 
-const PrivateRoute = ({component:Component, ...rest}) => (
-  <Route {...rest} render={(props) => (
-    fakeAuth.isAuthenticated === true
-    ? <Component {...props} />
-    : <Redirect  to='/login' />
-  )} />
-)
+const mapStateToProps = state => {
+  return { authenticated: state.authenticated };
+};
+
+const ConnectedPrivateRoute = ({component:Component, ...rest}) =>{
+  console.log(rest)
+  const { authenticated } = rest.authenticated;
+  return (
+    <Route {...rest} render={(props) => (
+      rest.authenticated === true
+      ? <Component {...rest} {...props} />
+      : <Redirect to={{ pathname: '/login', state: { from: props.location }}}
+    /> )} />
+    )
+  }
+const PrivateRoute = connect(mapStateToProps)(ConnectedPrivateRoute);
 
 // Gros Hack...
 const MyLoginForm = (props) => {
   return (
     <Login
-      fakeAuth={fakeAuth} {...props}/>
+      {...props}/>
   );
 }
 
@@ -59,7 +68,7 @@ const Main = () => (
     <Route exact path="/blog" component={Blog} />
     <Route path="/blog/:article" component={ArticlePost} />
     <Route path="/login" component={MyLoginForm} />
-    <Route path="/admin/:article" component={ArticlePostEditor} />
+    <PrivateRoute path="/admin/:article" component={ArticlePostEditor} />
     <PrivateRoute path="/admin" component={AsyncAdmin} />
 
 

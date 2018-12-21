@@ -81,7 +81,7 @@ class Admin extends Component {
 
       <div>
         <Grid> 
-          <Cell col={2} style={{backgroundColor:"lavender",height:"500vh"}}>
+          <Cell id="admin-tabs" col={2} style={{backgroundColor:"lavender",height:"500vh"}}>
             <Tabs style={{padding:'0px 10px', display:"block !important", width:"95%"}} activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
               <Tab style={{width:'100%'}}><p>Write Article</p></Tab>
               <Tab style={{width:'100%'}}> <p>Edit Article</p></Tab>

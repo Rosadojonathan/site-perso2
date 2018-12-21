@@ -444,10 +444,10 @@ h1, h2, h3 {
 }
 
 
-.mdl-tabs__tab-bar{
+#admin-tabs .mdl-tabs__tab-bar{
   display:block !important;
   width: 78% !important;
 }
-.mdl-tabs {
+#admin-tabs .mdl-tabs {
   width: 80% !important;
 }

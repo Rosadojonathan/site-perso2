@@ -6,6 +6,8 @@ import App from './App';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store, stateLoader } from './redux/store/store';
 
 // import TagManager from 'react-gtm-module';
 //
@@ -15,9 +17,17 @@ import { BrowserRouter } from 'react-router-dom';
 // 
 // TagManager.initialize(tagManagerArgs)
 
+
+store.subscribe(() => {
+  stateLoader.saveState(store.getState());
+});
+
+
 ReactDOM.render(
-<BrowserRouter>
-   <App />
-</BrowserRouter>
+<Provider store={store}>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+</Provider>  
   , document.getElementById('root'));
 // registerServiceWorker();

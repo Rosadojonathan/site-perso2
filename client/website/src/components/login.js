@@ -4,7 +4,10 @@ import {withRouter} from 'react-router-dom';
 import { Grid,Cell,Textfield,Button} from 'react-mdl';
 import axios from 'axios';
 import '../App.css';
-
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { authenticate } from '../redux/actions/actions';
+import {store} from '../redux/store/store';
 
 class Login extends Component {
   constructor(props,context){
@@ -29,10 +32,6 @@ class Login extends Component {
     // }
   }
 
-
-
-
-
   onSubmit = async () => {
     const {username, password} = this.state;
     const res = await axios.post('/api/login',{
@@ -40,20 +39,28 @@ class Login extends Component {
       password
     })
     if (res.data.success === true){
-      this.props.fakeAuth.authenticate(() => {
-        this.setState({redirectToReferrer:true})
-      })
+      this.props.authenticate()
+      this.setState({redirectToReferrer:true})
+      // this.props.authenticate()
+      // .then(() => {
+      //   this.setState({redirectToReferrer:true})
+      // })
+
+      // this.props.fakeAuth.authenticate(() => {
+        
+      // })
     }
   }
 
   render() {
     const bgColor = this.state.bgColor ? this.state.bgColor : '';
     const message = this.state.msgSend ? "✔" : "S'identifier";
+    const { from } = this.props.location.state || { from: { pathname: '/' } };
     const {redirectToReferrer} = this.state;
 
     if (redirectToReferrer === true){
       // <Redirect to='/admin' />
-      this.props.history.push('/admin');
+      this.props.history.push(from.pathname);
     }
     return (
       <div style={{width:'100%',margin:'auto'}}>
@@ -91,7 +98,11 @@ class Login extends Component {
       </div>
     );
   }
-
 }
 
-export default withRouter(Login);
+
+const mapDispatchToProps = dispatch => ({
+  authenticate: () => dispatch(authenticate()) // <-- manually dispatches
+});
+
+export default withRouter(connect(null, mapDispatchToProps)(Login));
