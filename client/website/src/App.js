@@ -5,12 +5,35 @@ import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
 import Main from './components/main';
 import { Link } from 'react-router-dom';
 import './App.css';
+import { loggedin} from './redux/actions/actions';
+import {withRouter} from 'react-router-dom';
+import { connect } from 'react-redux';
+import axios from 'axios';
 
 import 'react-chat-widget/lib/styles.css';
 
 
 class App extends Component {
 
+  componentDidMount(){
+      const {token} = this.props;
+      async function authenticate(token) {
+        const res = await axios.post('/api/auth',{
+          token
+        })
+        console.log(res);
+        if (res.data.success === true){
+          return true
+        } else{
+          return false
+        }
+      }
+    token && authenticate(token).then((res) => {
+      if (res === true){
+        this.props.loggedin()
+      }
+    })
+  }
 
 
   render() {
@@ -48,4 +71,11 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return { token: state.token };
+};
+const mapDispatchToProps = dispatch => ({
+  loggedin: () => dispatch(loggedin()) // <-- manually dispatches
+});
+
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(App));

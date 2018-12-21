@@ -6,7 +6,7 @@ import axios from 'axios';
 import '../App.css';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { authenticate } from '../redux/actions/actions';
+import { authenticate, loggedin } from '../redux/actions/actions';
 import {store} from '../redux/store/store';
 
 class Login extends Component {
@@ -39,7 +39,9 @@ class Login extends Component {
       password
     })
     if (res.data.success === true){
-      this.props.authenticate()
+      console.log(res.data)
+      this.props.authenticate(res.data.token)
+      this.props.loggedin()
       this.setState({redirectToReferrer:true})
       // this.props.authenticate()
       // .then(() => {
@@ -102,7 +104,8 @@ class Login extends Component {
 
 
 const mapDispatchToProps = dispatch => ({
-  authenticate: () => dispatch(authenticate()) // <-- manually dispatches
+  authenticate: (token) => dispatch(authenticate(token)),
+  loggedin: () => dispatch(loggedin()) // <-- manually dispatches
 });
 
 export default withRouter(connect(null, mapDispatchToProps)(Login));

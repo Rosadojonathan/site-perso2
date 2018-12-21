@@ -21,6 +21,9 @@ import { store, stateLoader } from './redux/store/store';
 store.subscribe(() => {
   stateLoader.saveState(store.getState());
 });
+window.store = store;
+
+
 
 
 ReactDOM.render(

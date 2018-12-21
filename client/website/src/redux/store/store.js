@@ -1,5 +1,6 @@
-import { combineReducers, createStore } from 'redux';
+import { combineReducers, createStore, applyMiddleware } from 'redux';
 import authenticateReducer from '../reducers/reducers';
+import thunk from 'redux-thunk';
 
 class StateLoader {
 
@@ -19,6 +20,8 @@ class StateLoader {
   }
 
   saveState(state) {
+    console.log('state to save')
+    console.log(state)
       try {
           let serializedState = JSON.stringify(state);
           localStorage.setItem("https://jonathanrosado.fr:state", serializedState);
@@ -30,17 +33,20 @@ class StateLoader {
 
   initializeState() {
       return {
-        authenticated: false
+        token: '',
+        loggedin:false
       }
       };
   }
 
+
+const middleware = applyMiddleware(thunk)
 export const stateLoader = new StateLoader();
 
 
 
 
-export const store = createStore(authenticateReducer,stateLoader.loadState());
+export const store = createStore(authenticateReducer,stateLoader.loadState(), middleware);
 
 
 

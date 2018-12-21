@@ -1,4 +1,4 @@
-import {  AUTHENTICATED } from "../actions/actions";
+import {  AUTHENTICATED, LOGGEDIN } from "../actions/actions";
 
 
 
@@ -7,9 +7,16 @@ function authenticateReducer(state, action){
       case AUTHENTICATED:
         state = {
          ...state,
-         authenticated: action.payload
+         token: action.payload
         }
-        return state;
+        return state;     
+      case LOGGEDIN:
+        state = {
+          ...state,
+          loggedin: action.payload
+        }
+      return state;
+      
       default: 
         return state;
     }

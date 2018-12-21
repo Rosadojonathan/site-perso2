@@ -1,6 +1,6 @@
 import React from 'react';
 import asyncComponent from './AsyncComponent';
-
+import axios from 'axios';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import LandingPage from './landingpage';
 // import Contact from './contact';
@@ -19,32 +19,31 @@ const AsyncProjects = asyncComponent(() => import('./projects'));
 
 
 
+// async function authenticate(token) {
+//   console.log('authenticate function called')
+//   console.log(token)
+//   const res = await axios.post('/api/auth',{
+//     token
+//   })
+//   console.log(res);
+//   if (res.data.success === true){
+//     return true
+//   }
+// }
 
-const fakeAuth = {
-  isAuthenticated: false,
-  authenticate(cb) {
-    this.isAuthenticated = true
-    setTimeout(cb, 100) // fake async
-  },
-  signout(cb) {
-    this.isAuthenticated = false
-    setTimeout(cb, 100) // fake async
-  }
-}
 
 const mapStateToProps = state => {
-  return { authenticated: state.authenticated };
+  return { token: state.token, loggedin:state.loggedin };
 };
 
-const ConnectedPrivateRoute = ({component:Component, ...rest}) =>{
-  console.log(rest)
-  const { authenticated } = rest.authenticated;
+const ConnectedPrivateRoute =   ({component:Component, ...rest}) =>{
   return (
-    <Route {...rest} render={(props) => (
-      rest.authenticated === true
+    <Route {...rest} render={(props,res) => 
+      ( 
+        rest.loggedin === true
       ? <Component {...rest} {...props} />
-      : <Redirect to={{ pathname: '/login', state: { from: props.location }}}
-    /> )} />
+      : <Redirect to={{ pathname: '/login', state: { from: props.location }}}/>
+     )} />
     )
   }
 const PrivateRoute = connect(mapStateToProps)(ConnectedPrivateRoute);
