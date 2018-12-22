@@ -81,7 +81,7 @@ class Login extends Component {
                     style={{width: '400px'}}
                 />
                 <br/>
-          <Button id='login-form' raised colored ripple style={{backgroundColor: this.state.failed ? 'red': this.state.success ? 'green' : bgColor, borderRadius:"12px"}} onClick={() => this.onSubmit()} > {this.state.failed ? 'Wrong username or password' : message}</Button>
+          <Button id='login-form' raised colored ripple style={{backgroundColor: this.state.failed ? 'rgb(153,0,0)': this.state.success ? 'green' : bgColor, borderRadius:"8px"}} onClick={() => this.onSubmit()} > {this.state.failed ? 'Wrong username or password' : message}</Button>
 
           </Cell>
         </Grid>

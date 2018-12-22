@@ -66,7 +66,7 @@ class CustomOption extends Component {
 
   render() {
     return (
-        <div style={{display:'flexje cr'}}>
+        <div style={{display:'flex'}}>
       <div className="rdw-option-wrapper" onClick={this.saveToDB}>💾</div>
       <div className="rdw-option-wrapper" onClick={this.destroyArticle}>❌</div>
       </div>
