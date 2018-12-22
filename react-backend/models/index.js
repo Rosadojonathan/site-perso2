@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
+const dbCredentials = require("../db-credentials.js").dbCredentials;
 
-const sequelize = new Sequelize('blog', 'jonathanrosado', '', {
+const sequelize = new Sequelize('blog', dbCredentials.username, dbCredentials.password, {
   host: 'localhost',
   port:"5432",
   dialect: 'postgres',
@@ -23,7 +24,7 @@ sequelize.authenticate()
   .then(() => {
     console.log('connected to DB');
   });
-sequelize.sync({alter:true}).then(()=>{
+sequelize.sync().then(()=>{
   console.log('synchro ok')
 });
 console.log(models)
