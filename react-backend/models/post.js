@@ -9,16 +9,20 @@ module.exports = (sequelize, Sequelize) => {
         unique:true,
       },
       path: {
-        type: Sequelize.STRING(1000)
+        type: Sequelize.STRING(1000),
+        allowNull: false
       },
       title:{
-          type: Sequelize.STRING(1000)
+          type: Sequelize.STRING(1000),
+          allowNull:false
       },
       description: {
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
+          allowNull: false
       },
       content:{
-          type: Sequelize.TEXT
+          type: Sequelize.TEXT,
+          allowNull: false
       },
       image:{
           type: Sequelize.STRING(1000)

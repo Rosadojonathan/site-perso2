@@ -23,7 +23,7 @@ sequelize.authenticate()
   .then(() => {
     console.log('connected to DB');
   });
-sequelize.sync().then(()=>{
+sequelize.sync({alter:true}).then(()=>{
   console.log('synchro ok')
 });
 console.log(models)

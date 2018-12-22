@@ -18,7 +18,8 @@ class Login extends Component {
       name:'',
       redirectToReferrer: false,
       failed: false,
-      msgSend: false
+      msgSend: false,
+      success: false,
     };
 
   }
@@ -31,13 +32,13 @@ class Login extends Component {
     })
     if (res.data.success === true){
       
-      this.setState({msgSend:true})
+      this.setState({msgSend:true,success:true})
       this.props.authenticate(res.data.token)
       this.props.loggedin()
       this.setState({redirectToReferrer:true})
     } else if (res.data.success === false ){
       this.setState({failed:true})
-      setTimeout(()=> this.setState({failed:false}),1000)
+      setTimeout(()=> this.setState({failed:false}),1000) //try again?
 
     }
   }
@@ -80,7 +81,7 @@ class Login extends Component {
                     style={{width: '400px'}}
                 />
                 <br/>
-          <Button id='login-form' raised colored ripple style={{backgroundColor: this.state.failed ? 'red': bgColor, borderRadius:"12px"}} onClick={() => this.onSubmit()} > {this.state.failed ? 'Wrong username or password' : message}</Button>
+          <Button id='login-form' raised colored ripple style={{backgroundColor: this.state.failed ? 'red': this.state.success ? 'green' : bgColor, borderRadius:"12px"}} onClick={() => this.onSubmit()} > {this.state.failed ? 'Wrong username or password' : message}</Button>
 
           </Cell>
         </Grid>

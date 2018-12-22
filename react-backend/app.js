@@ -13,8 +13,11 @@ const contactform = require("./routes/contact-form");
 const recaptcha = require("./routes/recaptcha");
 const newsletter = require("./routes/newsletter");
 const login = require("./routes/login");
+const auth = require("./routes/auth");
+const authConfirmPassword = require("./routes/authConfirmPassword");
 const articleCreator = require('./routes/articleCreator');
 const articleUpdator = require('./routes/articleUpdator');
+const articleDestroyer = require('./routes/articleDestroyer');
 
 
 const articlesDB = require("./filesystem/articlesDB").articlesDB;
@@ -49,6 +52,9 @@ app.use(express.static(`${__dirname}/../client/website/build`));
 
 app.use('/api/article-creator', articleCreator);
 app.use('/api/article-updator', articleUpdator);
+app.use('/api/article-destroyer', articleDestroyer);
+app.use('/api/auth',auth);
+app.use('/api/auth-confirm-password',authConfirmPassword);
 app.use("/api/posts", posts);
 app.use("/api/articles", articles);
 app.use("/api/contactform", contactform);
