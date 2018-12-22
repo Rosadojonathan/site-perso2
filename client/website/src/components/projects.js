@@ -24,8 +24,8 @@ class Projects extends Component {
       <div className="projects-grid">
         <ProjectCard 
           background={reactIcon}
-          cardTitle="Création d'un site internet sous React"
-          cardText="Je me suis lancé dans le développement de ce site internet codé entièrement en JavaScript grâce aux technologies React et Node.js. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking."
+          cardTitle="Création d'un site CMS-like en React" 
+          cardText="J'ai développé un site internet avec les technologies React / Node.js / Redux / Postgres. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking."
           githubLink="https://github.com/Rosadojonathan/site-perso2"
         />
 

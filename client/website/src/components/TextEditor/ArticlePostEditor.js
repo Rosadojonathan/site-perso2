@@ -172,10 +172,7 @@ class ArticlePostEditor extends Component {
                     onChangeImageLink={this.onChangeImageLink.bind(this)}
                 />
             </Cell>
-        {/* <textarea style={{width:'100%', height:'80vh'}}
-          disabled
-          value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
-        /> */}
+
 
         </Grid>
       </div>
