@@ -444,10 +444,43 @@ h1, h2, h3 {
 }
 
 
-#admin-tabs .mdl-tabs__tab-bar{
+#admin-tabs .mdl-tabs__tab-bar, #back-button .mdl-tabs__tab-bar {
   display:block !important;
   width: 78% !important;
 }
 #admin-tabs .mdl-tabs {
   width: 80% !important;
+}
+#back-button .mdl-tabs {
+  width: 75% !important;
+  margin:auto;
+}
+
+#back-button {
+  text-decoration: none;
+  color: rgb(0,0,0,0.87);
+  width:100%;
+  margin:auto;
+  margin-top:22px;
+}
+
+#back-button:hover {
+  color: rgb(0,0,0,1);
+}
+
+#back-button .mdl-tabs__tab.is-active:after{
+  height: 2px;
+  width: 100%;
+  display: block;
+  content: " ";
+  bottom: 0px;
+  margin: auto;
+  position: absolute;
+  background: rgb(63,81,181);
+  -webkit-animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
+  animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
+  -webkit-transition: all 1s cubic-bezier(0.4, 0, 1, 1);
+  -o-transition: all 1s cubic-bezier(0.4, 0, 1, 1);
+  transition: all 1s cubic-bezier(0.4, 0, 1, 1);
+
 }

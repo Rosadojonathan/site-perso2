@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
-import { Grid, Cell, Textfield, Card } from "react-mdl";
+import { Grid, Cell, Tab, Card, Navigation } from "react-mdl";
 import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import "../../css/articlecss.css";
@@ -8,45 +8,8 @@ import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 import '../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import FileSaverEditor from './FileSaverEditor';
-
-// class ArticlePostEditor extends Component {
-
-
-
-
-//   render() {
-//     if (this.state.loaded) {
-//       return (
-//         <div  id="article-post-div">
-
-
-//           <Grid className="article-post">
-//             <Cell col={7}>
-//               <div contentEditable="true"><h1>{this.state.article.title}</h1></div>
-//               <div
-//                 contentEditable="true"
-//                 dangerouslySetInnerHTML={{
-//                   __html: this.state.article.content
-//                 }}>
-//                 </div>
-              
-//             </Cell>
-
-//           </Grid>
-//         </div>
-//       );
-//     } else {
-//       return (
-//         <div style={{ textAlign: "center" }}>
-//           <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
-//         </div>
-//       );
-//     }
-//   }
-// }
-
-
-
+import { Link } from 'react-router-dom';
+import '../../App.css';
 
 
 
@@ -176,7 +139,15 @@ class ArticlePostEditor extends Component {
     return (
       <div>
         <Grid>
-            <Cell col={2}></Cell>
+            <Cell col={2} style={{backgroundColor:"lavender",height:"500vh"}}>
+            <Navigation>
+              <Link className="is-active" id="back-button" to="/admin">
+                <div className="mdl-tabs__tab mdl-tabs__tab-bar is-active mdl-tabs__ripple-container mdl-tabs mdl-js-tabs mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded " style={{width:'80%',margin:'auto',textAlign:'center'}}>
+                Back
+                </div>
+              </Link>
+            </Navigation>
+            </Cell>
             <Cell col={7}>
                 <Editor
                 editorState={editorState}
