@@ -48,7 +48,7 @@ export class MaestroExperience extends Component {
                 </ul>
                 <p>▬ Tech ▬</p>
                 <ul>
-                  <li>Développement Full Stack d'applications web (Stack: React, NodeJS/Flask, Postgres/SQLite, Redis, Docker, Nginx)</li>
+                  <li>Développement Full Stack d'applications web (Stack: React, Redux, NodeJS/Flask, Postgres/SQLite, Redis, Docker, Nginx)</li>
                   <li>Scripts d'automatisation en Python</li>
                 </ul>
 

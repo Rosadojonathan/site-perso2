@@ -25,7 +25,7 @@ class Projects extends Component {
         <ProjectCard 
           background={reactIcon}
           cardTitle="Création d'un site CMS-like en React" 
-          cardText="J'ai développé un site internet avec les technologies React / Node.js / Redux / Postgres. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking."
+          cardText="J'ai développé un site internet avec les technologies React, Node.js, Redux, Postgres, Docker et Nginx. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking."
           githubLink="https://github.com/Rosadojonathan/site-perso2"
         />
 

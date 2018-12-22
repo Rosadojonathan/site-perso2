@@ -16,20 +16,11 @@ class Login extends Component {
       password: '',
       username:'',
       name:'',
-      redirectToReferrer: false
+      redirectToReferrer: false,
+      failed: false,
+      msgSend: false
     };
 
-    // const fakeAuth = {
-    //   isAuthenticated: false,
-    //   authenticate(cb) {
-    //     this.isAuthenticated = true
-    //     setTimeout(cb, 100) // fake async
-    //   },
-    //   signout(cb) {
-    //     this.isAuthenticated = false
-    //     setTimeout(cb, 100) // fake async
-    //   }
-    // }
   }
 
   onSubmit = async () => {
@@ -39,18 +30,15 @@ class Login extends Component {
       password
     })
     if (res.data.success === true){
-      console.log(res.data)
+      
+      this.setState({msgSend:true})
       this.props.authenticate(res.data.token)
       this.props.loggedin()
       this.setState({redirectToReferrer:true})
-      // this.props.authenticate()
-      // .then(() => {
-      //   this.setState({redirectToReferrer:true})
-      // })
+    } else if (res.data.success === false ){
+      this.setState({failed:true})
+      setTimeout(()=> this.setState({failed:false}),1000)
 
-      // this.props.fakeAuth.authenticate(() => {
-        
-      // })
     }
   }
 
@@ -61,7 +49,6 @@ class Login extends Component {
     const {redirectToReferrer} = this.state;
 
     if (redirectToReferrer === true){
-      // <Redirect to='/admin' />
       this.props.history.push(from.pathname);
     }
     return (
@@ -93,7 +80,7 @@ class Login extends Component {
                     style={{width: '400px'}}
                 />
                 <br/>
-          <Button id='login-form' raised colored ripple style={{backgroundColor:bgColor}} onClick={() => this.onSubmit()} > {message}</Button>
+          <Button id='login-form' raised colored ripple style={{backgroundColor: this.state.failed ? 'red': bgColor, borderRadius:"12px"}} onClick={() => this.onSubmit()} > {this.state.failed ? 'Wrong username or password' : message}</Button>
 
           </Cell>
         </Grid>
