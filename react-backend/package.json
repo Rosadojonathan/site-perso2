@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "PORT=1337 sudo nodemon ./bin/www"
+    "start": "PORT=1337 sudo node ./bin/www"
   },
   "dependencies": {
     "babel-preset-env": "^1.7.0",

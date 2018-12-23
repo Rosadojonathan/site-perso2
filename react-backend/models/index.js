@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const dbCredentials = require("../db-credentials.js").dbCredentials;
 
-const sequelize = new Sequelize('blog', dbCredentials.username, dbCredentials.password, {
+const sequelize = new Sequelize(dbCredentials.database, dbCredentials.username, dbCredentials.password, {
   host: 'localhost',
   port:"5432",
   dialect: 'postgres',
