@@ -1,6 +1,6 @@
 # jonathanrosado.fr 
 
-This project is my personal website. I experiment with all sorts of web technologies and it serves as a resume/portfolio. I just find it a great tool for learning and you may find that some of the tech stack choices are overkill for what I actually do with them but that's okay :) 
+This project is the full stack development of my personal website. I experiment with all sorts of web technologies and it serves as a resume/portfolio. I just find it a great learning project so you may find that some of the tech stack choices are a bit overkill for what I actually do with them but that's okay :) 
 
 It has CMS-like features and a machine learning powered chatbot. 
 
@@ -15,8 +15,9 @@ Webserver: Nginx
 
 
 
-## Screenshots of the admin features
+## Screenshots of the admin features & chatbot interface
 
+![Chatbot](/readme_images/chatbot.jpg)
 ![Rich Text Editor](/readme_images/RichTextEditor.jpg)
 ![Select Articles to Edit](/readme_images/SelectArticleToEdit.jpg)
 ![Post Editor](/readme_images/EditPosts.jpg)
