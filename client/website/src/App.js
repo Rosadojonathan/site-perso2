@@ -21,7 +21,6 @@ class App extends Component {
         const res = await axios.post('/api/auth',{
           token
         })
-        console.log(res);
         if (res.data.success === true){
           return true
         } else if(res.data.tokenExpired === true) {

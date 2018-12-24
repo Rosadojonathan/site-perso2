@@ -20,9 +20,9 @@ class StateLoader {
   }
 
   saveState(state) {
-    console.log('state to save')
-    console.log(state)
       try {
+              //   const {loggedin, expiredSession, ...rest } = state;
+
           let serializedState = JSON.stringify(state);
           localStorage.setItem("https://jonathanrosado.fr:state", serializedState);
 
