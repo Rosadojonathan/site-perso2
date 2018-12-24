@@ -15,7 +15,7 @@ function generateToken(username, password) {
    password: password,
   };
   return token = jwt.sign(u,'shhhhh', {
-     expiresIn: 60 * 60 // expires in 1 hour
+     expiresIn: 60 * 60 * 3 // expires in 3 hours
   });
 }
 

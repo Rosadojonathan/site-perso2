@@ -34,7 +34,8 @@ class StateLoader {
   initializeState() {
       return {
         token: '',
-        loggedin:false
+        loggedin:false,
+        expiredSession: false
       }
       };
   }

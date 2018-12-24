@@ -13,14 +13,16 @@ function authenticateReducer(state, action){
       case LOGGEDIN:
         state = {
           ...state,
-          loggedin: action.payload
+          loggedin: action.payload,
+          expiredSession: !action.payload
         }
       return state;
 
       case EXPIREDLOGGEDIN:
       state = {
         ...state,
-        loggedin: action.payload
+        loggedin: action.payload,
+        expiredSession: !action.payload
       }
       
       default: 

@@ -81,7 +81,7 @@ class Login extends Component {
                     style={{width: '400px'}}
                 />
                 <br/>
-          <Button id='login-form' raised colored ripple style={{backgroundColor: this.state.failed ? 'rgb(153,0,0)': this.state.success ? 'green' : bgColor, borderRadius:"8px"}} onClick={() => this.onSubmit()} > {this.state.failed ? 'Wrong username or password' : message}</Button>
+          <Button id='login-form' raised colored ripple style={{backgroundColor: this.state.failed ? 'rgb(153,0,0)' : this.props.expiredSession ? 'orange' : this.state.success ? 'green' : bgColor, borderRadius:"8px"}} onClick={() => this.onSubmit()} > {this.state.failed ? 'Wrong username or password' : this.props.expiredSession ? 'Expired session: please login again' : message}</Button>
 
           </Cell>
         </Grid>
@@ -90,10 +90,13 @@ class Login extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return { expiredSession: state.expiredSession}
+}
 
 const mapDispatchToProps = dispatch => ({
   authenticate: (token) => dispatch(authenticate(token)),
   loggedin: () => dispatch(loggedin()) // <-- manually dispatches
 });
 
-export default withRouter(connect(null, mapDispatchToProps)(Login));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
