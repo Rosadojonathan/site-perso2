@@ -5,7 +5,7 @@ import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
 import Main from './components/main';
 import { Link } from 'react-router-dom';
 import './App.css';
-import { loggedin} from './redux/actions/actions';
+import { loggedin, expiredLoggedin } from './redux/actions/actions';
 import {withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 import axios from 'axios';
@@ -24,13 +24,19 @@ class App extends Component {
         console.log(res);
         if (res.data.success === true){
           return true
-        } else{
+        } else if(res.data.tokenExpired === true) {
+          return "expired token"
+        }
+        else {
           return false
         }
       }
     token && authenticate(token).then((res) => {
       if (res === true){
         this.props.loggedin()
+      } else if( res === "expired token") {
+        this.props.expiredLoggedin()
+
       }
     })
   }
@@ -75,7 +81,8 @@ const mapStateToProps = state => {
   return { token: state.token };
 };
 const mapDispatchToProps = dispatch => ({
-  loggedin: () => dispatch(loggedin()) // <-- manually dispatches
+  loggedin: () => dispatch(loggedin()),
+  expiredLoggedin: () => dispatch(expiredLoggedin())
 });
 
 export default withRouter(connect(mapStateToProps,mapDispatchToProps)(App));

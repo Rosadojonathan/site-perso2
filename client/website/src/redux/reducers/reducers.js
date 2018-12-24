@@ -1,4 +1,4 @@
-import {  AUTHENTICATED, LOGGEDIN } from "../actions/actions";
+import {  AUTHENTICATED, LOGGEDIN, EXPIREDLOGGEDIN } from "../actions/actions";
 
 
 
@@ -16,6 +16,12 @@ function authenticateReducer(state, action){
           loggedin: action.payload
         }
       return state;
+
+      case EXPIREDLOGGEDIN:
+      state = {
+        ...state,
+        loggedin: action.payload
+      }
       
       default: 
         return state;

@@ -12,6 +12,7 @@ DataBases: Postgres, Firebase & MongoDB (just for fun)
 Machine Learning: Python Chatbot with RASA Core
 Continuous Integration & Deployment: Docker (for the chatbot only)
 Webserver: Nginx
+Hosting: VPS Digital Ocean
 
 
 
