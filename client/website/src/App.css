@@ -44,14 +44,14 @@ body {
 /* Project page card CSS */
 
 .project-card{
-  box-shadow: 0 12px 6px 6px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 6px 6px rgba(0,0,0,0.12);
   border-radius:12px !important;
   transition: transform 0.2s cubic-bezier(0.37, 0.03, 0.11, 0.96),box-shadow 0.2s ease-out !important;
 }
 
 .project-card:hover {
   transform: translateY(-9px) !important;
-  box-shadow: 0 16px 14px 6px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 13px 12px rgba(0,0,0,0.12);
 }
 
 #card-title > h2 {
