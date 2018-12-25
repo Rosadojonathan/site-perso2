@@ -28,5 +28,11 @@
     "sequelize": "^4.42.0",
     "serve-favicon": "^2.4.5",
     "slack-webhook": "^1.0.0"
+  },
+  "devDependencies": {
+    "cryptiles": "^4.1.2",
+    "gulp": "^4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "mime": "^1.4.1"
   }
 }
