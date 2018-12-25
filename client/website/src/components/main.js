@@ -1,14 +1,9 @@
 import React from 'react';
 import asyncComponent from './AsyncComponent';
-import axios from 'axios';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import LandingPage from './landingpage';
-// import Contact from './contact';
-// import Projects from './projects';
 import Blog from './blog';
-// import Resume from './resume';
 import Login from './login';
-// import Admin from './admin';
 import ArticlePost from './articlepost';
 import ArticlePostEditor from './TextEditor/ArticlePostEditor';
 import { connect } from 'react-redux';
@@ -18,18 +13,6 @@ const AsyncAdmin = asyncComponent(() => import('./admin'));
 const AsyncProjects = asyncComponent(() => import('./projects'));
 
 
-
-// async function authenticate(token) {
-//   console.log('authenticate function called')
-//   console.log(token)
-//   const res = await axios.post('/api/auth',{
-//     token
-//   })
-//   console.log(res);
-//   if (res.data.success === true){
-//     return true
-//   }
-// }
 
 
 const mapStateToProps = state => {
