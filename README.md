@@ -6,13 +6,13 @@ It has CMS-like features and a machine learning powered chatbot.
 
 ## Tech Stack
 
-Front End: React & Redux for some state management
-Back-End: Express, Sequelize
-DataBases: Postgres, Firebase & MongoDB (just for fun)
-Machine Learning: Python Chatbot with RASA Core
-Continuous Integration & Deployment: Docker (for the chatbot only)
-Webserver: Nginx
-Hosting: VPS Digital Ocean
+- Front End: React & Redux for some auth state management
+- Back-End: Express, Sequelize
+- DataBases: Postgres, Firebase & MongoDB (just for fun)
+- Machine Learning: Python Chatbot with RASA Core
+- Continuous Integration & Deployment: Docker (for the chatbot only)
+- Webserver: Nginx
+- Hosting: VPS Digital Ocean
 
 
 
