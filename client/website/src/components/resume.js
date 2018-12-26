@@ -126,16 +126,19 @@ class Resume extends Component {
             <p>+336.46.74.63.75</p>
             <h5>Email</h5>
             <p>jonathan.emil.rosado@gmail.com</p>
-            <h5>LinkedIn</h5>
 
-            <a
-              style={{ cursor: "pointer" }}
-              href="https://www.linkedin.com/in/jonathan-emil-rosado/"
-            >
-            
-            <Logo logo={linkedinLogo} logoName="linkedin logo"/>
-
+            <div style={{display:"inline-flex", marginRight:'20px'}}> 
+             <div>
+              <h5>LinkedIn</h5>
+              <a
+                style={{ cursor: "pointer" }}
+                href="https://www.linkedin.com/in/jonathan-emil-rosado/"
+              >
+              
+              <Logo logo={linkedinLogo} logoName="linkedin logo"/>
             </a>
+            </div>
+            <div> 
             <h5>GitHub</h5>
             <a
               style={{ cursor: "pointer" }}
@@ -145,6 +148,8 @@ class Resume extends Component {
             <Logo logo={githubLogo} logoName="github logo"/>
 
             </a>
+            </div>
+            </div> 
 
             <hr style={{ borderTop: "3px solid #3E2723", width: "65%",marginLeft:"auto", marginRight:"auto" }} />
             <h5>Certifications</h5>
