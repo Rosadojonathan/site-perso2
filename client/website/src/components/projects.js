@@ -122,7 +122,7 @@ class Projects extends Component {
         </Helmet>
 
         <Tabs style={{padding:'0px 10px',width:"100%"}}activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
-          <Tab style={{width:'25%'}}><p>React</p></Tab>
+          <Tab style={{width:'25%'}}><p>Apps</p></Tab>
           <Tab style={{width:'25%'}}> <p>Data Science/Viz</p></Tab>
           <Tab style={{width:'25%'}}><p>Ads Automation</p></Tab>
           <Tab style={{width:'25%'}}><p>Slackbots</p></Tab>
