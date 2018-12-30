@@ -28,6 +28,12 @@ class Projects extends Component {
           cardText="J'ai développé un site internet avec les technologies React, Node.js, Redux, Postgres, Docker et Nginx. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking."
           githubLink="https://github.com/Rosadojonathan/site-perso2"
         />
+        <ProjectCard 
+          background={reactIcon}
+          cardTitle="Création d'une app mobile de flashcards en React-Native" 
+          cardText="J'ai réalisé une application mobile IOS/Android d'apprentissage par flashcards inspiré par la célèbre application Anki en utilisant les technologies React-Native et Redux."
+          githubLink="https://github.com/Rosadojonathan/not-anki"
+        />
 
 
 
