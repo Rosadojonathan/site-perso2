@@ -7,6 +7,7 @@ import machineLearningIcon from '../img/machinelearningicon.svg';
 import facebookIcon from '../img/facebookicon.svg';
 import slackIcon from '../img/slackicon.png';
 import reactIcon from '../img/reacticon.png';
+import reactNativeicon from '../img/react-native-logo.png';
 
 // import GoogleTagManager from './google-tag-manager';
 
@@ -29,7 +30,7 @@ class Projects extends Component {
           githubLink="https://github.com/Rosadojonathan/site-perso2"
         />
         <ProjectCard 
-          background={reactIcon}
+          background={reactNativeicon}
           cardTitle="Création d'une app mobile de flashcards en React-Native" 
           cardText="J'ai réalisé une application mobile IOS/Android d'apprentissage par flashcards inspiré par la célèbre application Anki en utilisant les technologies React-Native et Redux."
           githubLink="https://github.com/Rosadojonathan/not-anki"
