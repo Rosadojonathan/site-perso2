@@ -17,11 +17,14 @@ It has CMS-like features and a machine learning powered chatbot.
 
 
 ## Screenshots of the admin features & chatbot interface
+<img src="/readme_images/chatbot.jpg" width="300" />
+<img src="/readme_images/RichTextEditor.jpg" width="550" />
+<img src="/readme_images/SelectArticleToEdit.jpg" width="550" />
+<img src="/readme_images/EditPosts.jpg" width="550" />
 
-![Chatbot](/readme_images/chatbot.jpg)
-![Rich Text Editor](/readme_images/RichTextEditor.jpg)
+<!-- ![Rich Text Editor](/readme_images/RichTextEditor.jpg)
 ![Select Articles to Edit](/readme_images/SelectArticleToEdit.jpg)
-![Post Editor](/readme_images/EditPosts.jpg)
+![Post Editor](/readme_images/EditPosts.jpg) -->
 
 
 ### Plans for the future
