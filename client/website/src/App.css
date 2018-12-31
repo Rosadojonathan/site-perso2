@@ -487,3 +487,9 @@ color: rgba(0,0,0,.87);
 #login-form:hover{
   background-color:#212a5e
 }
+
+.rdw-editor-toolbar {
+  position:sticky;
+  top:60px;
+  z-index: 1;
+}
