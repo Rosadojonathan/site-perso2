@@ -491,5 +491,5 @@ color: rgba(0,0,0,.87);
 .rdw-editor-toolbar {
   position:sticky;
   top:60px;
-  z-index: 1;
+  z-index: 3;
 }

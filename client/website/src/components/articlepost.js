@@ -55,7 +55,7 @@ class ArticlePost extends Component {
             <meta property="og:url" content={window.location.href} />
             <meta
               property="og:image"
-              content="https://jonathanrosado.fr/images/homepage.jpg"
+              content={window.location.origin + this.state.article.image}
             />
             <meta
               property="article:published_time"
