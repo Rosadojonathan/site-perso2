@@ -8,6 +8,7 @@ import facebookIcon from '../img/facebookicon.svg';
 import slackIcon from '../img/slackicon.png';
 import reactIcon from '../img/reacticon.png';
 import reactNativeicon from '../img/react-native-logo.png';
+import electronIcon from '../img/electron-logo-3.png';
 
 // import GoogleTagManager from './google-tag-manager';
 
@@ -26,14 +27,20 @@ class Projects extends Component {
         <ProjectCard 
           background={reactIcon}
           cardTitle="Création d'un site CMS-like en React" 
-          cardText="J'ai développé un site internet avec les technologies React, Node.js, Redux, Postgres, Docker et Nginx. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking."
+          cardText="J'ai développé un site internet avec les technologies React, Express, Redux, Postgres, Docker et Nginx. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking."
           githubLink="https://github.com/Rosadojonathan/site-perso2"
         />
         <ProjectCard 
           background={reactNativeicon}
           cardTitle="Création d'une app mobile de flashcards en React-Native" 
-          cardText="J'ai réalisé une application mobile IOS/Android d'apprentissage par flashcards inspiré par la célèbre application Anki en utilisant les technologies React-Native et Redux."
+          cardText="J'ai réalisé une application mobile IOS/Android d'apprentissage par flashcards inspiré par la célèbre application Anki en utilisant les technologies React-Native, Redux et PouchDB. Elle peut ainsi se synchroniser avec son app équivalent Electron."
           githubLink="https://github.com/Rosadojonathan/not-anki"
+        />
+        <ProjectCard 
+          background={electronIcon}
+          cardTitle="Création d'une app Electron de flashcards avec React" 
+          cardText="J'ai créé une application Electron de flashcards en utilisant les technologies React, Redux et PouchDB qui se synchronise avec son app équivalente React-Native."
+          githubLink="https://github.com/Rosadojonathan/not-anki-electron"
         />
 
 
