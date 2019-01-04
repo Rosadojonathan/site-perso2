@@ -493,3 +493,9 @@ color: rgba(0,0,0,.87);
   top:60px;
   z-index: 3;
 }
+
+.project-image {
+  background-size: contain !important;
+  background-repeat:no-repeat !important;
+  background-position:center center !important;
+}
