@@ -9,6 +9,7 @@ import slackIcon from '../img/slackicon.png';
 import reactIcon from '../img/reacticon.png';
 import reactNativeicon from '../img/react-native-logo.png';
 import electronIcon from '../img/electron-logo-3.png';
+import chromeIcon from '../img/chrome-logo.png';
 
 // import GoogleTagManager from './google-tag-manager';
 
@@ -42,6 +43,13 @@ class Projects extends Component {
           cardText="J'ai créé une application Electron de flashcards en utilisant les technologies React, Redux et PouchDB qui se synchronise avec son app équivalente React-Native."
           githubLink="https://github.com/Rosadojonathan/not-anki-electron"
         />
+        <ProjectCard 
+          background={chromeIcon}
+          cardTitle="Création d'une extension Chrome de flashcards avec React" 
+          cardText="J'ai ajouté une extension Chrome à ma combinaison d'applications de flashcards qui se synchronise avec elles et qui permet de rajouter des cartes directement depuis le navigateur. Stack: React / Redux et PouchDB."
+          githubLink="https://github.com/Rosadojonathan/not-anki-chrome"
+        />
+
 
 
 
