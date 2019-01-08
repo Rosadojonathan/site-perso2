@@ -46,7 +46,7 @@ class Projects extends Component {
         <ProjectCard 
           background={chromeIcon}
           cardTitle="Création d'une extension Chrome de flashcards avec React" 
-          cardText="J'ai ajouté une extension Chrome à ma combinaison d'applications de flashcards qui se synchronise avec elles et qui permet de rajouter des cartes directement depuis le navigateur. Stack: React / Redux et PouchDB."
+          cardText="J'ai ajouté une extension Chrome à ma série d'applications de flashcards qui se synchronisent entre elles et qui permet de rajouter des cartes directement depuis le navigateur. Stack: React / Redux et PouchDB."
           githubLink="https://github.com/Rosadojonathan/not-anki-chrome"
         />
 
