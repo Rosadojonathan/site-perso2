@@ -76,6 +76,12 @@ class Projects extends Component {
             cardText="J'ai créé un petit chatbot disponible sur ma page de contact en utilisant la Stack RASA NLU / RASA Core. La librairie est open source, l'on peut donc faire tourner le chatbot sur son propre serveur."
             githubLink="https://github.com/Rosadojonathan/rasa-core-bot"
           />
+          <ProjectCard 
+            background="/images/markov-chains-shiny.jpg"
+            cardTitle="App Shiny: Attribution Markov Chains vs Modèles Heuristiques"
+            cardText="J'ai créé une petite app Shiny en R qui permet d'accéder à une interface qui graphe une comparaison de l'attribution des conversions selon un modèle par chaînes de Markov ou par modèles heuristiques classiques. "
+            githubLink="https://github.com/Rosadojonathan/markov-chains-attribution-shiny"
+          />
                     
         </div>
 
