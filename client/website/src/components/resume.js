@@ -69,7 +69,7 @@ class Resume extends Component {
       <div>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>CV de Jonathan Rosado - Technical Marketer </title>
+          <title>CV de Jonathan Rosado - Technical Marketer / Growth Engineer </title>
 
           <meta
             name="description"
@@ -80,7 +80,7 @@ class Resume extends Component {
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
-            content="CV de Jonathan Rosado - Technical Marketer"
+            content="CV de Jonathan Rosado - Technical Marketer / Growth Engineer"
           />
           <meta
             property="og:description"
@@ -168,7 +168,7 @@ class Resume extends Component {
             <MaestroExperience
               startYear="Octobre 2018"
               endYear="Maintenant"
-              jobName="Technical Marketer & Data Scientist"
+              jobName="Growth Engineer "
               company="Maestro Corporation"
               linkCompany="https://maestro-corporation.com/"
               />
@@ -178,7 +178,7 @@ class Resume extends Component {
             <Experience
               startYear="Février 2017"
               endYear="Maintenant"
-              jobName="SEA Manager & Technical Marketer"
+              jobName="SEA Manager & Technical Marketer / Growth Engineer"
               company="Maestro Corporation"
               linkCompany="https://maestro-corporation.com/"
               jobDescription="En charge de l'acquisition payante sur les plateformes publicitaires (AdWords, Facebook Ads, Instagram Ads, Snapchat Ads) en FR, EN, ES, DE, IT et NL. J'ai mis en place de nombreux programmes d'automatisation et un modèle prédictif de Machine Learning afin d'augmenter mon efficacité et aider la startup à scaler son système d'acquisition."
