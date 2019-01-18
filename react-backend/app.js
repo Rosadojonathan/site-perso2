@@ -4,8 +4,6 @@ const favicon = require("serve-favicon");
 const logger = require("morgan");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
-// const redisClient = require("redis").createClient();
-
 const index = require("./routes/index");
 const posts = require("./routes/posts");
 const articles = require("./routes/articles");
@@ -68,6 +66,11 @@ app.use("/robots.txt", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/website/build/robots.txt"));
 });
 
+app.use('/sitemap.xml', (req, res) => {
+  res.header('Content-Type','application/xml');
+  res.send(path.join(__dirname, "./public/sitemap.xml"))
+})
+
 app.use("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/website/build/index.html"));
 });
@@ -92,5 +95,6 @@ app.use(function(err, req, res, next) {
   // res.render('error');
   res.sendFile(path.join(__dirname, "..client/website/build/index.html"));
 });
+
 
 module.exports = app;

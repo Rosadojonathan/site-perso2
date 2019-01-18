@@ -11,6 +11,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
+    "cron": "^1.6.0",
     "debug": "~2.6.9",
     "express": "~4.15.5",
     "express-limiter": "^1.6.1",
@@ -27,6 +28,7 @@
     "request": "^2.85.0",
     "sequelize": "^4.42.0",
     "serve-favicon": "^2.4.5",
+    "sitemap": "^2.1.0",
     "slack-webhook": "^1.0.0"
   },
   "devDependencies": {
