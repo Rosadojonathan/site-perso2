@@ -43,7 +43,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static("static"));
-app.use(express.static(`${__dirname}/../client/website/build`));
+app.use(express.static(`${__dirname}/../client/app/build`));
 // app.use(
 //   require("prerender-node").set("prerenderToken", "ZXkgVzlyxjh1bS5BJ3ck")
 // );
@@ -60,10 +60,10 @@ app.use("/api/recaptcha", recaptcha);
 app.use("/api/login", login);
 app.use("/api/newsletter", newsletter);
 app.get("/blog/:whatever", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/website/build/index.html"));
+  res.sendFile(path.join(__dirname, "../client/app/build/index.html"));
 });
 app.use("/robots.txt", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/website/build/robots.txt"));
+  res.sendFile(path.join(__dirname, "../client/app/build/robots.txt"));
 });
 
 app.use('/sitemap.xml', (req, res) => {
@@ -72,14 +72,14 @@ app.use('/sitemap.xml', (req, res) => {
 })
 
 app.use("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/website/build/index.html"));
+  res.sendFile(path.join(__dirname, "../client/app/build/index.html"));
 });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   const err = new Error("Not Found");
   err.status = 404;
-  //  res.sendFile(path.join(__dirname,'..client/website/build/index.html'));
+  //  res.sendFile(path.join(__dirname,'..client/app/build/index.html'));
   next(err);
 });
 
@@ -93,7 +93,7 @@ app.use(function(err, req, res, next) {
   // // render the error page
   // res.status(err.status || 500);
   // res.render('error');
-  res.sendFile(path.join(__dirname, "..client/website/build/index.html"));
+  res.sendFile(path.join(__dirname, "..client/app/build/index.html"));
 });
 
 
