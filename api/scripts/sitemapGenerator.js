@@ -1,5 +1,5 @@
 const sm = require('sitemap');
-const models = require('./models');
+const models = require('../models');
 const fs = require('fs');
 const CronJob = require('cron').CronJob;
 
@@ -43,7 +43,7 @@ function generateSitemap() {
             urls: urls
         });
 
-        fs.writeFileSync(require('path').resolve(__dirname,'./public/sitemap.xml'), sitemap.toString());
+        fs.writeFileSync(require('path').resolve(__dirname,'../public/sitemap.xml'), sitemap.toString());
     });
 
 }
