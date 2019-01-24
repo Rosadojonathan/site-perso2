@@ -67,7 +67,9 @@ h3  {
    
   }
 }
-
+p {
+    font-size: 18px;
+}
 
 p > a {
   color: rgb(162, 23, 23) ;
