@@ -11,12 +11,12 @@ h1 {
 }
 
 h2   {
-  font-size: 2em !important;
+  font-size: 2.5em !important;
   font-weight:bold !important;
   
 }
 h3  {
-  font-size: 1.6em !important;
+  font-size: 2em !important;
   font-weight:bold !important;
 }
 
@@ -63,12 +63,12 @@ h3  {
     font-size: 1.3em !important;
   }
   #article-post-div p {
-    font-size: 1.2em !important;
+    font-size: 1.3em !important;
    
   }
 }
 p {
-    font-size: 18px;
+    font-size: 18px !important;
 }
 
 p > a {
