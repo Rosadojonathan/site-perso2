@@ -13,7 +13,7 @@ import {
 
 import "../App.css";
 
-import avatar from "../img/thinking.jpeg";
+import avatar from "../img/thinking.png";
 
 class Landing extends Component {
   constructor(props) {

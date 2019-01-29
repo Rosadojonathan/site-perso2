@@ -11,7 +11,7 @@ import adwordsLogo from "../img/adwords-logo-website.png";
 import googleAnalyticsLogo from "../img/google-analytics.png";
 import datacampLogo from "../img/datacamp.png";
 import hubspotLogo from "../img/hubspot-logo.jpg";
-import freecodecampLogo from "../img/freecodecamp.jpeg";
+import freecodecampLogo from "../img/freecodecamp.png";
 import linkedinLogo from "../img/linkedin.png";
 import githubLogo from "../img/github.png";
 import imageJonathan from "../img/jonathan-rosado-image-cv.jpg";
