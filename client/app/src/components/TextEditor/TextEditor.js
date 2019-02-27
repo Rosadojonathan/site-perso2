@@ -3,35 +3,40 @@ import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import '../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import '../../App.css';
 
 class CustomOption extends Component {
   saveToDB = () => {
     const { editorState, description, image_link, title, path, filename } = this.props;
-    console.log(this.props)
+    console.log(this.props.token)
     const html = draftToHtml(convertToRaw(editorState.getCurrentContent()))
     console.log(html)
     let today = new Date().toISOString().slice(0, 10)
     if (window.confirm('Are you sure you want to save this thing into the database?')) {
 
       fetch('/api/article-creator', {
-        headers:{
+        withCredentials: true,
+        credentials: 'include',
+        headers: {
           'Accept': 'application/json',
-          'Content-Type':'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${JSON.parse(localStorage.getItem('https://jonathanrosado.fr:state')).token}`
         },
         method: 'POST',
-        body: JSON.stringify({'content':html,'title':title,'path':path,'image_link':image_link, 'description':description, "filename":filename, 'date':today})
+        body: JSON.stringify({ 'content': html, 'title': title, 'path': path, 'image_link': image_link, 'description': description, "filename": filename, 'date': today })
       })
-      
-      .then(response => response.json())
-      .then((res) => {
-        res.response === 'ok' ? window.alert('file correctly saved ✅') : window.alert('file incorrectly saved ❌')
-      })
+
+        .then(response => response.json())
+        .then((res) => {
+          res.response === 'ok' ? window.alert('file correctly saved ✅') : window.alert('file incorrectly saved ❌')
+        })
     } else {
       // Do nothing!
-  }
-   
+    }
+
   };
 
   render() {
@@ -55,7 +60,6 @@ export default class TextEditor extends Component {
       };
     }
   }
-
   onEditorStateChange = (editorState) => {
     this.setState({
       editorState,
@@ -68,17 +72,17 @@ export default class TextEditor extends Component {
       <div>
         <Editor
           editorState={editorState}
-          style={{fontFamily:'Ubuntu,sans-serif'}}
+          style={{ fontFamily: 'Ubuntu,sans-serif' }}
           wrapperClassName="wrapper-class"
           editorClassName="editor-class"
           toolbarClassName="toolbar-class"
-          toolbarCustomButtons={[<CustomOption 
+          toolbarCustomButtons={[<CustomOption
             title={this.props.title}
             path={this.props.path}
             image_link={this.props.image_link}
             description={this.props.description}
             filename={this.props.filename}
-            />]}
+          />]}
           onEditorStateChange={this.onEditorStateChange}
         />
         {/* <textarea style={{width:'100%', height:'80vh'}}

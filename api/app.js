@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const path = require("path");
 const favicon = require("serve-favicon");
@@ -51,8 +52,8 @@ app.use(express.static(`${__dirname}/../client/app/build`));
 app.use('/api/article-creator', articleCreator);
 app.use('/api/article-updator', articleUpdator);
 app.use('/api/article-destroyer', articleDestroyer);
-app.use('/api/auth',auth);
-app.use('/api/auth-confirm-password',authConfirmPassword);
+app.use('/api/auth', auth);
+app.use('/api/auth-confirm-password', authConfirmPassword);
 app.use("/api/posts", posts);
 app.use("/api/articles", articles);
 app.use("/api/contactform", contactform);
@@ -67,7 +68,7 @@ app.use("/robots.txt", (req, res) => {
 });
 
 app.use('/sitemap.xml', (req, res) => {
-  res.header('Content-Type','application/xml');
+  res.header('Content-Type', 'application/xml');
   res.send(path.join(__dirname, "./public/sitemap.xml"))
 })
 
@@ -76,7 +77,7 @@ app.use("/", (req, res) => {
 });
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   const err = new Error("Not Found");
   err.status = 404;
   //  res.sendFile(path.join(__dirname,'..client/app/build/index.html'));
@@ -84,7 +85,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
 
   // res.locals.message = err.message;
