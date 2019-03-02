@@ -29,6 +29,6 @@ It has CMS-like features and a machine learning powered chatbot.
 
 ### Plans for the future
 
-- Add GraphQL because it's cool?
+- Have fun with GraphQL?
 - Add an interface to take over chatbot conversations and respond directly from the admin pages.
 - Add a content based Recommender System once I have written more articles.
