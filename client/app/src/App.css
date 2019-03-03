@@ -305,7 +305,7 @@ margin-top: 10px;
   }
   .category-tabs p {
     line-height:1.6em;
-    font-size: 0.7em;
+    font-size: 0.7em !important;
     font-weight: bold;
 
 
