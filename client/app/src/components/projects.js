@@ -10,7 +10,7 @@ import reactIcon from '../img/reacticon.png';
 import reactNativeicon from '../img/react-native-logo.png';
 import electronIcon from '../img/electron-logo-3.png';
 import chromeIcon from '../img/chrome-logo.png';
-
+import vueGraphQL from '../img/vue-graphql.png'
 // import GoogleTagManager from './google-tag-manager';
 
 
@@ -49,6 +49,13 @@ class Projects extends Component {
           cardText="J'ai ajouté une extension Chrome à ma série d'applications de flashcards qui se synchronisent entre elles et qui permet de rajouter des cartes directement depuis le navigateur. Stack: React / Redux et PouchDB."
           githubLink="https://github.com/Rosadojonathan/not-anki-chrome"
         />
+        <ProjectCard 
+          background={vueGraphQL}
+          cardTitle="Création d'un chat avec Vue + GraphQL + Firebase" 
+          cardText="Découverte de VueJS et GraphQL en créant une petite application de chat en temps réel qui utilise Firestore comme DB."
+          githubLink="https://github.com/Rosadojonathan/vue-graphql-firebase-chatapp"
+        />
+
 
 
 
