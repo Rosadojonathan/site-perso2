@@ -4,10 +4,10 @@ import { Card, CardTitle, CardText } from "react-mdl";
 class Comment extends Component {
   render() {
     return (
-      <div style={{ padding: "2em 0em", textAlign: "center" }}>
+      <div style={{ padding: "2em 0em", textAlign: "center"}}>
         <Card
           shadow={5}
-          style={{ margin: "auto", backgroundColor: "#fdfdfb", width: "100%" }}
+          style={{ margin: "auto", backgroundColor: "#fdfdfb", width: "100%", borderRadius:"15px"  }}
         >
           <CardTitle
             style={{ color: "black", fontWeight: "bold", fontSize: "16px" }}

@@ -12,7 +12,7 @@ class CommentList extends Component {
     let app = this.props.db
       .database()
       .ref(
-        `/api/articles/${decodeURIComponent(window.location.pathname.split("/")[2])}`
+        `articles/${decodeURIComponent(window.location.pathname.split("/")[2])}`
       );
     app.on("value", snapshot => {
       this.getData(snapshot.val());
@@ -37,13 +37,14 @@ class CommentList extends Component {
   render() {
     let commentsNodes = this.state.comments.map(comment => {
       return (
-        <div>
+        <div key={comment.key}>
           <div>
             <Comment
-              style={{ height: "auto" }}
+              style={{ height: "auto"}}
               comment={comment.comment}
               name={comment.name}
               date={comment.date}
+              
             />
           </div>
         </div>

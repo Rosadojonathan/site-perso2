@@ -27,7 +27,6 @@ class ArticlePost extends Component {
       .then((res) => { 
         return res.json()})
       .then((article) => { 
-        console.log(article)
         return this.setState({ article, loaded: true })})
       .catch(function(error) {
         console.log(error);
