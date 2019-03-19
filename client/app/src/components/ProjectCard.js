@@ -10,15 +10,13 @@ export default class ProjectCard extends Component {
           <CardTitle className="project-image" style={{color:'#fff',height:'176px',background:`url(${this.props.background})`}}></CardTitle>
           <CardTitle id="card-title" style={{color:'black', fontWeight:'bold', fontSize:"21px"}}>{this.props.cardTitle}</CardTitle>
           <CardText style={{marginBottom:'5px'}}>{this.props.cardText}</CardText>
-           <CardActions border>
+           <CardActions style={{position:'absolute', bottom:0}}>
            {this.props.githubLink ? 
                 <Button colored style={{textAlign:'center'}}><a style={{ textDecoration:'none',color:'#000080'}} href={this.props.githubLink}>GitHub</a></Button> 
            : 
                  <Button colored style={{textAlign:'center'}}>SOON ON GITHUB</Button>
 
             }
-             
-
            </CardActions>
            <CardMenu style={{color:'#fff'}}>
              <IconButton name="share"/>

@@ -325,7 +325,7 @@ a .hu-background-color_button-background hu-background-color_button-background-l
 }
 
 .mdl-card__supporting-text {
-  padding: 8px 16px !important;
+  padding: 4px 16px !important;
 }
 
 @media (min-width: 800px){
