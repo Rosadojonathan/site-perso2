@@ -58,7 +58,7 @@ class ArticlePost extends Component {
             />
             <meta
               property="article:published_time"
-              content={this.state.article.date}
+              content={this.state.article.createdAt}
             />
             <script type="application/ld+json">
             {`{
@@ -98,12 +98,15 @@ class ArticlePost extends Component {
 
           <Grid className="article-post">
             <Cell col={9}>
-              <h1>{this.state.article.title}</h1>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: this.state.article.content
-                }}
-              />
+              <article>
+                <h1>{this.state.article.title}</h1>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: this.state.article.content
+                  }}        
+                />
+                <small> Écrit le <time pubdate={this.state.article.createdAt}>{new Date(this.state.article.createdAt).toISOString().split("T")[0]}</time> </small>
+              </article>
             </Cell>
             <Cell id="signupform" col={3}>
               <SignupForm />
