@@ -1,16 +1,16 @@
 import React from 'react';
 import asyncComponent from './AsyncComponent';
 import {Switch, Route, Redirect} from 'react-router-dom';
-import LandingPage from './landingpage';
-import Blog from './blog';
-import Login from './login';
-import ArticlePost from './articlepost';
+import LandingPage from './LandingPage';
+import Blog from './Blog';
+import Login from './Login';
+import ArticlePost from './ArticlePost';
 import ArticlePostEditor from './TextEditor/ArticlePostEditor';
 import { connect } from 'react-redux';
-const AsyncContact = asyncComponent(() => import('./contact'));
-const AsyncResume = asyncComponent(() => import('./resume'));
-const AsyncAdmin = asyncComponent(() => import('./admin'));
-const AsyncProjects = asyncComponent(() => import('./projects'));
+const AsyncContact = asyncComponent(() => import('./Contact'));
+const AsyncResume = asyncComponent(() => import('./Resume'));
+const AsyncAdmin = asyncComponent(() => import('./Admin'));
+const AsyncProjects = asyncComponent(() => import('./Projects'));
 
 
 

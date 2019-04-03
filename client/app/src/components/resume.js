@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import { Grid, Cell } from "react-mdl";
 import { Bar } from "react-chartjs-2";
-import Education from "./education";
-import {Experience, MaestroExperience} from "./experience";
-import Skills from "./skills";
-import Logo from "./logo";
+import Education from "./Education";
+import {Experience, MaestroExperience} from "./Experience";
+import {Skills, AlternateSkills} from "./Skills";
+import Logo from "./Logo";
 
 import adwordsLogo from "../img/adwords-logo-website.png";
 import googleAnalyticsLogo from "../img/google-analytics.png";
@@ -65,6 +65,7 @@ class Resume extends Component {
   }
 
   render() {
+    const skills = ["Acquisition de trafic","Développement web","Growth Hacking", "Automatisation", "Data Mining", "Optimisation du taux de conversion"];
     return (
       <div>
         <Helmet>
@@ -221,10 +222,11 @@ class Resume extends Component {
 
             <br/>
             <hr style={{ borderTop: "3px solid white",marginTop:"3em" }} />
-
-
             <h3>Compétences</h3>
-            <Skills skill="SEA" progress={85} />
+
+            <AlternateSkills skills={skills} />
+             
+            {/* <Skills skill="SEA" progress={85} />
             <Skills skill="Data Analysis" progress={85} />
             <Skills skill="Python" progress={75} />
             <Skills skill="Machine Learning" progress={70} />
@@ -232,7 +234,7 @@ class Resume extends Component {
             <Skills skill="Analytics" progress={70} />
             <Skills skill="SEO" progress={70} />
             <Skills skill="JavaScript" progress={65} />
-            <Skills skill="R" progress={60} />
+            <Skills skill="R" progress={60} /> */}
             
             <hr style={{ borderTop: "3px solid white",marginTop:"3em" }} />
             <h3>Langues</h3>

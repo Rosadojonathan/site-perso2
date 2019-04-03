@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Cell,ProgressBar } from 'react-mdl';
 
-class Skills extends Component {
+export class Skills extends Component {
 
   render() {
     return (
@@ -15,4 +15,20 @@ class Skills extends Component {
 
 }
 
-export default Skills;
+export class AlternateSkills extends Component {
+  render() {
+    return (
+      <Grid>
+        <Cell col={4}>
+        </Cell>
+        <Cell col={8}>
+        <ul style={{ listStyle:'none', fontSize: '1.4rem', fontWeight:"bold", lineHeight:'2.5rem'}}>
+          {this.props.skills.map(skill => <li key={skill}> {skill}</li>)}
+          </ul>
+        </Cell> 
+      </Grid>
+    )
+  }
+}
+
+
