@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Grid, Cell, Tabs, Tab, Textfield, Card } from "react-mdl";
-import TextEditor from './TextEditor/TextEditor';
-import FileSaver from './TextEditor/FileSaver';
+import TextEditor from '../components/TextEditor/TextEditor';
+import FileSaver from '../components/TextEditor/FileSaver';
 import '../App.css';
-import ArticleDisplayer from './TextEditor/ArticleDisplayer';
+import ArticleDisplayer from '../components/TextEditor/ArticleDisplayer';
 
 class Admin extends Component {
   state = {

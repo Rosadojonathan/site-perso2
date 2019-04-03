@@ -14,7 +14,7 @@ import {
   Textfield
 } from "react-mdl";
 
-import Article from "./Article.js";
+import Article from "../components/Article.js";
 import "../App.css";
 
 class Blog extends Component {

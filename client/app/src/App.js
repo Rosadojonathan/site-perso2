@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import {Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
-import Main from './components/Main';
+import Main from './containers/Main';
 import { Link } from 'react-router-dom';
 import './App.css';
 import { loggedin, expiredLoggedin } from './redux/actions/actions';

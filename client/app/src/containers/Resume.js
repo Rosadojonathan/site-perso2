@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import { Grid, Cell } from "react-mdl";
 import { Bar } from "react-chartjs-2";
-import Education from "./Education";
-import {Experience, MaestroExperience} from "./Experience";
-import {Skills, AlternateSkills} from "./Skills";
-import Logo from "./Logo";
+import Education from "../components/Education";
+import {Experience, MaestroExperience} from "../components/Experience";
+import {Skills, AlternateSkills} from "../components/Skills";
+import Logo from "../components/Logo";
 
 import adwordsLogo from "../img/adwords-logo-website.png";
 import googleAnalyticsLogo from "../img/google-analytics.png";

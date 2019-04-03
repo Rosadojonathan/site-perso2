@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Helmet} from 'react-helmet';
 import { Tabs, Tab,Grid,Cell,Card,CardTitle,Button,CardMenu,IconButton, CardText, CardActions} from 'react-mdl';
-import ProjectCard from './ProjectCard';
+import ProjectCard from '../components/ProjectCard';
 
 import machineLearningIcon from '../img/machinelearningicon.svg';
 import facebookIcon from '../img/facebookicon.svg';
