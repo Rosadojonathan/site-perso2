@@ -36,7 +36,6 @@ class Blog extends Component {
   }
 
   render() {
-    if (this.state.search) {
       return (
         <div className="article-grid">
           <Helmet>
@@ -78,7 +77,7 @@ class Blog extends Component {
             />
           </div>
           <div className='article-list'> 
-          {this.state.posts
+          {this.state.search ? this.state.posts
             .filter(post => {
               const results = [];
               const elementsToSearch = this.state.search
@@ -108,70 +107,24 @@ class Blog extends Component {
                 image={post.image}
                 date={new Date(post.createdAt).toISOString().split("T")[0]}
               />
-            ))}
-
+            )) :
+            this.state.posts.map(post => (
+              <Article
+                style={{ width: "80%" }}
+                key={post.id}
+                cardTitle={post.title}
+                cardText={post.description}
+                linkTitle={post.path}
+                image={post.image}
+                date={new Date(post.createdAt).toISOString().split("T")[0]}
+              />
+            ))
+            }
             </div>
         </div>
       );
     }
-
-    if (!this.state.search) {
-      return (
-        <div className="">
-        <Grid>
-          <Helmet>
-            <meta charSet="utf-8" />
-            <title>Blog - Tech-Marketer</title>
-
-            <meta
-              name="description"
-              content="Comment allier le Marketing et la Tech pour améliorer son efficacité."
-            />
-
-            <meta property="og:locale" content="fr_FR" />
-            <meta property="og:type" content="website" />
-            <meta property="og:title" content="Blog - Tech-Marketer" />
-            <meta
-              name="og:description"
-              content="Comment allier Marketing et Tech pour améliorer son efficacité."
-            />
-            <meta name="og:url" content={window.location.href} />
-            <meta
-              name="og:image"
-              content="https://jonathanrosado.fr/images/homepage.jpg"
-            />
-          </Helmet>
-          <div className="search-div" style={{width:"100%"}}>
-
-          <Textfield
-            name="article"
-            label="Recherchez un article..."
-            value={this.state.search}
-            onChange={e => this.setState({ search: e.target.value })}
-            floatingLabel
-            style={{ width: "95%", marginTop: "30px", marginLeft: "20px" }}
-          />
-          </div>
-          <div className="article-list">
-          {this.state.posts.map(post => (
-          
-            <Article
-
-              style={{ width: "80%" }}
-              key={post.id}
-              cardTitle={post.title}
-              cardText={post.description}
-              linkTitle={post.path}
-              image={post.image}
-              date={new Date(post.createdAt).toISOString().split("T")[0]}
-            />
-          ))}
-          </div>
-        </Grid>
-        </div>
-      );
-    }
   }
-}
+
 
 export default Blog;
