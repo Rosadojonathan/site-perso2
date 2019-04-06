@@ -79,25 +79,11 @@ class Blog extends Component {
           <div className='article-list'> 
           {this.state.search ? this.state.posts
             .filter(post => {
-              const results = [];
-              const elementsToSearch = this.state.search
-                .toLowerCase()
-                .split(" ");
-              elementsToSearch.forEach(e => {
-                if (
-                  post.title.toLowerCase().includes(e) ||
-                  post.description.toLowerCase().includes(e)
-                ) {
-                  results.push(e);
-                }
-              });
-              if (results.length === elementsToSearch.length) {
-                return true;
-              }
+              const elementsToSearch = this.state.search.toLowerCase()
+              return post.title.toLowerCase().match(elementsToSearch) ||
+              post.description.toLowerCase().match(elementsToSearch)
             })
-
             .map(post => (
-
               <Article
                 style={{ width: "80%" }}
                 key={post.id}
