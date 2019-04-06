@@ -20,7 +20,7 @@ class Contact extends Component {
  };
 
  componentDidMount(){
-  addResponseMessage('Bienvenue dans le chat de discussion avec mon chatbot !')
+  addResponseMessage('Discutez avec mon chatbot !')
  }
 
 handleNewUserMessage = (newMessage) => {
